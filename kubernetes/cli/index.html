@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://hnc-hskim.github.io/images/favicon.png" type="image/png">
 
-    <title>Categories :: My New Hugo Site</title>
+    <title>Cli :: My New Hugo Site</title>
 
     
     <link href="https://hnc-hskim.github.io/css/nucleus.css?1657670046" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="https://hnc-hskim.github.io/categories/">
+  <body class="" data-url="https://hnc-hskim.github.io/kubernetes/cli/">
     <nav id="sidebar" class="">
 
 
@@ -170,8 +170,8 @@
   
     
     <li data-nav-id="/kubernetes/" title="Kubernetes" class="dd-item
+        parent
         
-        active
         
         ">
       <a href="https://hnc-hskim.github.io/kubernetes/">
@@ -217,7 +217,7 @@
  
   
     
-      <li data-nav-id="/kubernetes/cli/" title="Cli" class="dd-item ">
+      <li data-nav-id="/kubernetes/cli/" title="Cli" class="dd-item active">
         <a href="https://hnc-hskim.github.io/kubernetes/cli/">
         Cli
         
@@ -281,7 +281,13 @@
             
           
           
-            <a href='https://hnc-hskim.github.io/'>My New Hugo Site</a> > Categories
+            
+            
+          
+          
+            <a href='https://hnc-hskim.github.io/'>My New Hugo Site</a> > <a href='https://hnc-hskim.github.io/kubernetes/'>Kubernetes</a> > Cli
+          
+        
           
         
           
@@ -292,7 +298,12 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#클러스터명-조회">클러스터명 조회</a></li>
+    <li><a href="#노드에-레이블-추가">노드에 레이블 추가</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -308,24 +319,24 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              Cli
             </h1>
           
 
         
 
 
+<h2 id="클러스터명-조회">클러스터명 조회</h2>
+<pre tabindex="0"><code>kubectl config view --minify -o jsonpath=&#39;{.clusters[].name}&#39; 
+</code></pre><h2 id="노드에-레이블-추가">노드에 레이블 추가</h2>
+<pre tabindex="0"><code># 레이블 추가
+kubectl label nodes &lt;your-node-name&gt; disktype=ssd
 
+# 레이블 확인
+kubectl get nodes --show-labels
+</code></pre>
 
-
-<ul>
-	
-</ul>
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -360,8 +371,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -375,6 +384,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -391,6 +403,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -415,8 +428,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="https://hnc-hskim.github.io/kubernetes/aws-cli/" title="Aws Cli"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="https://hnc-hskim.github.io/kubernetes/" title="Kubernetes" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="https://hnc-hskim.github.io/kubernetes/aws-cli/" title="Aws Cli" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -448,3 +463,4 @@
 
   </body>
 </html>
+

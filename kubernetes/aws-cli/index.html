@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://hnc-hskim.github.io/images/favicon.png" type="image/png">
 
-    <title>Categories :: My New Hugo Site</title>
+    <title>Aws Cli :: My New Hugo Site</title>
 
     
     <link href="https://hnc-hskim.github.io/css/nucleus.css?1657670046" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="https://hnc-hskim.github.io/categories/">
+  <body class="" data-url="https://hnc-hskim.github.io/kubernetes/aws-cli/">
     <nav id="sidebar" class="">
 
 
@@ -170,8 +170,8 @@
   
     
     <li data-nav-id="/kubernetes/" title="Kubernetes" class="dd-item
+        parent
         
-        active
         
         ">
       <a href="https://hnc-hskim.github.io/kubernetes/">
@@ -196,7 +196,7 @@
  
   
     
-      <li data-nav-id="/kubernetes/aws-cli/" title="Aws Cli" class="dd-item ">
+      <li data-nav-id="/kubernetes/aws-cli/" title="Aws Cli" class="dd-item active">
         <a href="https://hnc-hskim.github.io/kubernetes/aws-cli/">
         Aws Cli
         
@@ -281,7 +281,13 @@
             
           
           
-            <a href='https://hnc-hskim.github.io/'>My New Hugo Site</a> > Categories
+            
+            
+          
+          
+            <a href='https://hnc-hskim.github.io/'>My New Hugo Site</a> > <a href='https://hnc-hskim.github.io/kubernetes/'>Kubernetes</a> > Aws Cli
+          
+        
           
         
           
@@ -292,7 +298,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#aws-계정-정보-조회">aws 계정 정보 조회</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -308,24 +322,20 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              Aws Cli
             </h1>
           
 
         
 
 
+<h3 id="aws-계정-정보-조회">aws 계정 정보 조회</h3>
+<pre tabindex="0"><code>aws sts get-caller-identity --profile &#34;name&#34; 
+</code></pre><h1 id="kubeconfig-등록">kubeconfig 등록</h1>
+<pre tabindex="0"><code>aws eks --profile &#34;profile name&#34; update-kubeconfig --name &#34;cluster name&#34; --region ap-northeast-2 
+</code></pre>
 
-
-
-<ul>
-	
-</ul>
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -360,8 +370,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -375,6 +383,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -391,6 +400,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -415,8 +427,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="https://hnc-hskim.github.io/kubernetes/" title="Kubernetes"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="https://hnc-hskim.github.io/kubernetes/" title="Kubernetes" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="https://hnc-hskim.github.io/kubernetes/cli/" title="Cli" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -448,3 +462,4 @@
 
   </body>
 </html>
+
