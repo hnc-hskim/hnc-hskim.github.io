@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hnc-hskim.github.io/kubernetes/</loc>
-    <lastmod>2022-07-13T08:56:51+09:00</lastmod>
+    <loc>https://hnc-hskim.github.io/hugo/</loc>
+    <lastmod>2022-07-13T09:06:26+09:00</lastmod>
+  </url><url>
+    <loc>https://hnc-hskim.github.io/hugo/style/</loc>
+    <lastmod>2022-07-13T09:06:26+09:00</lastmod>
   </url><url>
     <loc>https://hnc-hskim.github.io/</loc>
+    <lastmod>2022-07-13T09:00:36+09:00</lastmod>
+  </url><url>
+    <loc>https://hnc-hskim.github.io/kubernetes/</loc>
     <lastmod>2022-07-13T08:56:51+09:00</lastmod>
   </url><url>
     <loc>https://hnc-hskim.github.io/kubernetes/aws-cli/</loc>
@@ -13,6 +19,12 @@
   </url><url>
     <loc>https://hnc-hskim.github.io/kubernetes/cli/</loc>
     <lastmod>2022-07-13T08:51:28+09:00</lastmod>
+  </url><url>
+    <loc>https://hnc-hskim.github.io/workshop/msa/</loc>
+    <lastmod>2022-07-12T13:38:31+09:00</lastmod>
+  </url><url>
+    <loc>https://hnc-hskim.github.io/workshop/</loc>
+    <lastmod>2022-07-12T13:38:31+09:00</lastmod>
   </url><url>
     <loc>https://hnc-hskim.github.io/categories/</loc>
   </url><url>

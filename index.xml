@@ -6,7 +6,16 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Jul 2022 08:56:51 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Jul 2022 09:00:36 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Style</title>
+      <link>https://hnc-hskim.github.io/hugo/style/</link>
+      <pubDate>Wed, 13 Jul 2022 09:06:26 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/hugo/style/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Aws Cli</title>
       <link>https://hnc-hskim.github.io/kubernetes/aws-cli/</link>
@@ -22,7 +31,7 @@
       <pubDate>Wed, 13 Jul 2022 08:51:28 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/kubernetes/cli/</guid>
-      <description>클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.clusters[].name}&amp;#39; 노드에 레이블 추가 # 레이블 추가 kubectl label nodes &amp;lt;your-node-name&amp;gt; disktype=ssd # 레이블 확인 kubectl get nodes --show-labels </description>
+      <description>컨텍스트 조회 # 조회 kubectl config get-contexts # 사용 kubectl config use-context &amp;#34;context name&amp;#34; 클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.clusters[].name}&amp;#39; 노드에 레이블 추가 # 레이블 추가 kubectl label nodes &amp;lt;your-node-name&amp;gt; disktype=ssd # 레이블 확인 kubectl get nodes --show-labels </description>
     </item>
     
   </channel>
