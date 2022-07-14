@@ -8,6 +8,17 @@
     <language>ko-kr</language>
     <lastBuildDate>Wed, 13 Jul 2022 09:00:36 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>vscode</title>
+      <link>https://hnc-hskim.github.io/workshop/ide/vscode/</link>
+      <pubDate>Wed, 13 Jul 2022 11:12:30 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/ide/vscode/</guid>
+      <description>VS code extentions  cloude code kubernetes  [참고] https://www.sobyte.net/post/2021-12/deploy-vscode-on-k8s/
+[참고2] https://github.com/coder/coder
+아래 명세서를 파일로 저장후 배포한다. (패스워드및 네임스페이스 확인)  code-server.yaml  apiVersion: v1 kind: Namespace metadata: name: code-server --- apiVersion: v1 kind: Service metadata: name: code-server namespace: code-server spec: ports: - port: 80 targetPort: 8080 selector: app: code-server --- apiVersion: apps/v1 kind: Deployment metadata: labels: app: code-server name: code-server namespace: code-server spec: selector: matchLabels: app: code-server template: metadata: labels: app: code-server spec: containers: - image: codercom/code-server imagePullPolicy: IfNotPresent name: code-server ports: - containerPort: 8080 env: - name: PASSWORD value: &amp;#34;your password&amp;#34; --- apiVersion: extensions/v1beta1 kind: Ingress metadata: name: code-server-ingress namespace: code-server annotations: kubernetes.</description>
+    </item>
+    
+    <item>
       <title>Style</title>
       <link>https://hnc-hskim.github.io/hugo/style/</link>
       <pubDate>Wed, 13 Jul 2022 09:06:26 +0900</pubDate>
@@ -32,6 +43,35 @@
       
       <guid>https://hnc-hskim.github.io/kubernetes/cli/</guid>
       <description>컨텍스트 조회 # 조회 kubectl config get-contexts # 사용 kubectl config use-context &amp;#34;context name&amp;#34; 클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.clusters[].name}&amp;#39; 노드에 레이블 추가 # 레이블 추가 kubectl label nodes &amp;lt;your-node-name&amp;gt; disktype=ssd # 레이블 확인 kubectl get nodes --show-labels </description>
+    </item>
+    
+    <item>
+      <title>Software Architecture</title>
+      <link>https://hnc-hskim.github.io/workshop/msa/software-architecture/</link>
+      <pubDate>Tue, 12 Jul 2022 15:43:56 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/msa/software-architecture/</guid>
+      <description>[참고] https://dev.to/zachgoll/introduction-to-software-architecture-monolithic-vs-layered-vs-microservices-452
+[참고] https://github.com/mermaid-js/mermaid
+Diagram Editor
+&amp;ldquo;Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius—and a lot of courage to move in the opposite direction&amp;rdquo;
+[From E.F. Schumacher&amp;rsquo;s book Small is Beautiful]
+1. 소프트웨어 아키텍처 소프트웨어 구조 또는 소프트웨어 아키텍처(software architecture)는 소프트웨어의 구성요소들 사이에서 유기적 관계를 표현하고 소프트웨어의 설계와 업그레이드를 통제하는 지침과 원칙이다.
+1.1 소프트웨어 아키텍처 설계시 고려사항  성능: 회전하는 &amp;ldquo;로드 중&amp;rdquo; 아이콘이 사라지기 전에 얼마나 기다려야 합니까?</description>
+    </item>
+    
+    <item>
+      <title>Concept</title>
+      <link>https://hnc-hskim.github.io/workshop/msa/concept/</link>
+      <pubDate>Tue, 12 Jul 2022 13:38:23 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/msa/concept/</guid>
+      <description>아래에 사용된 예제는 NodeJS, ExpressJS, MongoDB를 이용하여 구성되었습니다.
+Diagram Editor
+mermaid flowchart syntax
+1. 모놀리식 아키텍처 VS 마이크로서비스 아키텍처 Monolithic Architecture 전통적인 모놀로식 아키텍처가 비효율적으로 보일 수 있지만 실제로 개발중인 애플리케이션이 충분히 복잡하지 않다면 마이크로서비스 아키텍처의 이점을 확인하기는 쉽지 않다. 비교적 간단한 아키텍처의 경우 충분히 활용 가능한 솔루션이라고 할 수 있다.
+따라서 모놀로딕 아키텍처로 시작하여 마이크로 서비스 아키텍처로 리팩토링하는것이 효율적인 개발 방법일수도 있다.
+장점  손쉬운 배포 : 단일 실행파일 또는 디렉토리로 작성되어 배포가 쉽다.</description>
     </item>
     
   </channel>

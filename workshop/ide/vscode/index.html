@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Hugoes :: My New Hugo Site</title>
+    <title>vscode :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1657774746" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/hugo/">
+  <body class="" data-url="/workshop/ide/vscode/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -84,8 +84,8 @@
   
     
     <li data-nav-id="/workshop/" title="Workshops" class="dd-item
+        parent
         
-        active
         
         ">
       <a href="/workshop/">
@@ -114,7 +114,7 @@
  
   
     
-      <li data-nav-id="/workshop/ide/vscode/" title="vscode" class="dd-item ">
+      <li data-nav-id="/workshop/ide/vscode/" title="vscode" class="dd-item active">
         <a href="/workshop/ide/vscode/">
         vscode
         <i class="fas fa-check read-icon"></i>
@@ -223,8 +223,8 @@
   
     
     <li data-nav-id="/hugo/" title="Hugoes" class="dd-item
-        parent
-        active
+        
+        
         
         ">
       <a href="/hugo/">
@@ -387,6 +387,13 @@
                   
                   
                   
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/workshop/ide/vscode.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
                 
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -408,7 +415,13 @@
             
           
           
-            <a href='/'></a> > Hugoes
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/workshop/'>Workshops</a> > vscode
+          
+        
           
         
           
@@ -419,7 +432,23 @@
                 
                     <div class="progress">
     <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#vs-code-extentions">VS code extentions</a></li>
+  </ul>
 
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ingress-확인host에-접속">ingress 확인(Host에 접속)</a></li>
+        <li><a href="#접속-화면">접속 화면</a></li>
+        <li><a href="#web-vs-code-화면">web vs code 화면</a></li>
+        <li><a href="#sample-html">sample HTML</a></li>
+        <li><a href="#nodejs-설치">node.js 설치</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -435,20 +464,104 @@
           
             <h1>
               
-              Hugoes
+              vscode
             </h1>
           
 
         
 
 
+<h2 id="vs-code-extentions">VS code extentions</h2>
+<ul>
+<li>cloude code</li>
+<li>kubernetes</li>
+</ul>
+<p>[참고] <a href="https://www.sobyte.net/post/2021-12/deploy-vscode-on-k8s/">https://www.sobyte.net/post/2021-12/deploy-vscode-on-k8s/</a><br>
+[참고2] <a href="https://github.com/coder/coder">https://github.com/coder/coder</a></p>
+<h1 id="아래-명세서를-파일로-저장후-배포한다-패스워드및-네임스페이스-확인">아래 명세서를 파일로 저장후 배포한다. (패스워드및 네임스페이스 확인)</h1>
+<ul>
+<li>code-server.yaml</li>
+</ul>
+<pre tabindex="0"><code>apiVersion: v1
+kind: Namespace
+metadata:
+  name: code-server
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: code-server
+  namespace: code-server
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: code-server
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: code-server
+  name: code-server
+  namespace: code-server
+spec:
+  selector:
+    matchLabels:
+      app: code-server
+  template:
+    metadata:
+      labels:
+        app: code-server
+    spec:
+      containers:
+        - image: codercom/code-server
+          imagePullPolicy: IfNotPresent
+          name: code-server
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PASSWORD
+              value: &#34;your password&#34;
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: code-server-ingress
+  namespace: code-server
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: &#34;your_host_name.example.com&#34;
+      http:
+        paths:
+          - backend:
+              serviceName: code-server
+              servicePort: 80
+</code></pre><h3 id="ingress-확인host에-접속">ingress 확인(Host에 접속)</h3>
+<pre tabindex="0"><code>kubectl get ingress -n code-server
+NAME                  CLASS    HOSTS                         ADDRESS
+              PORTS   AGE
+code-server-ingress   &lt;none&gt;   code.**********.com   a**************1-716630360.ap-northeast-2.elb.amazonaws.com   80      16m
+</code></pre><h3 id="접속-화면">접속 화면</h3>
+<p><img src="./login.png" alt="login"></p>
+<h3 id="web-vs-code-화면">web vs code 화면</h3>
+<p><img src="./vscode.png" alt="vscode"></p>
+<h3 id="sample-html">sample HTML</h3>
+<ul>
+<li>Extension을 선택하고 Live Preview 검색후 설치한다.</li>
+</ul>
+<h3 id="nodejs-설치">node.js 설치</h3>
+<ul>
+<li>터미널을 열고 다음 항목을 붙여 넣는다.</li>
+</ul>
+<pre tabindex="0"><code>curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+</code></pre>
 
-	
-
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -483,8 +596,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -492,6 +603,39 @@
                     
                     
                         
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
                     
                     
 
@@ -525,35 +669,6 @@
                     
 
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -568,7 +683,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -581,9 +695,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -656,10 +767,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/workshop/msa/concept/" title="Concept"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/workshop/" title="Workshops"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/hugo/style/" title="Style" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/workshop/msa/" title="Msa" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -691,3 +802,4 @@
 
   </body>
 </html>
+

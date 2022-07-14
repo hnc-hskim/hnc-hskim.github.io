@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hnc-hskim.github.io/workshop/ide/vscode/</loc>
+    <lastmod>2022-07-13T11:12:30+09:00</lastmod>
+  </url><url>
+    <loc>https://hnc-hskim.github.io/workshop/</loc>
+    <lastmod>2022-07-13T11:12:30+09:00</lastmod>
+  </url><url>
     <loc>https://hnc-hskim.github.io/hugo/</loc>
     <lastmod>2022-07-13T09:06:26+09:00</lastmod>
   </url><url>
@@ -20,11 +26,14 @@
     <loc>https://hnc-hskim.github.io/kubernetes/cli/</loc>
     <lastmod>2022-07-13T08:51:28+09:00</lastmod>
   </url><url>
+    <loc>https://hnc-hskim.github.io/workshop/msa/software-architecture/</loc>
+    <lastmod>2022-07-12T15:43:56+09:00</lastmod>
+  </url><url>
     <loc>https://hnc-hskim.github.io/workshop/msa/</loc>
     <lastmod>2022-07-12T13:38:31+09:00</lastmod>
   </url><url>
-    <loc>https://hnc-hskim.github.io/workshop/</loc>
-    <lastmod>2022-07-12T13:38:31+09:00</lastmod>
+    <loc>https://hnc-hskim.github.io/workshop/msa/concept/</loc>
+    <lastmod>2022-07-12T13:38:23+09:00</lastmod>
   </url><url>
     <loc>https://hnc-hskim.github.io/categories/</loc>
   </url><url>
