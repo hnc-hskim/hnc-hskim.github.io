@@ -12,22 +12,22 @@
     <title>Concept :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1657774746" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1657774746" rel="stylesheet">
-    <link href="/css/hybrid.css?1657774746" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1657774746" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1657774746" rel="stylesheet">
-    <link href="/css/auto-complete.css?1657774746" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1657774746" rel="stylesheet">
-    <link href="/css/theme.css?1657774746" rel="stylesheet">
-    <link href="/css/tabs.css?1657774746" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1657774746" rel="stylesheet">
+    <link href="/css/nucleus.css?1657789482" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1657789482" rel="stylesheet">
+    <link href="/css/hybrid.css?1657789482" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1657789482" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1657789482" rel="stylesheet">
+    <link href="/css/auto-complete.css?1657789482" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1657789482" rel="stylesheet">
+    <link href="/css/theme.css?1657789482" rel="stylesheet">
+    <link href="/css/tabs.css?1657789482" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1657789482" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1657774746" rel="stylesheet">
+    <link href="/css/theme-green.css?1657789482" rel="stylesheet">
     
-    <link href="/css/msa-style.css?1657774746" rel="stylesheet">
+    <link href="/css/msa-style.css?1657789482" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1657774746"></script>
+    <script src="/js/jquery-3.3.1.min.js?1657789482"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1657774746"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1657774746"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1657789482"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1657789482"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hnc-hskim.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1657774746"></script>
+<script type="text/javascript" src="/js/search.js?1657789482"></script>
 
     
   </div>
@@ -449,9 +449,11 @@
       <ul>
         <li><a href="#장점">장점</a></li>
         <li><a href="#애플리케이션-구조">애플리케이션 구조</a></li>
+        <li><a href="#monolithic-architecture-with-better-layered-or-n-tier-design">Monolithic Architecture (with better &ldquo;layered&rdquo; or &ldquo;n-tier&rdquo; design)</a></li>
+        <li><a href="#layered-architecture-diagram">Layered Architecture Diagram</a></li>
+        <li><a href="#application-structure">Application Structure</a></li>
       </ul>
     </li>
-    <li><a href="#monolithic-architecture-with-better-layered-or-n-tier-design">Monolithic Architecture (with better &ldquo;layered&rdquo; or &ldquo;n-tier&rdquo; design)</a></li>
   </ul>
 </nav>
     </div>
@@ -570,7 +572,7 @@ app.js에서 데이터베이스, 서버 및 API 엔드포인트에 대한 연결
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Visit app at http://localhost:8080&#34;</span>);
 </span></span></code></pre></div><p>이 모놀리딕 애플리케이션이 확장하기 시작할 경우 빠르게 코드는 엉망이 될 것이다.
 이 단계에서 대부분 마이크로서비스 아키텍처로의 전환을 선택하지만, 리팩토링을 통하여 계층화된 아키텍처로 바꾸는것을 다른 하나의 옵션으로 고민해 볼 수 있다.</p>
-<h2 id="monolithic-architecture-with-better-layered-or-n-tier-design">Monolithic Architecture (with better &ldquo;layered&rdquo; or &ldquo;n-tier&rdquo; design)</h2>
+<h3 id="monolithic-architecture-with-better-layered-or-n-tier-design">Monolithic Architecture (with better &ldquo;layered&rdquo; or &ldquo;n-tier&rdquo; design)</h3>
 <p>계층화된 아키텍처는 애플리케이션을 일반적으로 다음과 같은 레이어들로 분할할 수 있다.</p>
 <ol>
 <li>프리젠테이션 계층(Presentation Layer)</li>
@@ -584,30 +586,120 @@ app.js에서 데이터베이스, 서버 및 API 엔드포인트에 대한 연결
 <li>Domain Layer</li>
 <li>Persistence Layer</li>
 </ol>
+<h3 id="layered-architecture-diagram">Layered Architecture Diagram</h3>
 
 <div class="mermaid" align="center"> 
-flowchart TB
-  subgraph Layered Architecture 
-    subgraph Presentation-Layer 
+  flowchart TD
+  subgraph Layered-Architecture  
+    subgraph Presentation-Layer
         direction LR
-        Angular5+ --> A[Closed]
+        Angular --- A{{Closed}}
     end
-    subgraph BusinessLayer
+    subgraph Business-Layer
         direction LR
-        Express --> B[Closed]
+        Express --- B{{Closed}}
     end
-    subgraph Shared Utilities Layer
+    subgraph Shared-Utilities-Layer
         direction LR
-        Utilities --> C[Open]
+        String-Utilities ---  Object-Transformation-Utilities --- C{{Closed}}
     end
-    subgraph Data Layer
+    subgraph Data-Layer
         direction LR
-        Mongo --> D[Closed]
+        Mongo --- D{{Closed}}
     end    
   end  
+  Presentation-Layer --> Business-Layer
+  Business-Layer --> Shared-Utilities-Layer
+  Shared-Utilities-Layer --> Data-Layer   
 </div>
 
-<p>중요한 점은 각 레이어 구조에서 바로 아래 레이어만 사용할 수 있게 하도록 구조를 분리하는것입니다.</p>
+<p>중요한 점은 각 레이어 구조에서 바로 아래 레이어만 사용할 수 있게 하도록 구조를 분리하는것입니다.
+하지만 Utility 레이어의 경우처럼 때로는 공유하여 쓸수 있는 레이어가 필요할 수도 있습니다.
+다이어그램에서 모든 레이어에서 사용할 수 있도록 열린 레이어로 생성한것을 확인할 수 있습니다.</p>
+<h3 id="application-structure">Application Structure</h3>
+<p>위에서 언급한대로 계층화된 아키텍처에서는 각 계층이 바로 아래 계층만 사용할수 있다는 규칙이 있습니다.
+그럼 이 중요한 규칙을 기반으로 monolothic archicture를 변경해 보겠습니다.</p>
+<ol>
+<li>프레젠테이션 계층은 HTML 사용자 양식에서 호출합니다.</li>
+<li>프레젠테이션 계층 자바스크립트는 양식을 처리하고 비즈니스 계층에 대한 호출을 실행합니다.</li>
+<li>비즈니스 계층은 양식 정보를 처리하고 데이터 액세스 계층을 호출합니다.</li>
+<li>데이터 액세스 계층은 정보를 처리하고 사용자를 위해 데이터베이스에 쿼리합니다.</li>
+<li>데이터 액세스 계층은 비즈니스 계층에 정보를 반환합니다.</li>
+<li>비즈니스 계층은 HTTP를 통해 프레젠테이션 계층에 정보를 반환합니다.</li>
+<li>프레젠테이션 레이어는 새로운 정보로 뷰를 렌더링합니다.</li>
+</ol>
+<h4 id="1-프레젠테이션-계층은-html-사용자-양식에서-호출합니다">1. 프레젠테이션 계층은 HTML 사용자 양식에서 호출합니다.</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">File</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">home</span>.<span style="color:#a6e22e">ejs</span> <span style="color:#f92672">--&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">On</span> <span style="color:#a6e22e">form</span> <span style="color:#a6e22e">submit</span>, <span style="color:#a6e22e">home</span>.<span style="color:#a6e22e">ejs</span> <span style="color:#a6e22e">executes</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">getDataFromBusinessLayer</span>() <span style="color:#66d9ef">function</span> <span style="color:#f92672">--&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">form</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;emailform&#34;</span> <span style="color:#a6e22e">onsubmit</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;getDataFromBusinessLayer()&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Enter email...&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Load</span> <span style="color:#a6e22e">Profile</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/button&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/form&gt;</span>
+</span></span></code></pre></div><h4 id="2-프리젠테이션-계층-자바스크립트는-양식을-처리하고-비즈니스-계층에-대한-호출을-실행합니다">2. 프리젠테이션 계층 자바스크립트는 양식을 처리하고 비즈니스 계층에 대한 호출을 실행합니다.</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// File: presentation-layer-user.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getDataFromBusinessLayer</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;#email&#34;</span>).<span style="color:#a6e22e">val</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Perform the GET request to the business layer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">$</span>.<span style="color:#a6e22e">ajax</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`http://localhost:8081/get-user/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">email</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;GET&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">user</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// Render the user object on the page
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#75715e">// Ommitted for brevity
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">jqXHR</span>, <span style="color:#a6e22e">textStatus</span>, <span style="color:#a6e22e">ex</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">textStatus</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">ex</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">jqXHR</span>.<span style="color:#a6e22e">responseText</span>);
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="3">
+<li>비즈니스 계층은 양식 정보를 처리하고 데이터 액세스 계층을 호출합니다.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// File: business-layer-user.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;/get-user/:useremail&#34;</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Makes a call to the data access layer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">User</span>.<span style="color:#a6e22e">getUserByEmail</span>(<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">useremail</span>, (<span style="color:#a6e22e">error</span>, <span style="color:#a6e22e">user</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">200</span>).<span style="color:#a6e22e">json</span>({
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">email</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">profileUrl</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">profileUrl</span>,
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><ol start="4">
+<li>데이터 접근 계층은 정보를 처리하고 사용자를 위해 데이터베이스에 쿼리합니다.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// File: data-layer-user.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">getUserByEmail</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">email</span>, <span style="color:#a6e22e">callback</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Makes a call to the database
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">User</span>.<span style="color:#a6e22e">findOne</span>({ <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">email</span> }, <span style="color:#a6e22e">callback</span>);
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">callback</span>(<span style="color:#a6e22e">err</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><ol start="5">
+<li>
+<p>데이터 액세스 계층은 비즈니스 계층에 정보를 반환합니다.</p>
+</li>
+<li>
+<p>비즈니스 계층은 HTTP를 통해 프레젠테이션 계층에 정보를 반환합니다.</p>
+</li>
+<li>
+<p>프레젠테이션 레이어는 새로운 정보로 뷰를 렌더링합니다.</p>
+</li>
+</ol>
+<p>각 단계를 통해 계층이 담당하는 구체적인 의무를</p>
 <p>[monolithic layered architecture example github] <a href="https://github.com/zachgoll/layered-architecture-example-app">https://github.com/zachgoll/layered-architecture-example-app</a></p>
 
 
@@ -837,19 +929,19 @@ flowchart TB
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1657774746"></script>
-    <script src="/js/perfect-scrollbar.min.js?1657774746"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1657774746"></script>
-    <script src="/js/jquery.sticky.js?1657774746"></script>
-    <script src="/js/featherlight.min.js?1657774746"></script>
-    <script src="/js/highlight.pack.js?1657774746"></script>
+    <script src="/js/clipboard.min.js?1657789482"></script>
+    <script src="/js/perfect-scrollbar.min.js?1657789482"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1657789482"></script>
+    <script src="/js/jquery.sticky.js?1657789482"></script>
+    <script src="/js/featherlight.min.js?1657789482"></script>
+    <script src="/js/highlight.pack.js?1657789482"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1657774746"></script>
-    <script src="/js/learn.js?1657774746"></script>
-    <script src="/js/hugo-learn.js?1657774746"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1657789482"></script>
+    <script src="/js/learn.js?1657789482"></script>
+    <script src="/js/hugo-learn.js?1657789482"></script>
     
         
-            <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+            <script src="https://unpkg.com/mermaid@9.1.3/dist/mermaid.min.js"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
