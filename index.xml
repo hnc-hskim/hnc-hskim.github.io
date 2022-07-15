@@ -8,6 +8,15 @@
     <language>ko-kr</language>
     <lastBuildDate>Wed, 13 Jul 2022 09:00:36 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Scheduling</title>
+      <link>https://hnc-hskim.github.io/cloud/operation/scheduling/</link>
+      <pubDate>Fri, 15 Jul 2022 08:52:22 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/cloud/operation/scheduling/</guid>
+      <description>노드에 파드 할당하기 특정한 노드(들) 집합에서만 동작하도록 파드를 제한할 수 있다. 이를 수행하는 방법에는 여러 가지가 있으며 권장되는 접근 방식은 모두 레이블 셀렉터를 사용하여 선택을 용이하게 한다. 보통은 스케줄러가 자동으로 합리적인 배치(예: 자원이 부족한 노드에 파드를 배치하지 않도록 노드 간에 파드를 분배)를 수행하기에 이러한 제약 조건은 필요하지 않다. 그러나, 예를 들어 SSD가 장착된 머신에 파드가 배포되도록 하거나 또는 많은 통신을 하는 두 개의 서로 다른 서비스의 파드를 동일한 가용성 영역(availability zone)에 배치하는 경우와 같이, 파드가 어느 노드에 배포될지를 제어해야 하는 경우도 있다.</description>
+    </item>
+    
+    <item>
       <title>vscode</title>
       <link>https://hnc-hskim.github.io/workshop/ide/vscode/</link>
       <pubDate>Wed, 13 Jul 2022 11:12:30 +0900</pubDate>
