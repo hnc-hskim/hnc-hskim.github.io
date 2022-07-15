@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Msa :: My New Hugo Site</title>
+    <title>Comments :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1657855455" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/workshop/msa/">
+  <body class="" data-url="/hugo/comments/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -84,7 +84,7 @@
   
     
     <li data-nav-id="/hugo/" title="Hugoes" class="dd-item
-        
+        parent
         
         
         ">
@@ -112,7 +112,7 @@
  
   
     
-      <li data-nav-id="/hugo/comments/" title="Comments" class="dd-item ">
+      <li data-nav-id="/hugo/comments/" title="Comments" class="dd-item active">
         <a href="/hugo/comments/">
         Comments
         <i class="fas fa-check read-icon"></i>
@@ -219,7 +219,7 @@
   
     
     <li data-nav-id="/workshop/" title="Workshops" class="dd-item
-        parent
+        
         
         
         ">
@@ -271,8 +271,8 @@
   
     
     <li data-nav-id="/workshop/msa/" title="Msa" class="dd-item
-        parent
-        active
+        
+        
         
         ">
       <a href="/workshop/msa/">
@@ -466,7 +466,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/workshop/msa/_index.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/hugo/comments.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -497,7 +497,7 @@
             
           
           
-            <a href='/'></a> > <a href='/workshop/'>Workshops</a> > Msa
+            <a href='/'></a> > <a href='/hugo/'>Hugoes</a> > Comments
           
         
           
@@ -512,7 +512,8 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#goals">Goals</a></li>
+    <li><a href="#댓글-기능-추가">댓글 기능 추가</a></li>
+    <li><a href="#댓글-삭제">댓글 삭제</a></li>
   </ul>
 </nav>
     </div>
@@ -530,39 +531,47 @@
           
             <h1>
               
-              Msa
+              Comments
             </h1>
           
 
         
 
 
+<p>[참고] <a href="https://velog.io/@mellonggo/Github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-with-Hugo">https://velog.io/@mellonggo/Github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-with-Hugo</a></p>
+<h2 id="댓글-기능-추가">댓글 기능 추가</h2>
+<ul>
+<li>리파지터리 생성</li>
+</ul>
+<pre tabindex="0"><code>blog-comments로 리파지터리 생성
+</code></pre><ul>
+<li>layouts/partials/custom-footer.html 파일 생성 및 스크립트 추가</li>
+</ul>
 
-	<p>[netflex microservice] <a href="https://netflixtechblog.com/tagged/microservices">https://netflixtechblog.com/tagged/microservices</a></p>
-
-<div class="notices info" ><p>마이크로서비스는 소프트웨어가 잘 정의된 API를 통해 통신하는 소규모의 독립적인 서비스로 구성되어 있는 경우의 소프트웨어 개발을 위한 아키텍처 및 조직적 접근 방식입니다.<br>
-이러한 서비스는 독립적인 소규모 팀에서 보유합니다.
-마이크로서비스 아키텍처는 애플리케이션의 확장을 용이하게 하고 개발 속도를 앞당겨 혁신을 실현하고 새로운 기능의 출시 시간을 단축할 수 있게 해 줍니다.</p>
+<div class="notices info" ><p>테마별로 지정해야할 위치가 다를수 있다. learn 테마의 경우 post 레이아웃을 찾을수 없어 custom-footer.html에 추가한다.</p>
 </div>
 
-<h2 id="goals">Goals</h2>
-<ol>
-<li>소프트웨어 아키텍처가 필요한 이유</li>
-<li>모놀리식 아키텍처</li>
-<li>계층화된 아키텍처</li>
-<li>마이크로 서비스 아키텍처</li>
-</ol>
-<p><img src="introduction/microservices.jpg#floatright" alt="마이크로서비스"></p>
-<p>마이크로서비스 아키텍처의 경우, 애플리케이션이 독립적인 구성 요소로 구축되어 각 애플리케이션 프로세스가 서비스로 실행됩니다. 이러한 서비스는 경량 API를 사용하여 잘 정의된 인터페이스를 통해 통신합니다. 서비스는 비즈니스 기능을 위해 구축되며 서비스마다 한 가지 기능을 수행합니다. 서비스가 독립적으로 실행되기 때문에 애플리케이션의 특정 기능에 대한 수요를 충족하도록 각각의 서비스를 업데이트, 배포 및 확장할 수 있습니다.</p>
-<p>[출처] <a href="https://aws.amazon.com/ko/microservices/">https://aws.amazon.com/ko/microservices/</a></p>
-<!-- raw HTML omitted -->
-<p><a href="https://bluewhale-users.github.io/ko/">bluewhale-users</a></p>
+<ul>
+<li>아래 코드를 복하하여 custom-footer.html에 붙여넣는다.</li>
+</ul>
+<pre tabindex="0"><code>&lt;script src=&#34;https://utteranc.es/client.js&#34;
+        repo=&#34;user id/blog-comments&#34;
+        issue-term=&#34;title&#34;
+        theme=&#34;github-light&#34;
+        crossorigin=&#34;anonymous&#34;
+        async&gt;
+&lt;/script&gt;
+</code></pre>
+<div class="notices tip" ><p>첫 로딩시 댓글 기능은 비활성화되어 있고 github 로그인 인증을 통해 해당 리파지터리에서 utterances app 사용을 승인하면 이후 댓글 기능을 사용할 수 있다.
+댓글의 경우 생성한 리파지터리의 Issues 생성 기능을 통해 동작한다.</p>
+</div>
+
+<h2 id="댓글-삭제">댓글 삭제</h2>
+<p>해당 기능은 따로 제공하지 않는것 같다.
+직접 리파지터리에서 이슈로 이동후 본인이 등록한 이슈를 삭제하자</p>
 
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -597,6 +606,37 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -604,6 +644,59 @@
                 
 
                     
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
                     
                     
 
@@ -637,100 +730,10 @@
                     
 
                     
-            
-        
-                    
-            
-        
-                    
                         
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -822,10 +825,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/workshop/ide/vscode/" title="vscode"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/hugo/" title="Hugoes"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/workshop/msa/software-architecture/" title="Software Architecture" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/hugo/style/" title="Style" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -858,3 +861,4 @@
     </script>
   </body>
 </html>
+

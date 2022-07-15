@@ -1,5 +1,19 @@
 [
 {
+	"uri": "https://hnc-hskim.github.io/hugo/comments/",
+	"title": "Comments",
+	"tags": [],
+	"description": "",
+	"content": "[참고] https://velog.io/@mellonggo/Github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-with-Hugo\n댓글 기능 추가  리파지터리 생성  blog-comments로 리파지터리 생성  layouts/partials/custom-footer.html 파일 생성 및 스크립트 추가  테마별로 지정해야할 위치가 다를수 있다. learn 테마의 경우 post 레이아웃을 찾을수 없어 custom-footer.html에 추가한다.\n\r 아래 코드를 복하하여 custom-footer.html에 붙여넣는다.  \u0026lt;script src=\u0026#34;https://utteranc.es/client.js\u0026#34; repo=\u0026#34;user id/blog-comments\u0026#34; issue-term=\u0026#34;title\u0026#34; theme=\u0026#34;github-light\u0026#34; crossorigin=\u0026#34;anonymous\u0026#34; async\u0026gt; \u0026lt;/script\u0026gt; \r첫 로딩시 댓글 기능은 비활성화되어 있고 github 로그인 인증을 통해 해당 리파지터리에서 utterances app 사용을 승인하면 이후 댓글 기능을 사용할 수 있다. 댓글의 경우 생성한 리파지터리의 Issues 생성 기능을 통해 동작한다.\n\r댓글 삭제 해당 기능은 따로 제공하지 않는것 같다. 직접 리파지터리에서 이슈로 이동후 본인이 등록한 이슈를 삭제하자\n"
+},
+{
+	"uri": "https://hnc-hskim.github.io/hugo/",
+	"title": "Hugoes",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://hnc-hskim.github.io/cloud/",
 	"title": "Clouds",
 	"tags": [],
@@ -18,18 +32,11 @@
 	"title": "vscode",
 	"tags": [],
 	"description": "",
-	"content": "VS code extentions  cloude code kubernetes  [참고] https://www.sobyte.net/post/2021-12/deploy-vscode-on-k8s/\n[참고2] https://github.com/coder/coder\n아래 명세서를 파일로 저장후 배포한다. (패스워드및 네임스페이스 확인)  code-server.yaml  apiVersion: v1 kind: Namespace metadata: name: code-server --- apiVersion: v1 kind: Service metadata: name: code-server namespace: code-server spec: ports: - port: 80 targetPort: 8080 selector: app: code-server --- apiVersion: apps/v1 kind: Deployment metadata: labels: app: code-server name: code-server namespace: code-server spec: selector: matchLabels: app: code-server template: metadata: labels: app: code-server spec: containers: - image: codercom/code-server imagePullPolicy: IfNotPresent name: code-server ports: - containerPort: 8080 env: - name: PASSWORD value: \u0026#34;your password\u0026#34; --- apiVersion: extensions/v1beta1 kind: Ingress metadata: name: code-server-ingress namespace: code-server annotations: kubernetes.io/ingress.class: nginx spec: rules: - host: \u0026#34;your_host_name.example.com\u0026#34; http: paths: - backend: serviceName: code-server servicePort: 80 ingress 확인(Host에 접속) kubectl get ingress -n code-server NAME CLASS HOSTS ADDRESS PORTS AGE code-server-ingress \u0026lt;none\u0026gt; code.**********.com a**************1-716630360.ap-northeast-2.elb.amazonaws.com 80 16m 접속 화면 web vs code 화면 sample HTML  Extension을 선택하고 Live Preview 검색후 설치한다.  node.js 설치  터미널을 열고 다음 항목을 붙여 넣는다.  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - sudo apt-get install -y nodejs "
+	"content": "\rcode server를 활용한 실습 환경 구성이 가능한지 검증해보자.\n\rVS code extentions  cloud code kubernetes  [참고] https://www.sobyte.net/post/2021-12/deploy-vscode-on-k8s/\n[참고2] https://github.com/coder/coder\n아래 명세서를 파일로 저장후 배포한다. (패스워드및 네임스페이스 확인)  code-server.yaml  apiVersion: v1 kind: Namespace metadata: name: code-server --- apiVersion: v1 kind: Service metadata: name: code-server namespace: code-server spec: ports: - port: 80 targetPort: 8080 selector: app: code-server --- apiVersion: apps/v1 kind: Deployment metadata: labels: app: code-server name: code-server namespace: code-server spec: selector: matchLabels: app: code-server template: metadata: labels: app: code-server spec: containers: - image: codercom/code-server imagePullPolicy: IfNotPresent name: code-server ports: - containerPort: 8080 env: - name: PASSWORD value: \u0026#34;your password\u0026#34; --- apiVersion: extensions/v1beta1 kind: Ingress metadata: name: code-server-ingress namespace: code-server annotations: kubernetes.io/ingress.class: nginx spec: rules: - host: \u0026#34;your_host_name.example.com\u0026#34; http: paths: - backend: serviceName: code-server servicePort: 80 ingress 확인(Host에 접속) kubectl get ingress -n code-server NAME CLASS HOSTS ADDRESS PORTS AGE code-server-ingress \u0026lt;none\u0026gt; code.**********.com a**************1-716630360.ap-northeast-2.elb.amazonaws.com 80 16m 접속 화면 web vs code 화면 sample HTML  Extension을 선택하고 Live Preview 검색후 설치한다.  node.js 설치  터미널을 열고 다음 항목을 붙여 넣는다.  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - sudo apt-get install -y nodejs "
 },
 {
 	"uri": "https://hnc-hskim.github.io/workshop/",
 	"title": "Workshops",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://hnc-hskim.github.io/hugo/",
-	"title": "Hugoes",
 	"tags": [],
 	"description": "",
 	"content": ""
