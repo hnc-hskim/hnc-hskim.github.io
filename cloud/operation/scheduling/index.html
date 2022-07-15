@@ -12,22 +12,22 @@
     <title>Scheduling :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1657846225" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1657846225" rel="stylesheet">
-    <link href="/css/hybrid.css?1657846225" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1657846225" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1657846225" rel="stylesheet">
-    <link href="/css/auto-complete.css?1657846225" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1657846225" rel="stylesheet">
-    <link href="/css/theme.css?1657846225" rel="stylesheet">
-    <link href="/css/tabs.css?1657846225" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1657846225" rel="stylesheet">
+    <link href="/css/nucleus.css?1657846631" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1657846631" rel="stylesheet">
+    <link href="/css/hybrid.css?1657846631" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1657846631" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1657846631" rel="stylesheet">
+    <link href="/css/auto-complete.css?1657846631" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1657846631" rel="stylesheet">
+    <link href="/css/theme.css?1657846631" rel="stylesheet">
+    <link href="/css/tabs.css?1657846631" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1657846631" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1657846225" rel="stylesheet">
+    <link href="/css/theme-green.css?1657846631" rel="stylesheet">
     
-    <link href="/css/msa-style.css?1657846225" rel="stylesheet">
+    <link href="/css/msa-style.css?1657846631" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1657846225"></script>
+    <script src="/js/jquery-3.3.1.min.js?1657846631"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1657846225"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1657846225"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1657846631"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1657846631"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hnc-hskim.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1657846225"></script>
+<script type="text/javascript" src="/js/search.js?1657846631"></script>
 
     
   </div>
@@ -495,6 +495,8 @@
       <ul>
         <li><a href="#방법">방법</a></li>
         <li><a href="#label을-이용한-특정-node에-pod-배포">label을 이용한 특정 Node에 Pod 배포</a></li>
+        <li><a href="#deployment를-수정해-리소스-제한-요청을-늘려보자">Deployment를 수정해 리소스 제한 요청을 늘려보자</a></li>
+        <li><a href="#확인-결과">확인 결과</a></li>
       </ul>
     </li>
   </ul>
@@ -829,120 +831,125 @@ ingress.extensions/scheduling-ingress created
 NAME                        READY   STATUS    RESTARTS   AGE
 my-nginx-5b5f4bdd49-qwk7x   1/1     Running   0          9s 
 </code></pre><ul>
-<li>node 상태 조회
-&hellip;&hellip;
-Non-terminated Pods:          (20 in total)
-Namespace                   Name                                                            CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
-<hr>
-code-server                 code-server-84f85bfbb7-q9rs5                                    0 (0%)        0 (0%)      0 (0%)           0 (0%)         43h
-gatekeeper-system           gatekeeper-controller-manager-77768dcc76-fmggf                  100m (1%)     1 (12%)     256Mi (0%)       512Mi (1%)     20h
-kube-system                 alb-controller-aws-load-balancer-controller-579798fdbf-5w8zb    0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
-kube-system                 aws-cluster-autoscaler-84bd9c55fb-k28ps                         0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
-kube-system                 aws-node-lsfh6                                                  25m (0%)      0 (0%)      0 (0%)           0 (0%)         6d15h
-kube-system                 coredns-6dbb778559-5vn52                                        100m (1%)     0 (0%)      70Mi (0%)        170Mi (0%)     6d16h
-kube-system                 ebs-csi-node-q6df6                                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
-kube-system                 efs-csi-controller-664994d876-9wqqx                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         17h
-kube-system                 efs-csi-node-4x5tj                                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         17h
-kube-system                 kube-proxy-26nsg                                                100m (1%)     0 (0%)      0 (0%)           0 (0%)         6d15h
-linkerd-viz                 tap-766dd477f8-x2m94                                            200m (2%)     100m (1%)   70Mi (0%)        500Mi (1%)     16h
-linkerd                     linkerd-destination-7c8564ff97-g8gf6                            300m (3%)     100m (1%)   120Mi (0%)       750Mi (2%)     16h
-linkerd                     linkerd-identity-67bcfd69d4-l94zv                               200m (2%)     100m (1%)   30Mi (0%)        500Mi (1%)     16h
-linkerd                     linkerd-proxy-injector-6f464ddc76-98wj4                         200m (2%)     100m (1%)   70Mi (0%)        500Mi (1%)     16h
-litmus                      subscriber-cd959f546-4g8kx                                      125m (1%)     225m (2%)   300Mi (0%)       500Mi (1%)     22h
-litmus                      workflow-controller-856d568f68-wt6dj                            125m (1%)     225m (2%)   300Mi (0%)       500Mi (1%)     22h
-log-stack                   fluentd-ccwzk                                                   300m (3%)     300m (3%)   1Gi (3%)         1Gi (3%)       47h
-log-stack                   opensearch-cluster-coordinate-0                                 1 (12%)       1 (12%)     2Gi (6%)         2Gi (6%)       47h
-log-stack                   opensearch-cluster-master-0                                     1 (12%)       1 (12%)     2Gi (6%)         2Gi (6%)       47h
-scheduling-test             my-nginx-5b5f4bdd49-qwk7x                                       500m (6%)     1 (12%)     0 (0%)           0 (0%)         90s
-Allocated resources:
-(Total limits may be over 100 percent, i.e., overcommitted.)
-Resource                    Requests      Limits
-<hr>
-cpu                         4275m (54%)   5150m (65%)
-memory                      6336Mi (20%)  9052Mi (29%)
-ephemeral-storage           1000Mi (5%)   2Gi (11%)
-hugepages-1Gi               0 (0%)        0 (0%)
-hugepages-2Mi               0 (0%)        0 (0%)
-attachable-volumes-aws-ebs  0             0</li>
+<li>node 상태 조회</li>
 </ul>
-<pre tabindex="0"><code>
-### Deployment를 수정해 리소스 제한 요청을 늘려보자 
-- 기존 리소스 삭제
-</code></pre><p>$ kubectl delete -f nodeselectortest.yaml
-deployment.apps &ldquo;my-nginx&rdquo; deleted
-service &ldquo;my-nginx&rdquo; deleted
-ingress.extensions &ldquo;scheduling-ingress&rdquo; deleted</p>
-<pre tabindex="0"><code></code></pre><p>resources:
-requests:
-cpu: &ldquo;5000m&rdquo;
-limits:
-cpu: &ldquo;6000m&rdquo;</p>
-<pre tabindex="0"><code>
-- 현재 상태 확인
-</code></pre><p>$ kubectl describe nodes ip-10-83-80-162.ap-northeast-2.compute.internal
-&hellip;..
-Non-terminated Pods:          (19 in total)
-Namespace                   Name                                                            CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age</p>
-<hr>
-<p>code-server                 code-server-84f85bfbb7-q9rs5                                    0 (0%)        0 (0%)      0 (0%)           0 (0%)         43h
-gatekeeper-system           gatekeeper-controller-manager-77768dcc76-fmggf                  100m (1%)     1 (12%)     256Mi (0%)       512Mi (1%)     20h
-kube-system                 alb-controller-aws-load-balancer-controller-579798fdbf-5w8zb    0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
-kube-system                 aws-cluster-autoscaler-84bd9c55fb-k28ps                         0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
-kube-system                 aws-node-lsfh6                                                  25m (0%)      0 (0%)      0 (0%)           0 (0%)         6d16h
-kube-system                 coredns-6dbb778559-5vn52                                        100m (1%)     0 (0%)      70Mi (0%)        170Mi (0%)     6d16h
-kube-system                 ebs-csi-node-q6df6                                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
-kube-system                 efs-csi-controller-664994d876-9wqqx                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         18h
-kube-system                 efs-csi-node-4x5tj                                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         18h
-kube-system                 kube-proxy-26nsg                                                100m (1%)     0 (0%)      0 (0%)           0 (0%)         6d16h
-linkerd-viz                 tap-766dd477f8-x2m94                                            200m (2%)     100m (1%)   70Mi (0%)        500Mi (1%)     16h
-linkerd                     linkerd-destination-7c8564ff97-g8gf6                            300m (3%)     100m (1%)   120Mi (0%)       750Mi (2%)     16h
-linkerd                     linkerd-identity-67bcfd69d4-l94zv                               200m (2%)     100m (1%)   30Mi (0%)        500Mi (1%)     16h
-linkerd                     linkerd-proxy-injector-6f464ddc76-98wj4                         200m (2%)     100m (1%)   70Mi (0%)        500Mi (1%)     16h
-litmus                      subscriber-cd959f546-4g8kx                                      125m (1%)     225m (2%)   300Mi (0%)       500Mi (1%)     22h
-litmus                      workflow-controller-856d568f68-wt6dj                            125m (1%)     225m (2%)   300Mi (0%)       500Mi (1%)     22h
-log-stack                   fluentd-ccwzk                                                   300m (3%)     300m (3%)   1Gi (3%)         1Gi (3%)       47h
-log-stack                   opensearch-cluster-coordinate-0                                 1 (12%)       1 (12%)     2Gi (6%)         2Gi (6%)       47h
-log-stack                   opensearch-cluster-master-0                                     1 (12%)       1 (12%)     2Gi (6%)         2Gi (6%)       47h
+<pre tabindex="0"><code>......
+Non-terminated Pods:          (20 in total)
+  Namespace                   Name                                                            CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                                            ------------  ----------  ---------------  -------------  ---
+  code-server                 code-server-84f85bfbb7-q9rs5                                    0 (0%)        0 (0%)      0 (0%)           0 (0%)         43h
+  gatekeeper-system           gatekeeper-controller-manager-77768dcc76-fmggf                  100m (1%)     1 (12%)     256Mi (0%)       512Mi (1%)     20h
+  kube-system                 alb-controller-aws-load-balancer-controller-579798fdbf-5w8zb    0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
+  kube-system                 aws-cluster-autoscaler-84bd9c55fb-k28ps                         0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
+  kube-system                 aws-node-lsfh6                                                  25m (0%)      0 (0%)      0 (0%)           0 (0%)         6d15h
+  kube-system                 coredns-6dbb778559-5vn52                                        100m (1%)     0 (0%)      70Mi (0%)        170Mi (0%)     6d16h
+  kube-system                 ebs-csi-node-q6df6                                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
+  kube-system                 efs-csi-controller-664994d876-9wqqx                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         17h
+  kube-system                 efs-csi-node-4x5tj                                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         17h
+  kube-system                 kube-proxy-26nsg                                                100m (1%)     0 (0%)      0 (0%)           0 (0%)         6d15h
+  linkerd-viz                 tap-766dd477f8-x2m94                                            200m (2%)     100m (1%)   70Mi (0%)        500Mi (1%)     16h
+  linkerd                     linkerd-destination-7c8564ff97-g8gf6                            300m (3%)     100m (1%)   120Mi (0%)       750Mi (2%)     16h
+  linkerd                     linkerd-identity-67bcfd69d4-l94zv                               200m (2%)     100m (1%)   30Mi (0%)        500Mi (1%)     16h
+  linkerd                     linkerd-proxy-injector-6f464ddc76-98wj4                         200m (2%)     100m (1%)   70Mi (0%)        500Mi (1%)     16h
+  litmus                      subscriber-cd959f546-4g8kx                                      125m (1%)     225m (2%)   300Mi (0%)       500Mi (1%)     22h
+  litmus                      workflow-controller-856d568f68-wt6dj                            125m (1%)     225m (2%)   300Mi (0%)       500Mi (1%)     22h
+  log-stack                   fluentd-ccwzk                                                   300m (3%)     300m (3%)   1Gi (3%)         1Gi (3%)       47h
+  log-stack                   opensearch-cluster-coordinate-0                                 1 (12%)       1 (12%)     2Gi (6%)         2Gi (6%)       47h
+  log-stack                   opensearch-cluster-master-0                                     1 (12%)       1 (12%)     2Gi (6%)         2Gi (6%)       47h
+  scheduling-test             my-nginx-5b5f4bdd49-qwk7x                                       500m (6%)     1 (12%)     0 (0%)           0 (0%)         90s
 Allocated resources:
-(Total limits may be over 100 percent, i.e., overcommitted.)
-Resource                    Requests      Limits</p>
-<hr>
-<p>cpu                         3775m (47%)   4150m (52%)
-memory                      6336Mi (20%)  9052Mi (29%)
-ephemeral-storage           1000Mi (5%)   2Gi (11%)
-hugepages-1Gi               0 (0%)        0 (0%)
-hugepages-2Mi               0 (0%)        0 (0%)
-attachable-volumes-aws-ebs  0             0
-Events:                       <!-- raw HTML omitted --></p>
-<pre tabindex="0"><code>
-- 배포후 pod 상태 확인
-</code></pre><p>$ kubectl apply -f nodeselectortest.yaml
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource                    Requests      Limits
+  --------                    --------      ------
+  cpu                         4275m (54%)   5150m (65%)
+  memory                      6336Mi (20%)  9052Mi (29%)
+  ephemeral-storage           1000Mi (5%)   2Gi (11%)
+  hugepages-1Gi               0 (0%)        0 (0%)
+  hugepages-2Mi               0 (0%)        0 (0%)
+  attachable-volumes-aws-ebs  0             0
+</code></pre><h3 id="deployment를-수정해-리소스-제한-요청을-늘려보자">Deployment를 수정해 리소스 제한 요청을 늘려보자</h3>
+<ul>
+<li>기존 리소스 삭제</li>
+</ul>
+<pre tabindex="0"><code>$ kubectl delete -f nodeselectortest.yaml 
+deployment.apps &#34;my-nginx&#34; deleted
+service &#34;my-nginx&#34; deleted 
+ingress.extensions &#34;scheduling-ingress&#34; deleted
+</code></pre><pre tabindex="0"><code>resources:
+    requests: 
+        cpu: &#34;5000m&#34;
+    limits: 
+        cpu: &#34;6000m&#34;
+</code></pre><ul>
+<li>현재 상태 확인</li>
+</ul>
+<pre tabindex="0"><code>$ kubectl describe nodes ip-10-83-80-162.ap-northeast-2.compute.internal
+.....
+Non-terminated Pods:          (19 in total)
+  Namespace                   Name                                                            CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                                            ------------  ----------  ---------------  -------------  ---
+  code-server                 code-server-84f85bfbb7-q9rs5                                    0 (0%)        0 (0%)      0 (0%)           0 (0%)         43h
+  gatekeeper-system           gatekeeper-controller-manager-77768dcc76-fmggf                  100m (1%)     1 (12%)     256Mi (0%)       512Mi (1%)     20h
+  kube-system                 alb-controller-aws-load-balancer-controller-579798fdbf-5w8zb    0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
+  kube-system                 aws-cluster-autoscaler-84bd9c55fb-k28ps                         0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
+  kube-system                 aws-node-lsfh6                                                  25m (0%)      0 (0%)      0 (0%)           0 (0%)         6d16h
+  kube-system                 coredns-6dbb778559-5vn52                                        100m (1%)     0 (0%)      70Mi (0%)        170Mi (0%)     6d16h
+  kube-system                 ebs-csi-node-q6df6                                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
+  kube-system                 efs-csi-controller-664994d876-9wqqx                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         18h
+  kube-system                 efs-csi-node-4x5tj                                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         18h
+  kube-system                 kube-proxy-26nsg                                                100m (1%)     0 (0%)      0 (0%)           0 (0%)         6d16h
+  linkerd-viz                 tap-766dd477f8-x2m94                                            200m (2%)     100m (1%)   70Mi (0%)        500Mi (1%)     16h
+  linkerd                     linkerd-destination-7c8564ff97-g8gf6                            300m (3%)     100m (1%)   120Mi (0%)       750Mi (2%)     16h
+  linkerd                     linkerd-identity-67bcfd69d4-l94zv                               200m (2%)     100m (1%)   30Mi (0%)        500Mi (1%)     16h
+  linkerd                     linkerd-proxy-injector-6f464ddc76-98wj4                         200m (2%)     100m (1%)   70Mi (0%)        500Mi (1%)     16h
+  litmus                      subscriber-cd959f546-4g8kx                                      125m (1%)     225m (2%)   300Mi (0%)       500Mi (1%)     22h
+  litmus                      workflow-controller-856d568f68-wt6dj                            125m (1%)     225m (2%)   300Mi (0%)       500Mi (1%)     22h
+  log-stack                   fluentd-ccwzk                                                   300m (3%)     300m (3%)   1Gi (3%)         1Gi (3%)       47h
+  log-stack                   opensearch-cluster-coordinate-0                                 1 (12%)       1 (12%)     2Gi (6%)         2Gi (6%)       47h
+  log-stack                   opensearch-cluster-master-0                                     1 (12%)       1 (12%)     2Gi (6%)         2Gi (6%)       47h
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource                    Requests      Limits
+  --------                    --------      ------
+  cpu                         3775m (47%)   4150m (52%)
+  memory                      6336Mi (20%)  9052Mi (29%)
+  ephemeral-storage           1000Mi (5%)   2Gi (11%)
+  hugepages-1Gi               0 (0%)        0 (0%)
+  hugepages-2Mi               0 (0%)        0 (0%)
+  attachable-volumes-aws-ebs  0             0
+Events:                       &lt;none&gt;
+</code></pre><ul>
+<li>배포후 pod 상태 확인</li>
+</ul>
+<pre tabindex="0"><code>$ kubectl apply -f nodeselectortest.yaml
 deployment.apps/my-nginx created
-service/my-nginx created
-ingress.extensions/scheduling-ingress created</p>
-<p>$ kubectl get pods -n scheduling-test
+service/my-nginx created 
+ingress.extensions/scheduling-ingress created
+
+$ kubectl get pods -n scheduling-test
 NAME                        READY   STATUS    RESTARTS   AGE
-my-nginx-7cbcf9fb8d-lqcpg   0/1     Pending   0          13s</p>
-<pre tabindex="0"><code>
-- 로그 조회
-</code></pre><p>$ kubectl describe pods/my-nginx-7cbcf9fb8d-lqcpg -n scheduling-test</p>
-<p>Events:
-Type     Reason             Age                    From                Message</p>
-<hr>
-<p>Warning  FailedScheduling   5m28s (x2 over 5m29s)  default-scheduler   0/3 nodes are available: 1 Insufficient cpu, 2 node(s) didn&rsquo;t match Pod&rsquo;s node affinity/selector.
-Normal   TriggeredScaleUp   5m26s                  cluster-autoscaler  pod triggered scale-up: [{eks-black-nodegroup-20220708083127543500000015-58c0ee77-b6ac-cd2a-5d95-c6d8c8c059b3 3-&gt;4 (max: 6)}]
-Warning  FailedScheduling   4m15s (x3 over 4m43s)  default-scheduler   0/4 nodes are available: 1 Insufficient cpu, 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn&rsquo;t tolerate, 2 node(s) didn&rsquo;t match Pod&rsquo;s node affinity/selector.
-Warning  FailedScheduling   3m55s (x2 over 4m5s)   default-scheduler   0/4 nodes are available: 1 Insufficient cpu, 3 node(s) didn&rsquo;t match Pod&rsquo;s node affinity/selector.
-Warning  FailedScheduling   2m51s (x3 over 3m19s)  default-scheduler   0/5 nodes are available: 1 Insufficient cpu, 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn&rsquo;t tolerate, 3 node(s) didn&rsquo;t match Pod&rsquo;s node affinity/selector.
-Warning  FailedScheduling   2m31s (x2 over 2m41s)  default-scheduler   0/5 nodes are available: 1 Insufficient cpu, 4 node(s) didn&rsquo;t match Pod&rsquo;s node affinity/selector.
-Warning  FailedScheduling   93s (x3 over 2m1s)     default-scheduler   0/6 nodes are available: 1 Insufficient cpu, 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn&rsquo;t tolerate, 4 node(s) didn&rsquo;t match Pod&rsquo;s node affinity/selector.
-Warning  FailedScheduling   72s (x2 over 82s)      default-scheduler   0/6 nodes are available: 1 Insufficient cpu, 5 node(s) didn&rsquo;t match Pod&rsquo;s node affinity/selector.
-Normal   NotTriggerScaleUp  24s (x10 over 2m35s)   cluster-autoscaler  pod didn&rsquo;t trigger scale-up: 1 max node group size reached</p>
-<pre tabindex="0"><code>
-### 확인 결과
-Running중인 pod의 드레인이나 리스케줄링 같은 특이상황은 관찰되지 않았으며, 리소스 부족으로 오토스케일링이 발생하여 max 값까지 노드들이 증가하지만
-레이블이 존재하지 않으므로 pod 배포에 실패한다. 
-</code></pre>
+my-nginx-7cbcf9fb8d-lqcpg   0/1     Pending   0          13s
+</code></pre><ul>
+<li>로그 조회</li>
+</ul>
+<pre tabindex="0"><code>$ kubectl describe pods/my-nginx-7cbcf9fb8d-lqcpg -n scheduling-test
+
+Events:
+  Type     Reason             Age                    From                Message
+  ----     ------             ----                   ----                -------
+  Warning  FailedScheduling   5m28s (x2 over 5m29s)  default-scheduler   0/3 nodes are available: 1 Insufficient cpu, 2 node(s) didn&#39;t match Pod&#39;s node affinity/selector.
+  Normal   TriggeredScaleUp   5m26s                  cluster-autoscaler  pod triggered scale-up: [{eks-black-nodegroup-20220708083127543500000015-58c0ee77-b6ac-cd2a-5d95-c6d8c8c059b3 3-&gt;4 (max: 6)}]
+  Warning  FailedScheduling   4m15s (x3 over 4m43s)  default-scheduler   0/4 nodes are available: 1 Insufficient cpu, 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn&#39;t tolerate, 2 node(s) didn&#39;t match Pod&#39;s node affinity/selector.
+  Warning  FailedScheduling   3m55s (x2 over 4m5s)   default-scheduler   0/4 nodes are available: 1 Insufficient cpu, 3 node(s) didn&#39;t match Pod&#39;s node affinity/selector.
+  Warning  FailedScheduling   2m51s (x3 over 3m19s)  default-scheduler   0/5 nodes are available: 1 Insufficient cpu, 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn&#39;t tolerate, 3 node(s) didn&#39;t match Pod&#39;s node affinity/selector.
+  Warning  FailedScheduling   2m31s (x2 over 2m41s)  default-scheduler   0/5 nodes are available: 1 Insufficient cpu, 4 node(s) didn&#39;t match Pod&#39;s node affinity/selector.
+  Warning  FailedScheduling   93s (x3 over 2m1s)     default-scheduler   0/6 nodes are available: 1 Insufficient cpu, 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn&#39;t tolerate, 4 node(s) didn&#39;t match Pod&#39;s node affinity/selector.
+  Warning  FailedScheduling   72s (x2 over 82s)      default-scheduler   0/6 nodes are available: 1 Insufficient cpu, 5 node(s) didn&#39;t match Pod&#39;s node affinity/selector.
+  Normal   NotTriggerScaleUp  24s (x10 over 2m35s)   cluster-autoscaler  pod didn&#39;t trigger scale-up: 1 max node group size reached
+</code></pre><h3 id="확인-결과">확인 결과</h3>
+<p>Running중인 pod의 드레인이나 리스케줄링 같은 특이상황은 관찰되지 않았으며, 리소스 부족으로 오토스케일링이 발생하여 max 값까지 노드들이 증가하지만
+레이블이 존재하지 않으므로 pod 배포에 실패한다.</p>
+
 
 <footer class="footline">
 	
@@ -1195,16 +1202,16 @@ Running중인 pod의 드레인이나 리스케줄링 같은 특이상황은 관�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1657846225"></script>
-    <script src="/js/perfect-scrollbar.min.js?1657846225"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1657846225"></script>
-    <script src="/js/jquery.sticky.js?1657846225"></script>
-    <script src="/js/featherlight.min.js?1657846225"></script>
-    <script src="/js/highlight.pack.js?1657846225"></script>
+    <script src="/js/clipboard.min.js?1657846631"></script>
+    <script src="/js/perfect-scrollbar.min.js?1657846631"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1657846631"></script>
+    <script src="/js/jquery.sticky.js?1657846631"></script>
+    <script src="/js/featherlight.min.js?1657846631"></script>
+    <script src="/js/highlight.pack.js?1657846631"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1657846225"></script>
-    <script src="/js/learn.js?1657846225"></script>
-    <script src="/js/hugo-learn.js?1657846225"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1657846631"></script>
+    <script src="/js/learn.js?1657846631"></script>
+    <script src="/js/hugo-learn.js?1657846631"></script>
     
         
             <script src="https://unpkg.com/mermaid@9.1.3/dist/mermaid.min.js"></script>
