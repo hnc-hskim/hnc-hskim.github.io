@@ -12,22 +12,22 @@
     <title>Scheduling :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1657846631" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1657846631" rel="stylesheet">
-    <link href="/css/hybrid.css?1657846631" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1657846631" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1657846631" rel="stylesheet">
-    <link href="/css/auto-complete.css?1657846631" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1657846631" rel="stylesheet">
-    <link href="/css/theme.css?1657846631" rel="stylesheet">
-    <link href="/css/tabs.css?1657846631" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1657846631" rel="stylesheet">
+    <link href="/css/nucleus.css?1657847832" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1657847832" rel="stylesheet">
+    <link href="/css/hybrid.css?1657847832" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1657847832" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1657847832" rel="stylesheet">
+    <link href="/css/auto-complete.css?1657847832" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1657847832" rel="stylesheet">
+    <link href="/css/theme.css?1657847832" rel="stylesheet">
+    <link href="/css/tabs.css?1657847832" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1657847832" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1657846631" rel="stylesheet">
+    <link href="/css/theme-green.css?1657847832" rel="stylesheet">
     
-    <link href="/css/msa-style.css?1657846631" rel="stylesheet">
+    <link href="/css/msa-style.css?1657847832" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1657846631"></script>
+    <script src="/js/jquery-3.3.1.min.js?1657847832"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1657846631"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1657846631"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1657847832"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1657847832"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hnc-hskim.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1657846631"></script>
+<script type="text/javascript" src="/js/search.js?1657847832"></script>
 
     
   </div>
@@ -497,6 +497,8 @@
         <li><a href="#label을-이용한-특정-node에-pod-배포">label을 이용한 특정 Node에 Pod 배포</a></li>
         <li><a href="#deployment를-수정해-리소스-제한-요청을-늘려보자">Deployment를 수정해 리소스 제한 요청을 늘려보자</a></li>
         <li><a href="#확인-결과">확인 결과</a></li>
+        <li><a href="#priorityclassname-적용후-동작-확인">priorityClassName 적용후 동작 확인</a></li>
+        <li><a href="#결론">결론</a></li>
       </ul>
     </li>
   </ul>
@@ -949,6 +951,48 @@ Events:
 </code></pre><h3 id="확인-결과">확인 결과</h3>
 <p>Running중인 pod의 드레인이나 리스케줄링 같은 특이상황은 관찰되지 않았으며, 리소스 부족으로 오토스케일링이 발생하여 max 값까지 노드들이 증가하지만
 레이블이 존재하지 않으므로 pod 배포에 실패한다.</p>
+<h3 id="priorityclassname-적용후-동작-확인">priorityClassName 적용후 동작 확인</h3>
+<ul>
+<li>priorityClass 적용</li>
+</ul>
+<pre tabindex="0"><code>nodeSelector:
+        key: mytest-node
+priorityClassName: system-cluster-critical
+</code></pre><ul>
+<li>배포 성공 및 기존 pod 드레인 확인</li>
+</ul>
+<pre tabindex="0"><code>Non-terminated Pods:          (16 in total)
+  Namespace                   Name                                                            CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                                            ------------  ----------  ---------------  -------------  ---
+  code-server                 code-server-84f85bfbb7-q9rs5                                    0 (0%)        0 (0%)      0 (0%)           0 (0%)         43h
+  gatekeeper-system           gatekeeper-controller-manager-77768dcc76-fmggf                  100m (1%)     1 (12%)     256Mi (0%)       512Mi (1%)     20h
+  kube-system                 alb-controller-aws-load-balancer-controller-579798fdbf-5w8zb    0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
+  kube-system                 aws-cluster-autoscaler-84bd9c55fb-k28ps                         0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
+  kube-system                 aws-node-lsfh6                                                  25m (0%)      0 (0%)      0 (0%)           0 (0%)         6d16h
+  kube-system                 coredns-6dbb778559-5vn52                                        100m (1%)     0 (0%)      70Mi (0%)        170Mi (0%)     6d16h
+  kube-system                 ebs-csi-node-q6df6                                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         6d15h
+  kube-system                 efs-csi-controller-664994d876-9wqqx                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         18h
+  kube-system                 efs-csi-node-4x5tj                                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         18h
+  kube-system                 kube-proxy-26nsg                                                100m (1%)     0 (0%)      0 (0%)           0 (0%)         6d16h
+  litmus                      subscriber-cd959f546-4g8kx                                      125m (1%)     225m (2%)   300Mi (0%)       500Mi (1%)     22h
+  litmus                      workflow-controller-856d568f68-wt6dj                            125m (1%)     225m (2%)   300Mi (0%)       500Mi (1%)     22h
+  log-stack                   fluentd-ccwzk                                                   300m (3%)     300m (3%)   1Gi (3%)         1Gi (3%)       47h
+  log-stack                   opensearch-cluster-coordinate-0                                 1 (12%)       1 (12%)     2Gi (6%)         2Gi (6%)       47h
+  log-stack                   opensearch-cluster-master-0                                     1 (12%)       1 (12%)     2Gi (6%)         2Gi (6%)       47h
+  scheduling-test             my-nginx-7c9849cffb-nr6gn                                       5 (63%)       6 (75%)     0 (0%)           0 (0%)         99s
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource                    Requests      Limits
+  --------                    --------      ------
+  cpu                         7875m (99%)   9750m (123%)
+  memory                      6046Mi (19%)  6802Mi (22%)
+  ephemeral-storage           1000Mi (5%)   2Gi (11%)
+  hugepages-1Gi               0 (0%)        0 (0%)
+  hugepages-2Mi               0 (0%)        0 (0%)
+  attachable-volumes-aws-ebs  0             0
+Events:                       &lt;none&gt;
+</code></pre><h3 id="결론">결론</h3>
+<p>우선순위가 낮은 pod들이 이동되는것을 확인함</p>
 
 
 <footer class="footline">
@@ -1202,16 +1246,16 @@ Events:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1657846631"></script>
-    <script src="/js/perfect-scrollbar.min.js?1657846631"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1657846631"></script>
-    <script src="/js/jquery.sticky.js?1657846631"></script>
-    <script src="/js/featherlight.min.js?1657846631"></script>
-    <script src="/js/highlight.pack.js?1657846631"></script>
+    <script src="/js/clipboard.min.js?1657847833"></script>
+    <script src="/js/perfect-scrollbar.min.js?1657847833"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1657847833"></script>
+    <script src="/js/jquery.sticky.js?1657847833"></script>
+    <script src="/js/featherlight.min.js?1657847833"></script>
+    <script src="/js/highlight.pack.js?1657847833"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1657846631"></script>
-    <script src="/js/learn.js?1657846631"></script>
-    <script src="/js/hugo-learn.js?1657846631"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1657847833"></script>
+    <script src="/js/learn.js?1657847833"></script>
+    <script src="/js/hugo-learn.js?1657847833"></script>
     
         
             <script src="https://unpkg.com/mermaid@9.1.3/dist/mermaid.min.js"></script>
