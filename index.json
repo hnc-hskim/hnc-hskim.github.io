@@ -1,5 +1,19 @@
 [
 {
+	"uri": "https://hnc-hskim.github.io/references/",
+	"title": "References",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hnc-hskim.github.io/references/terraform/",
+	"title": "Terraform",
+	"tags": [],
+	"description": "",
+	"content": "참고  helm values파일내 환경변수 전달 nginx controller acm 적용  "
+},
+{
 	"uri": "https://hnc-hskim.github.io/hugo/comments/",
 	"title": "Comments",
 	"tags": [],

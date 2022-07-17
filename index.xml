@@ -8,6 +8,15 @@
     <language>ko-kr</language>
     <lastBuildDate>Wed, 13 Jul 2022 09:00:36 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Terraform</title>
+      <link>https://hnc-hskim.github.io/references/terraform/</link>
+      <pubDate>Fri, 15 Jul 2022 13:52:27 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/references/terraform/</guid>
+      <description>참고  helm values파일내 환경변수 전달 nginx controller acm 적용  </description>
+    </item>
+    
+    <item>
       <title>Comments</title>
       <link>https://hnc-hskim.github.io/hugo/comments/</link>
       <pubDate>Fri, 15 Jul 2022 11:57:37 +0900</pubDate>

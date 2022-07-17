@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Aws Cli :: My New Hugo Site</title>
+    <title>Terraform :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1658102133" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/kubernetes/aws-cli/">
+  <body class="" data-url="/references/terraform/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -84,7 +84,7 @@
   
     
     <li data-nav-id="/references/" title="References" class="dd-item
-        
+        parent
         
         
         ">
@@ -112,7 +112,7 @@
  
   
     
-      <li data-nav-id="/references/terraform/" title="Terraform" class="dd-item ">
+      <li data-nav-id="/references/terraform/" title="Terraform" class="dd-item active">
         <a href="/references/terraform/">
         Terraform
         <i class="fas fa-check read-icon"></i>
@@ -415,7 +415,7 @@
   
     
     <li data-nav-id="/kubernetes/" title="Kubernetes" class="dd-item
-        parent
+        
         
         
         ">
@@ -443,7 +443,7 @@
  
   
     
-      <li data-nav-id="/kubernetes/aws-cli/" title="Aws Cli" class="dd-item active">
+      <li data-nav-id="/kubernetes/aws-cli/" title="Aws Cli" class="dd-item ">
         <a href="/kubernetes/aws-cli/">
         Aws Cli
         <i class="fas fa-check read-icon"></i>
@@ -523,7 +523,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/kubernetes/aws-cli.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/references/terraform.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -554,7 +554,7 @@
             
           
           
-            <a href='/'></a> > <a href='/kubernetes/'>Kubernetes</a> > Aws Cli
+            <a href='/'></a> > <a href='/references/'>References</a> > Terraform
           
         
           
@@ -569,11 +569,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#aws-계정-정보-조회">aws 계정 정보 조회</a></li>
-      </ul>
-    </li>
+    <li><a href="#참고">참고</a></li>
   </ul>
 </nav>
     </div>
@@ -591,18 +587,19 @@
           
             <h1>
               
-              Aws Cli
+              Terraform
             </h1>
           
 
         
 
 
-<h3 id="aws-계정-정보-조회">aws 계정 정보 조회</h3>
-<pre tabindex="0"><code>aws sts get-caller-identity --profile &#34;name&#34; 
-</code></pre><h1 id="kubeconfig-등록">kubeconfig 등록</h1>
-<pre tabindex="0"><code>aws eks --profile &#34;profile name&#34; update-kubeconfig --name &#34;cluster name&#34; --region ap-northeast-2 
-</code></pre>
+<h2 id="참고">참고</h2>
+<ol>
+<li><a href="https://stackoverflow.com/questions/64696721/how-do-i-pass-variables-to-a-yaml-file-in-heml-tf">helm values파일내 환경변수 전달</a></li>
+<li><a href="https://jenakim47.tistory.com/78">nginx controller acm 적용</a></li>
+</ol>
+
 
 <footer class="footline">
 	
@@ -639,8 +636,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -654,6 +649,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -674,116 +670,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -828,14 +716,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
                     
                 
                 
@@ -849,7 +733,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -862,13 +745,124 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
                     
+                
+                
+
+                    
+                    
                         
+                    
+                    
+
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -893,10 +887,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/kubernetes/" title="Kubernetes"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/references/" title="References"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/kubernetes/cli/" title="Cli" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/hugo/" title="Hugoes" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
