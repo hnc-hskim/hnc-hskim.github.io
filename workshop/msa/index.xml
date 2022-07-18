@@ -8,6 +8,18 @@
     <language>ko-kr</language>
     <lastBuildDate>Tue, 12 Jul 2022 13:38:31 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/workshop/msa/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Software Architecture Pattern</title>
+      <link>https://hnc-hskim.github.io/workshop/msa/software-architecture-pattern/</link>
+      <pubDate>Mon, 18 Jul 2022 16:48:39 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/msa/software-architecture-pattern/</guid>
+      <description>[참고] https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013
+[Architectural patterns] https://www.ou.nl/documents/40554/791670/IM0203_03.pdf/30dae517-691e-b3c7-22ed-a55ad27726d6
+10가지 소프트웨어 아키텍처 패턴  계층화 패턴 (Layered pattern) 클라이언트-서버 패턴 (Client-server pattern) 마스터-슬레이브 패턴 (Master-slave pattern) 파이프-필터 패턴 (Pipe-filter pattern) 브로커 패턴 (Broker pattern) 피어 투 피어 패턴 (Peer-to-peer pattern) 이벤트-버스 패턴 (Event-bus pattern) 모델-뷰-컨트롤러 패턴 (Model-view-controller pattern) 블랙보드 패턴 (Blackboard pattern) 인터프리터 패턴 (Interpreter pattern)  1. 계층화 패턴 (Layered pattern) 계층화 패턴에서 흔히 볼 수 있는 4개의 계층은 다음과 같다.
+ 프레젠테이션 계층 ( UI 계층 이라고도 함 ) 애플리케이션 계층 ( 서비스 계층 이라고도 함 ) 비즈니스 논리 계층 ( 도메인 계층 이라고도 함 ) 데이터 액세스 계층 ( 지속성 계층 이라고도 함 )  (1) 일반 데스크탑 애플리케이션</description>
+    </item>
+    
+    <item>
       <title>Software Architecture</title>
       <link>https://hnc-hskim.github.io/workshop/msa/software-architecture/</link>
       <pubDate>Tue, 12 Jul 2022 15:43:56 +0900</pubDate>

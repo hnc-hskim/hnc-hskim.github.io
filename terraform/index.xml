@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terraforms on My New Hugo Site</title>
+    <link>https://hnc-hskim.github.io/terraform/</link>
+    <description>Recent content in Terraforms on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 18 Jul 2022 14:19:28 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://hnc-hskim.github.io/terraform/introduction/</link>
+      <pubDate>Mon, 18 Jul 2022 14:19:28 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/terraform/introduction/</guid>
+      <description>테라폼(Terraform)은 하시코프(Hashicorp)에서 오픈소스로 개발중인 클라우드 인프라스트럭처 자동화를 지향하는 코드로서의 인프라스트럭처(Infrastructure as Code), IaC1 도구입니다.
+AWS 클라우드 포메이션AWS CloudFormation의 경우 AWS만 지원하는 것과 달리 테라폼의 경우 아마존 웹 서비스, 구글 클라우드 플랫폼(Google Cloud Platform), 마이크로소프트 애저(Microsoft Azure)와 같은 주요 클라우드 서비스를 비롯한 다양한 클라우드 서비스들을 프로바이더 방식으로 제공하고 있습니다. 이를 통해 테라폼만으로 멀티 클라우드의 리소스들을 선언하고 코드로 관리하는 것도 가능합니다.
+테라폼은 고(Go) 프로그래밍 언어로 개발 되고 있습니다.
+테라폼 공식 홈
+  IaC는 코드로 인프라스트럭처를 관리한다는 개념으로 테라폼에서는 하시코프 설정 언어(HCL, Hashicorp Configuration Language)을 사용해 클라우드 리소스를 선언합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

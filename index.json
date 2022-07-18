@@ -1,5 +1,40 @@
 [
 {
+	"uri": "https://hnc-hskim.github.io/workshop/msa/software-architecture-pattern/",
+	"title": "Software Architecture Pattern",
+	"tags": [],
+	"description": "",
+	"content": "[참고] https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013\n[Architectural patterns] https://www.ou.nl/documents/40554/791670/IM0203_03.pdf/30dae517-691e-b3c7-22ed-a55ad27726d6\n10가지 소프트웨어 아키텍처 패턴  계층화 패턴 (Layered pattern) 클라이언트-서버 패턴 (Client-server pattern) 마스터-슬레이브 패턴 (Master-slave pattern) 파이프-필터 패턴 (Pipe-filter pattern) 브로커 패턴 (Broker pattern) 피어 투 피어 패턴 (Peer-to-peer pattern) 이벤트-버스 패턴 (Event-bus pattern) 모델-뷰-컨트롤러 패턴 (Model-view-controller pattern) 블랙보드 패턴 (Blackboard pattern) 인터프리터 패턴 (Interpreter pattern)  1. 계층화 패턴 (Layered pattern) 계층화 패턴에서 흔히 볼 수 있는 4개의 계층은 다음과 같다.\n 프레젠테이션 계층 ( UI 계층 이라고도 함 ) 애플리케이션 계층 ( 서비스 계층 이라고도 함 ) 비즈니스 논리 계층 ( 도메인 계층 이라고도 함 ) 데이터 액세스 계층 ( 지속성 계층 이라고도 함 )  (1) 일반 데스크탑 애플리케이션\n(2) 전자 상거래 웹 애플리케이션\n\r2. 클라이언트-서버 패턴 (Client-server pattern) 흔히 사용되는 패턴입니다. 서버와 여러 클라이언트가 존재할 수 있습니다. 서버는 여러 클라이언트에 서비스를 제공합니다.\n 클라이언트는 서버에 서비스 요청 서버는 클라이언트에 서비스 제공 서버는 클라이언트 요청을 계속 수신  3. 마스터-슬레이브 패턴 (Master-slave pattern) 서비스 주체가 Master와 Slave로 구성됩니다. 마스터 컴포넌트는 슬래이브 컴포넌트간에 작업을 분배하고 슬래이가 반환한 결과로부터 최종 결과를 계산합니다.\n(1) 데이터베이스 복제\n\r4. 파이프-필터 패턴 (Pipe-filter pattern) 데이터스트림을 생성하고 가공하는 시스템을 구성하는데 사용할 수 있습니다. 각 단계는 필터 구성 요소로 구분되고 처리 데이터는 파이프를 통해 전달됩니다.\n(1) 컴파일러\n\r5. 브로커 패턴 (Broker pattern) 분리된 구성 요소가 있는 분산 시스템을 구성하는데 사용됩니다. 원격 서비스 호출을 통해 서로 상호작용할 수 있습니다. 브로커 구성 요소는 구성 요소간의 통신을 담당합니다.\n(1) Apache ActiveMQ (2) Apache Kafka (3) RabbitMQ\n\r6. 피어 투 피어 패턴 (Peer-to-peer pattern) 개별 구성요소는 피어로 표현하며, 각 피어는 다른 피어에게 서비스를 요청하는 클라이언트와 다른 피어에게 서비스를 제공하는 서버역할을 모두 할 수 있습니다.\n(1) 파일 공유 네트워크(Gnutella) (2) 블록체인 기반 상품\n\r7. 이벤트-버스 패턴 (Event-bus pattern) 이벤트 소스, 이벤트 리스터, 채널 및 이벤트 버스 4가지 구성요소로 구성됩니다. 소스는 이벤트 버스의 특정 채널에 메시지를 게시합니다. 청취자는 특정 채널을 구독합니다. 리스너트 이전에 구독한 채널에 게시된 메시지에 대한 알림을 받습니다.\n(1) 안드로이드 개발 (2) 알림서비스\n\r8. 모델-뷰-컨트롤러 패턴 (Model-view-controller pattern) MVC 패턴으로 불리며 대화형 애플리케이션을 구성하는데 사용됩니다.\n Model : 핵심 기능 및 데이터 View : 사용자에게 정보를 표시 Controller : 사용자의 입력을 처리  (1) 웹 애플리케이션을 위한 아키텍처로 사용\n\r9. 블랙보드 패턴 (Blackboard pattern) 이 패턴은 솔루션이 결정되지 않은 문제에 유용합니다.\n blackboard : 솔루션 공간의 객체를 포함하는 구조화된 전역 메모리 지식 소스 : 고유한 표현이 있는 특수 모듈 제어 구성 요소 : 모듈을 선택하고 구성 및 실행합니다.  (1) 음성 인식 (2) 차량 식별 및 추적\n\r10. 인터프리터 패턴 (Interpreter pattern) 이 패턴은 전용 언어로 작성된 프로그램을 해석하는 구성 요소를 설계하는데 사용됩니다. 기본 아이디어는 언어의 각 기호에 대한 클래스를 구성하는것입니다.\n(1) SQL과 같은 데이터베이스 쿼리 언어 (2) 통신 프로토콜에 사용\n\r"
+},
+{
+	"uri": "https://hnc-hskim.github.io/workshop/",
+	"title": "Workshops",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hnc-hskim.github.io/terraform/introduction/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "테라폼(Terraform)은 하시코프(Hashicorp)에서 오픈소스로 개발중인 클라우드 인프라스트럭처 자동화를 지향하는 코드로서의 인프라스트럭처(Infrastructure as Code), IaC1 도구입니다.\nAWS 클라우드 포메이션AWS CloudFormation의 경우 AWS만 지원하는 것과 달리 테라폼의 경우 아마존 웹 서비스, 구글 클라우드 플랫폼(Google Cloud Platform), 마이크로소프트 애저(Microsoft Azure)와 같은 주요 클라우드 서비스를 비롯한 다양한 클라우드 서비스들을 프로바이더 방식으로 제공하고 있습니다. 이를 통해 테라폼만으로 멀티 클라우드의 리소스들을 선언하고 코드로 관리하는 것도 가능합니다.\n테라폼은 고(Go) 프로그래밍 언어로 개발 되고 있습니다.\n테라폼 공식 홈\n  IaC는 코드로 인프라스트럭처를 관리한다는 개념으로 테라폼에서는 하시코프 설정 언어(HCL, Hashicorp Configuration Language)을 사용해 클라우드 리소스를 선언합니다.\u0026#160;\u0026#x21a9;\u0026#xfe0e;\n   "
+},
+{
+	"uri": "https://hnc-hskim.github.io/terraform/",
+	"title": "Terraforms",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hnc-hskim.github.io/references/kubernetes/",
+	"title": "Kubernetes",
+	"tags": [],
+	"description": "",
+	"content": "참고  Advanced Scheduling  "
+},
+{
 	"uri": "https://hnc-hskim.github.io/references/",
 	"title": "References",
 	"tags": [],
@@ -47,13 +82,6 @@
 	"tags": [],
 	"description": "",
 	"content": "\rcode server를 활용한 실습 환경 구성이 가능한지 검증해보자.\n\rVS code extentions  cloud code kubernetes  [참고] https://www.sobyte.net/post/2021-12/deploy-vscode-on-k8s/\n[참고2] https://github.com/coder/coder\n아래 명세서를 파일로 저장후 배포한다. (패스워드및 네임스페이스 확인)  code-server.yaml  apiVersion: v1 kind: Namespace metadata: name: code-server --- apiVersion: v1 kind: Service metadata: name: code-server namespace: code-server spec: ports: - port: 80 targetPort: 8080 selector: app: code-server --- apiVersion: apps/v1 kind: Deployment metadata: labels: app: code-server name: code-server namespace: code-server spec: selector: matchLabels: app: code-server template: metadata: labels: app: code-server spec: containers: - image: codercom/code-server imagePullPolicy: IfNotPresent name: code-server ports: - containerPort: 8080 env: - name: PASSWORD value: \u0026#34;your password\u0026#34; --- apiVersion: extensions/v1beta1 kind: Ingress metadata: name: code-server-ingress namespace: code-server annotations: kubernetes.io/ingress.class: nginx spec: rules: - host: \u0026#34;your_host_name.example.com\u0026#34; http: paths: - backend: serviceName: code-server servicePort: 80 ingress 확인(Host에 접속) kubectl get ingress -n code-server NAME CLASS HOSTS ADDRESS PORTS AGE code-server-ingress \u0026lt;none\u0026gt; code.**********.com a**************1-716630360.ap-northeast-2.elb.amazonaws.com 80 16m 접속 화면 web vs code 화면 sample HTML  Extension을 선택하고 Live Preview 검색후 설치한다.  node.js 설치  터미널을 열고 다음 항목을 붙여 넣는다.  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - sudo apt-get install -y nodejs "
-},
-{
-	"uri": "https://hnc-hskim.github.io/workshop/",
-	"title": "Workshops",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "https://hnc-hskim.github.io/hugo/style/",
