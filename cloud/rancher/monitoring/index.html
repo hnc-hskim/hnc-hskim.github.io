@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Aws Cli :: My New Hugo Site</title>
+    <title>Monitoring :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1658208497" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/kubernetes/aws-cli/">
+  <body class="" data-url="/cloud/rancher/monitoring/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -84,7 +84,7 @@
   
     
     <li data-nav-id="/cloud/" title="Clouds" class="dd-item
-        
+        parent
         
         
         ">
@@ -112,7 +112,7 @@
  
   
     
-      <li data-nav-id="/cloud/rancher/monitoring/" title="Monitoring" class="dd-item ">
+      <li data-nav-id="/cloud/rancher/monitoring/" title="Monitoring" class="dd-item active">
         <a href="/cloud/rancher/monitoring/">
         Monitoring
         <i class="fas fa-check read-icon"></i>
@@ -535,7 +535,7 @@
   
     
     <li data-nav-id="/kubernetes/" title="Kubernetes" class="dd-item
-        parent
+        
         
         
         ">
@@ -563,7 +563,7 @@
  
   
     
-      <li data-nav-id="/kubernetes/aws-cli/" title="Aws Cli" class="dd-item active">
+      <li data-nav-id="/kubernetes/aws-cli/" title="Aws Cli" class="dd-item ">
         <a href="/kubernetes/aws-cli/">
         Aws Cli
         <i class="fas fa-check read-icon"></i>
@@ -643,7 +643,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/kubernetes/aws-cli.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/cloud/rancher/monitoring.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -674,7 +674,7 @@
             
           
           
-            <a href='/'></a> > <a href='/kubernetes/'>Kubernetes</a> > Aws Cli
+            <a href='/'></a> > <a href='/cloud/'>Clouds</a> > Monitoring
           
         
           
@@ -689,11 +689,17 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#rancher에-모니터링-도구-설치-및-gpu-모니터링">Rancher에 모니터링 도구 설치 및 GPU 모니터링</a></li>
+    <li><a href="#references">References</a>
       <ul>
-        <li><a href="#aws-계정-정보-조회">aws 계정 정보 조회</a></li>
+        <li><a href="#rancher에서-monitoring-도구-설치">rancher에서 monitoring 도구 설치</a></li>
+        <li><a href="#gpu-노드-모니터링을-위한-dcgm-exporter-설치">GPU 노드 모니터링을 위한 dcgm-exporter 설치</a></li>
+        <li><a href="#exporter-추가후-동작-확인">exporter 추가후 동작 확인</a></li>
+        <li><a href="#crashloopbackoff-상태-확인">CrashLoopBackoff 상태 확인</a></li>
+        <li><a href="#해결">해결</a></li>
       </ul>
     </li>
+    <li><a href="#grafana로-이동후-gpu-dashboard-설치">grafana로 이동후 gpu dashboard 설치</a></li>
   </ul>
 </nav>
     </div>
@@ -711,18 +717,291 @@
           
             <h1>
               
-              Aws Cli
+              Monitoring
             </h1>
           
 
         
 
 
-<h3 id="aws-계정-정보-조회">aws 계정 정보 조회</h3>
-<pre tabindex="0"><code>aws sts get-caller-identity --profile &#34;name&#34; 
-</code></pre><h1 id="kubeconfig-등록">kubeconfig 등록</h1>
-<pre tabindex="0"><code>aws eks --profile &#34;profile name&#34; update-kubeconfig --name &#34;cluster name&#34; --region ap-northeast-2 
-</code></pre>
+<h2 id="rancher에-모니터링-도구-설치-및-gpu-모니터링">Rancher에 모니터링 도구 설치 및 GPU 모니터링</h2>
+<h2 id="references">References</h2>
+<ul>
+<li>[참고1] <a href="https://nvidia.github.io/gpu-monitoring-tools/">https://nvidia.github.io/gpu-monitoring-tools/</a></li>
+<li>[참고2] <a href="https://passwd.tistory.com/entry/NVIDIAgpu-monitoring-tools-dcgm-exporter-CrashLoopBackOff">https://passwd.tistory.com/entry/NVIDIAgpu-monitoring-tools-dcgm-exporter-CrashLoopBackOff</a></li>
+</ul>
+<h3 id="rancher에서-monitoring-도구-설치">rancher에서 monitoring 도구 설치</h3>
+<ul>
+<li>
+<p>Apps -&gt; Charts 이동후 monitoring 검색
+<img src="./charts.png" alt="charts"></p>
+</li>
+<li>
+<p>Monitoring 설치
+설치를 진행하면 모니터링 앱은 Rancher 의 cattle-monitoring-system namespace 에 배포됨<br>
+(설치후 랜처 로그아웃후 다시 로그인)</p>
+</li>
+<li>
+<p>네비게이션 영역을 보면 Monitoring 메뉴가 추가되어 있음
+<img src="./navigationbar.png" alt="navigationbar"></p>
+</li>
+<li>
+<p>대쉬보드 확인
+<img src="./dashboard.png" alt="dashboard"></p>
+</li>
+<li>
+<p>grafana 확인
+<img src="./grafana.png" alt="grafana"></p>
+</li>
+</ul>
+
+<div class="notices tip" ><p>그라파나에 로그인합니다. Grafana 인스턴스의 기본 관리자 사용자 이름과 비밀번호는 입니다 admin/prom-operator. (비밀번호가 있는 사람에 관계없이 Rancher의 클러스터 관리자 권한은 여전히 ​​Grafana 인스턴스에 액세스해야 합니다.) 차트를 배포하거나 업그레이드할 때 대체 자격 증명을 제공할 수도 있습니다.</p>
+</div>
+
+<h3 id="gpu-노드-모니터링을-위한-dcgm-exporter-설치">GPU 노드 모니터링을 위한 dcgm-exporter 설치</h3>
+<ul>
+<li>Helm v3 설치</li>
+</ul>
+<pre tabindex="0"><code>curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 &amp;&amp; \
+    chmod 700 get_helm.sh &amp;&amp; \
+    ./get_helm.sh
+</code></pre><ul>
+<li>Helm 저장소 설정</li>
+</ul>
+<pre tabindex="0"><code>helm repo add gpu-helm-charts \
+    https://nvidia.github.io/gpu-monitoring-tools/helm-charts
+</code></pre><ul>
+<li>리파지터리 업데이트</li>
+</ul>
+<pre tabindex="0"><code>helm repo update
+</code></pre><ul>
+<li>DCGM-Exporter 공식 차트 설치</li>
+</ul>
+<pre tabindex="0"><code>#helm install --generate-name gpu-helm-charts/dcgm-exporter
+
+# orca mlops node를 모니터링하기 위해 tolerations, nodeSelector 수정한 values파일로 설치한다. 
+helm install -f dcgm-values.yaml --generate-name gpu-helm-charts/dcgm-exporter
+</code></pre><ul>
+<li>차트 확인</li>
+</ul>
+<pre tabindex="0"><code>$ helm search repo gpu-helm-charts
+NAME                                    CHART VERSION   APP VERSION     DESCRIPTION
+gpu-helm-charts/dcgm-exporter           2.4.0           2.4.0           A Helm chart for DCGM exporter
+gpu-helm-charts/kube-prometheus         0.0.43                          Manifests, dashboards, and alerting rules for e...
+gpu-helm-charts/prometheus-operator     0.0.15                          Provides easy monitoring definitions for Kubern...
+
+$ helm inspect chart gpu-helm-charts/dcgm-exporter 
+apiVersion: v2
+appVersion: 2.4.0
+description: A Helm chart for DCGM exporter
+home: https://github.com/nvidia/gpu-monitoring-tools/
+icon: https://assets.nvidiagrid.net/ngc/logos/DCGM.png
+keywords:
+- gpu
+- cuda
+- compute
+- monitoring
+- telemetry
+- tesla
+kubeVersion: &#39;&gt;= 1.13.0-0&#39;
+name: dcgm-exporter
+sources:
+- https://gitlab.com/nvidia/container-toolkit/gpu-monitoring-tools
+version: 2.4.0
+
+# values 확인
+$ helm inspect values gpu-helm-charts/dcgm-exporter 
+# Copyright (c) 2020, NVIDIA CORPORATION.  All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+image:
+  repository: nvcr.io/nvidia/k8s/dcgm-exporter
+  pullPolicy: IfNotPresent
+  # Image tag defaults to AppVersion, but you can use the tag key
+  # for the image tag, e.g:
+  tag: 2.2.9-2.4.0-ubuntu18.04
+
+# Comment the following line to stop profiling metrics from DCGM
+arguments: [&#34;-f&#34;, &#34;/etc/dcgm-exporter/dcp-metrics-included.csv&#34;]
+# NOTE: in general, add any command line arguments to arguments above
+# and they will be passed through.
+# Use &#34;-r&#34;, &#34;&lt;HOST&gt;:&lt;PORT&gt;&#34; to connect to an already running hostengine
+# Example arguments: [&#34;-r&#34;, &#34;host123:5555&#34;]
+# Use &#34;-n&#34; to remove the hostname tag from the output.
+# Example arguments: [&#34;-n&#34;]
+# Use &#34;-d&#34; to specify the devices to monitor. -d must be followed by a string
+# in the following format: [f] or [g[:numeric_range][+]][i[:numeric_range]]
+# Where a numeric range is something like 0-4 or 0,2,4, etc.
+# Example arguments: [&#34;-d&#34;, &#34;g+i&#34;] to monitor all GPUs and GPU instances or
+# [&#34;-d&#34;, &#34;g:0-3&#34;] to monitor GPUs 0-3.
+
+imagePullSecrets: []
+nameOverride: &#34;&#34;
+fullnameOverride: &#34;&#34;
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name:
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext:
+  runAsNonRoot: false
+  runAsUser: 0
+  capabilities:
+     add: [&#34;SYS_ADMIN&#34;]
+  # readOnlyRootFilesystem: true
+
+service:
+  type: ClusterIP
+  port: 9400
+  address: &#34;:9400&#34;
+  # Annotations to add to the service
+  annotations: {}
+
+resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+serviceMonitor:
+  enabled: true
+  interval: 15s
+  additionalLabels: {}
+    #monitoring: prometheus
+
+mapPodsMetrics: false
+
+nodeSelector: {}
+  #node: gpu
+
+tolerations: []
+#- operator: Exists
+
+affinity: {}
+  #nodeAffinity:
+  #  requiredDuringSchedulingIgnoredDuringExecution:
+  #    nodeSelectorTerms:
+  #    - matchExpressions:
+  #      - key: nvidia-gpu
+  #        operator: Exists
+
+extraHostVolumes: []
+#- name: host-binaries
+#  hostPath: /opt/bin
+
+extraVolumeMounts: []
+#- name: host-binaries
+#  mountPath: /opt/bin
+#  readOnly: true
+
+extraEnv: []
+#- name: EXTRA_VAR
+#  value: &#34;TheStringValue&#34;
+</code></pre><ul>
+<li>helm 삭제</li>
+</ul>
+<pre tabindex="0"><code>$ helm ls
+NAME                            NAMESPACE       REVISION        UPDATED                                 STATUS          CHART                          APP VERSION  
+dcgm-exporter-1658202339        default         1               2022-07-19 12:45:40.1694572 +0900 KST   deployed        dcgm-exporter-2.4.0            2.4.0
+
+
+$ helm delete dcgm-exporter-1658202339
+</code></pre><h3 id="exporter-추가후-동작-확인">exporter 추가후 동작 확인</h3>
+<pre tabindex="0"><code>$ kubectl get pods -A | grep exporter 
+cattle-monitoring-system    rancher-monitoring-prometheus-node-exporter-6q7pp            1/1     Running            0          56m
+cattle-monitoring-system    rancher-monitoring-prometheus-node-exporter-8bmpz            1/1     Running            0          56m
+cattle-monitoring-system    rancher-monitoring-prometheus-node-exporter-8xrk6            1/1     Running            0          56m
+cattle-monitoring-system    rancher-monitoring-prometheus-node-exporter-blvhr            1/1     Running            0          56m
+cattle-monitoring-system    rancher-monitoring-prometheus-node-exporter-kc4ql            1/1     Running            0          56m
+cattle-monitoring-system    rancher-monitoring-prometheus-node-exporter-l56nm            1/1     Running            0          56m
+cattle-monitoring-system    rancher-monitoring-prometheus-node-exporter-qkk82            1/1     Running            0          56m
+cattle-monitoring-system    rancher-monitoring-prometheus-node-exporter-s654d            1/1     Running            0          56m
+cattle-monitoring-system    rancher-monitoring-prometheus-node-exporter-x6hjz            1/1     Running            0          56m
+default                     dcgm-exporter-1658202339-6wwlg                               0/1     CrashLoopBackOff   6          5m22s
+default                     dcgm-exporter-1658202339-ffch6                               0/1     CrashLoopBackOff   6          5m22s
+default                     dcgm-exporter-1658202339-kgldt                               0/1     CrashLoopBackOff   7          5m22s
+default                     dcgm-exporter-1658202339-nprlc                               0/1     CrashLoopBackOff   6          5m22s
+</code></pre><h3 id="crashloopbackoff-상태-확인">CrashLoopBackoff 상태 확인</h3>
+<ul>
+<li>로그는 정상</li>
+</ul>
+<pre tabindex="0"><code>$ kubectl logs dcgm-exporter-1658205662-qwhs9
+time=&#34;2022-07-19T03:50:16Z&#34; level=info msg=&#34;Starting dcgm-exporter&#34;
+time=&#34;2022-07-19T03:50:16Z&#34; level=info msg=&#34;DCGM successfully initialized!&#34;
+time=&#34;2022-07-19T03:50:16Z&#34; level=info msg=&#34;Collecting DCP Metrics&#34;
+time=&#34;2022-07-19T03:50:16Z&#34; level=info msg=&#34;Kubernetes metrics collection enabled!&#34;
+time=&#34;2022-07-19T03:50:16Z&#34; level=info msg=&#34;Pipeline starting&#34;
+time=&#34;2022-07-19T03:50:16Z&#34; level=info msg=&#34;Starting webserver&#34;
+</code></pre><ul>
+<li>상태 확인</li>
+</ul>
+<pre tabindex="0"><code>$ kubectl describe pod dcgm-exporter-1658205662-qwhs9
+......
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  29m                default-scheduler  Successfully assigned default/dcgm-exporter-1658205662-qwhs9 to hcidc-sv-paz-orca-worker-09
+  Normal   Pulled     29m                kubelet            Container image &#34;nvcr.io/nvidia/k8s/dcgm-exporter:2.2.9-2.4.0-ubuntu18.04&#34; already present on machine
+  Normal   Created    29m                kubelet            Created container exporter
+  Normal   Started    29m                kubelet            Started container exporter
+  Warning  Unhealthy  28m (x3 over 29m)  kubelet            Readiness probe failed: HTTP probe failed with statuscode: 503
+</code></pre><h3 id="해결">해결</h3>
+<pre tabindex="0"><code>$ kubectl edit daemonset.apps/dcgm-exporter-1658205662
+
+# initialDelaySeconds를 60으로 변경
+.......
+livenessProbe:
+    failureThreshold: 3
+    httpGet:
+    path: /health
+    port: 9400
+    scheme: HTTP
+    initialDelaySeconds: 60
+    periodSeconds: 5
+    successThreshold: 1
+    timeoutSeconds: 1
+</code></pre><h2 id="grafana로-이동후-gpu-dashboard-설치">grafana로 이동후 gpu dashboard 설치</h2>
+<pre tabindex="0"><code>DCGM Exporter Dashboard 설치
+https://grafana.com/grafana/dashboards/12239
+</code></pre><ul>
+<li>
+<p>Import 선택
+<img src="./add-dashboard1.png" alt="add-dashboard1"></p>
+</li>
+<li>
+<p>dashboard id(12239) 입력
+<img src="./add-dashboard2.png" alt="add-dashboard2"></p>
+</li>
+<li>
+<p>Prometheus 선택
+<img src="./add-dashboard3.png" alt="add-dashboard3"></p>
+</li>
+<li>
+<p>Dashboard 확인
+<img src="./gpu-dashboard.png" alt="gpu-dashboard"></p>
+</li>
+</ul>
+
 
 <footer class="footline">
 	
@@ -759,6 +1038,37 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -769,6 +1079,72 @@
                     
                     
 
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -805,34 +1181,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -848,121 +1196,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1036,7 +1269,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1049,7 +1281,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -1067,8 +1298,53 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1093,10 +1369,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/kubernetes/" title="Kubernetes"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cloud/" title="Clouds"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/kubernetes/cli/" title="Cli" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cloud/operation/scheduling/" title="Scheduling" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -22,7 +22,7 @@
       <pubDate>Wed, 13 Jul 2022 08:51:28 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/kubernetes/cli/</guid>
-      <description>컨텍스트 조회 # 조회 kubectl config get-contexts # 사용 kubectl config use-context &amp;#34;context name&amp;#34; 클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.clusters[].name}&amp;#39; 노드에 레이블 추가 # 레이블 추가 kubectl label nodes &amp;lt;your-node-name&amp;gt; disktype=ssd # 레이블 확인 kubectl get nodes --show-labels </description>
+      <description>컨텍스트 조회 # 조회 kubectl config get-contexts # 사용 kubectl config use-context &amp;#34;context name&amp;#34; 클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.clusters[].name}&amp;#39; 노드에 레이블 추가 # 레이블 추가 kubectl label nodes &amp;lt;your-node-name&amp;gt; disktype=ssd # 레이블 확인 kubectl get nodes --show-labels Evicted pod 제거 kubectl delete pods --field-selector=status.phase=Failed -A node describe kubectl describe nodes &amp;#34;nodes-name&amp;#34; </description>
     </item>
     
   </channel>

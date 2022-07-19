@@ -6,7 +6,18 @@
     <description>Recent content in Clouds on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 15 Jul 2022 08:52:22 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jul 2022 13:59:12 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Monitoring</title>
+      <link>https://hnc-hskim.github.io/cloud/rancher/monitoring/</link>
+      <pubDate>Tue, 19 Jul 2022 13:59:12 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/cloud/rancher/monitoring/</guid>
+      <description>Rancher에 모니터링 도구 설치 및 GPU 모니터링 References  [참고1] https://nvidia.github.io/gpu-monitoring-tools/ [참고2] https://passwd.tistory.com/entry/NVIDIAgpu-monitoring-tools-dcgm-exporter-CrashLoopBackOff  rancher에서 monitoring 도구 설치   Apps -&amp;gt; Charts 이동후 monitoring 검색   Monitoring 설치 설치를 진행하면 모니터링 앱은 Rancher 의 cattle-monitoring-system namespace 에 배포됨
+(설치후 랜처 로그아웃후 다시 로그인)
+  네비게이션 영역을 보면 Monitoring 메뉴가 추가되어 있음   대쉬보드 확인   grafana 확인   그라파나에 로그인합니다. Grafana 인스턴스의 기본 관리자 사용자 이름과 비밀번호는 입니다 admin/prom-operator.</description>
+    </item>
+    
     <item>
       <title>Scheduling</title>
       <link>https://hnc-hskim.github.io/cloud/operation/scheduling/</link>
