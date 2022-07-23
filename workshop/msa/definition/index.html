@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tags :: My New Hugo Site</title>
+    <title>Definition :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1658557972" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/workshop/msa/definition/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -84,8 +84,8 @@
   
     
     <li data-nav-id="/workshop/" title="Workshops" class="dd-item
+        parent
         
-        active
         
         ">
       <a href="/workshop/">
@@ -115,7 +115,7 @@
   
     
     <li data-nav-id="/workshop/msa/" title="Msa" class="dd-item
-        
+        parent
         
         
         ">
@@ -143,7 +143,7 @@
  
   
     
-      <li data-nav-id="/workshop/msa/definition/" title="Definition" class="dd-item ">
+      <li data-nav-id="/workshop/msa/definition/" title="Definition" class="dd-item active">
         <a href="/workshop/msa/definition/">
         Definition
         <i class="fas fa-check read-icon"></i>
@@ -245,7 +245,7 @@
     
     <li data-nav-id="/cloud/" title="Clouds" class="dd-item
         
-        active
+        
         
         ">
       <a href="/cloud/">
@@ -323,7 +323,7 @@
     
     <li data-nav-id="/terraform/" title="Terraforms" class="dd-item
         
-        active
+        
         
         ">
       <a href="/terraform/">
@@ -380,7 +380,7 @@
     
     <li data-nav-id="/references/" title="References" class="dd-item
         
-        active
+        
         
         ">
       <a href="/references/">
@@ -458,7 +458,7 @@
     
     <li data-nav-id="/hugo/" title="Hugoes" class="dd-item
         
-        active
+        
         
         ">
       <a href="/hugo/">
@@ -639,6 +639,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/workshop/msa/definition.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -659,7 +670,19 @@
             
           
           
-            <a href='/'></a> > Tags
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/workshop/'>Workshops</a> > <a href='/workshop/msa/'>Msa</a> > Definition
+          
+        
+          
+        
           
         
           
@@ -670,7 +693,12 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#정의">정의</a></li>
+    <li><a href="#개요">개요</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -686,24 +714,40 @@
           
             <h1>
               
-                tag ::
-              
-              Tags
+              Definition
             </h1>
           
 
         
 
 
+<p>[출처] <a href="https://ko.wikipedia.org/wiki/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4">https://ko.wikipedia.org/wiki/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4</a></p>
+<h2 id="정의">정의</h2>
+<p>마이크로서비스(microservice)는 애플리케이션을 느슨하게 결합된 서비스의 모임으로 구조화하는 서비스 지향 아키텍처(SOA) 스타일의 일종인 소프트웨어 개발 기법이다. 마이크로서비스 아키텍처에서 서비스들은 섬세(fine-grained)하고 프로토콜은 가벼운 편이다. 애플리케이션을 더 조그마한 여러 서비스로 분해할 때의 장점은 모듈성을 개선하고 애플리케이션의 이해, 개발, 테스트를 더 쉽게 해주고 애플리케이션 침식에 더 탄력적으로 만들어 준다. 규모가 작은 자율적인 팀들이 팀별 서비스를 독립적으로 개발, 전개, 규모 확장을 할 수 있게 함으로써 병렬로 개발할 수 있게 한다. 또, 지속적인 리팩터링을 통해 개개의 서비스 아키텍처가 하나로 병합될 수 있게 허용한다. 마이크로서비스 기반 아키텍처는 지속적 배포를 가능케 한다.</p>
+<h2 id="개요">개요</h2>
 
+<div class="notices info" ><p>마이크로서비스의 속성과 관련하여 아직 산업적인 합의는 없으며 공식적인 정의도 없다.</p>
+</div>
 
-
+<p>특징들 가운데 일부는 다음을 포함한다:</p>
 <ul>
-	
+<li>마이크로서비스 아키텍처(microservice architecture, MSA)의 서비스들은 HTTP와 같은 기술 불가지론적인 프로토콜을 사용하여 목표를 달성하기 위해 네트워크를 통해 통신하는 프로세스들인 경우도 있다.  그러나, 서비스들은 공유 메모리와 같은 다른 종류의 프로세스 간 통신 메커니즘을 사용할 수도 있다. 서비스들은 이를테면 OSGI 번들에서처럼 동일한 프로세스 내에서 실행할 수 있다.</li>
+<li>마이크로서비스 아키텍처의 서비스들은 독립적인 전개(deploy)가 가능하다.</li>
+<li>서비스의 교체가 쉽다.</li>
+<li>서비스는 기능별로 분류된다. (예: 사용자 인터페이스 프론트엔드, 추천, 로지스틱스, 청구서 발부 등)</li>
+<li>서비스는 최적의 조건에 부합하는 바에 따라 각기 다른 프로그래밍 언어, 데이터베이스, 하드웨어, 소프트웨어 환경을 사용하여 구현할 수 있다.</li>
+<li>서비스들은 규모가 작고, 메시지 전달이 가능하며 컨텍스트별로 묶이며 자율적으로 개발되며 독립적으로 전개할 수 있으며 분산적이며 빌드가 되며 자동화된 프로세스들로 출시된다.</li>
+</ul>
+<p>마이크로서비스 기반 아키텍처는:</p>
+<ul>
+<li>모듈성이 있는 구조를 자연스럽게 강제한다.</li>
+<li>자기 자신을 지속적 배포 소프트웨어 개발 프로세스에 위치시킨다. 애플리케이션의 사소한 부분의 변경은 하나 이상의 적은 수의 서비스의 다시 빌드, 재전개만을 필요로 한다.</li>
+<li>섬세(fine-grained)한 인터페이스(독립적으로 서비스를 전개할 수 있음), 비즈니스 주도의 개발(예: 도메인 드리븐 디자인), 클라우드 애플리케이션 아키텍처, 폴리곳 프로그래밍, 퍼시스턴스, 가벼운 컨테이너 전개, 탈중심화된 지속적 배포, 전체론적인 서비스 모니터링을 갖춘 데브옵스와 같은 원칙들을 고수한다.</li>
+<li>확장성에 이득이 되는 특징들을 제공한다.</li>
 </ul>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -738,8 +782,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -756,6 +798,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -768,6 +811,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -784,6 +828,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1067,8 +1114,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/workshop/msa/" title="Msa"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/workshop/" title="Workshops" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/workshop/msa/concept/" title="Concept" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1101,3 +1150,4 @@
     </script>
   </body>
 </html>
+

@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hnc-hskim.github.io/workshop/msa/definition/</loc>
+    <lastmod>2022-07-21T15:01:06+09:00</lastmod>
+  </url><url>
     <loc>https://hnc-hskim.github.io/workshop/msa/concept/</loc>
     <lastmod>2022-07-12T13:38:23+09:00</lastmod>
   </url><url>
@@ -11,14 +14,14 @@
     <loc>https://hnc-hskim.github.io/workshop/msa/software-architecture/</loc>
     <lastmod>2022-07-12T15:43:56+09:00</lastmod>
   </url><url>
+    <loc>https://hnc-hskim.github.io/workshop/</loc>
+    <lastmod>2022-07-21T15:01:06+09:00</lastmod>
+  </url><url>
     <loc>https://hnc-hskim.github.io/cloud/</loc>
     <lastmod>2022-07-19T13:59:12+09:00</lastmod>
   </url><url>
     <loc>https://hnc-hskim.github.io/cloud/rancher/monitoring/</loc>
     <lastmod>2022-07-19T13:59:12+09:00</lastmod>
-  </url><url>
-    <loc>https://hnc-hskim.github.io/workshop/</loc>
-    <lastmod>2022-07-18T16:48:39+09:00</lastmod>
   </url><url>
     <loc>https://hnc-hskim.github.io/terraform/introduction/</loc>
     <lastmod>2022-07-18T14:19:28+09:00</lastmod>
@@ -43,9 +46,6 @@
   </url><url>
     <loc>https://hnc-hskim.github.io/cloud/operation/scheduling/</loc>
     <lastmod>2022-07-15T08:52:22+09:00</lastmod>
-  </url><url>
-    <loc>https://hnc-hskim.github.io/workshop/ide/vscode/</loc>
-    <lastmod>2022-07-13T11:12:30+09:00</lastmod>
   </url><url>
     <loc>https://hnc-hskim.github.io/hugo/style/</loc>
     <lastmod>2022-07-13T09:06:26+09:00</lastmod>

@@ -8,15 +8,24 @@
     <language>ko-kr</language>
     <lastBuildDate>Wed, 13 Jul 2022 09:00:36 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Definition</title>
+      <link>https://hnc-hskim.github.io/workshop/msa/definition/</link>
+      <pubDate>Thu, 21 Jul 2022 15:01:06 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/msa/definition/</guid>
+      <description>[출처] https://ko.wikipedia.org/wiki/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4
+정의 마이크로서비스(microservice)는 애플리케이션을 느슨하게 결합된 서비스의 모임으로 구조화하는 서비스 지향 아키텍처(SOA) 스타일의 일종인 소프트웨어 개발 기법이다. 마이크로서비스 아키텍처에서 서비스들은 섬세(fine-grained)하고 프로토콜은 가벼운 편이다. 애플리케이션을 더 조그마한 여러 서비스로 분해할 때의 장점은 모듈성을 개선하고 애플리케이션의 이해, 개발, 테스트를 더 쉽게 해주고 애플리케이션 침식에 더 탄력적으로 만들어 준다. 규모가 작은 자율적인 팀들이 팀별 서비스를 독립적으로 개발, 전개, 규모 확장을 할 수 있게 함으로써 병렬로 개발할 수 있게 한다. 또, 지속적인 리팩터링을 통해 개개의 서비스 아키텍처가 하나로 병합될 수 있게 허용한다.</description>
+    </item>
+    
+    <item>
       <title>Concept</title>
       <link>https://hnc-hskim.github.io/workshop/msa/concept/</link>
       <pubDate>Tue, 12 Jul 2022 13:38:23 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/workshop/msa/concept/</guid>
       <description>아래에 사용된 예제는 NodeJS, ExpressJS, MongoDB를 이용하여 구성되었습니다.
-Referenes  Diagram Editor mermaid flowchart syntax  모놀리식 아키텍처는 소프트웨어 프로그램의 전통적인 모델로, 자체 포함 방식이며 다른 애플리케이션과 독립적인 통합된 유닛으로 만들어집니다. “모놀리스&amp;quot;라는 단어는 거대하고 빙하 같은 것을 의미하는 경우가 많은데, 소프트웨어 설계의 모놀리식 아키텍처도 크게 다르지 않습니다. 모놀리식 아키텍처는 모든 비즈니스 관련 사항을 함께 결합하는 하나의 코드 베이스를 갖춘 대규모의 단일 컴퓨팅 네트워크입니다.
-[출처] https://www.atlassian.com/ko/microservices/microservices-architecture/microservices-vs-monolith
-1. 모놀리식 아키텍처 VS 마이크로서비스 아키텍처 Monolithic Architecture 전통적인 모놀로식 아키텍처가 비효율적으로 보일 수 있지만 간단한 아키텍처의 경우 모놀리식 아키텍처도 충분히 활용 가능한 솔루션이라고 할 수 있습니다.</description>
+Referenes  https://www.atlassian.com/ko/microservices/microservices-architecture/microservices-vs-monolith Diagram Editor mermaid flowchart syntax  모놀리식 아키텍처는 소프트웨어 프로그램의 전통적인 모델로, 자체 포함 방식이며 다른 애플리케이션과 독립적인 통합된 유닛으로 만들어집니다. “모놀리스&amp;quot;라는 단어는 거대하고 빙하 같은 것을 의미하는 경우가 많은데, 소프트웨어 설계의 모놀리식 아키텍처도 크게 다르지 않습니다. 모놀리식 아키텍처는 모든 비즈니스 관련 사항을 함께 결합하는 하나의 코드 베이스를 갖춘 대규모의 단일 컴퓨팅 네트워크입니다.
+1. 모놀리식 아키텍처 VS 마이크로서비스 아키텍처 Monolithic Architecture 전통적인 모놀로식 아키텍처가 비효율적으로 보일 수 있지만 간단한 아키텍처의 경우 모놀리식 아키텍처도 충분히 활용 가능한 솔루션이라고 할 수 있습니다.</description>
     </item>
     
     <item>
@@ -34,10 +43,7 @@
       <pubDate>Tue, 12 Jul 2022 15:43:56 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/workshop/msa/software-architecture/</guid>
-      <description>[참고] https://dev.to/zachgoll/introduction-to-software-architecture-monolithic-vs-layered-vs-microservices-452
-[참고] https://github.com/mermaid-js/mermaid
-Diagram Editor
-&amp;ldquo;Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius—and a lot of courage to move in the opposite direction&amp;rdquo;
+      <description>References  [참고1] https://dev.to/zachgoll/introduction-to-software-architecture-monolithic-vs-layered-vs-microservices-452 [참고2] https://github.com/mermaid-js/mermaid Diagram Editor  &amp;ldquo;Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius—and a lot of courage to move in the opposite direction&amp;rdquo;
 [From E.F. Schumacher&amp;rsquo;s book Small is Beautiful]
 1. 소프트웨어 아키텍처 소프트웨어 구조 또는 소프트웨어 아키텍처(software architecture)는 소프트웨어의 구성요소들 사이에서 유기적 관계를 표현하고 소프트웨어의 설계와 업그레이드를 통제하는 지침과 원칙이다.
 1.1 소프트웨어 아키텍처 설계시 고려사항  성능: 회전하는 &amp;ldquo;로드 중&amp;rdquo; 아이콘이 사라지기 전에 얼마나 기다려야 합니까?</description>
@@ -93,7 +99,7 @@ AWS 클라우드 포메이션AWS CloudFormation의 경우 AWS만 지원하는 �
       <guid>https://hnc-hskim.github.io/hugo/comments/</guid>
       <description>[참고] https://velog.io/@mellonggo/Github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-with-Hugo
 댓글 기능 추가  리파지터리 생성  blog-comments로 리파지터리 생성  layouts/partials/custom-footer.html 파일 생성 및 스크립트 추가  테마별로 지정해야할 위치가 다를수 있다. learn 테마의 경우 post 레이아웃을 찾을수 없어 custom-footer.html에 추가한다.
- 아래 코드를 복하하여 custom-footer.html에 붙여넣는다.  &amp;lt;script src=&amp;#34;https://utteranc.es/client.js&amp;#34; repo=&amp;#34;user id/blog-comments&amp;#34; issue-term=&amp;#34;title&amp;#34; theme=&amp;#34;github-light&amp;#34; crossorigin=&amp;#34;anonymous&amp;#34; async&amp;gt; &amp;lt;/script&amp;gt; 첫 로딩시 댓글 기능은 비활성화되어 있고 github 로그인 인증을 통해 해당 리파지터리에서 utterances app 사용을 승인하면 이후 댓글 기능을 사용할 수 있다.</description>
+ 아래 코드를 복하하여 custom-footer.html에 붙여넣는다.  &amp;lt;script src=&amp;#34;https://utteranc.es/client.js&amp;#34;repo=&amp;#34;user id/blog-comments&amp;#34;issue-term=&amp;#34;title&amp;#34;theme=&amp;#34;github-light&amp;#34;crossorigin=&amp;#34;anonymous&amp;#34;async&amp;gt;&amp;lt;/script&amp;gt; 첫 로딩시 댓글 기능은 비활성화되어 있고 github 로그인 인증을 통해 해당 리파지터리에서 utterances app 사용을 승인하면 이후 댓글 기능을 사용할 수 있다.</description>
     </item>
     
     <item>
@@ -103,16 +109,6 @@ AWS 클라우드 포메이션AWS CloudFormation의 경우 AWS만 지원하는 �
       
       <guid>https://hnc-hskim.github.io/cloud/operation/scheduling/</guid>
       <description>노드에 파드 할당하기 특정한 노드(들) 집합에서만 동작하도록 파드를 제한할 수 있다. 이를 수행하는 방법에는 여러 가지가 있으며 권장되는 접근 방식은 모두 레이블 셀렉터를 사용하여 선택을 용이하게 한다. 보통은 스케줄러가 자동으로 합리적인 배치(예: 자원이 부족한 노드에 파드를 배치하지 않도록 노드 간에 파드를 분배)를 수행하기에 이러한 제약 조건은 필요하지 않다. 그러나, 예를 들어 SSD가 장착된 머신에 파드가 배포되도록 하거나 또는 많은 통신을 하는 두 개의 서로 다른 서비스의 파드를 동일한 가용성 영역(availability zone)에 배치하는 경우와 같이, 파드가 어느 노드에 배포될지를 제어해야 하는 경우도 있다.</description>
-    </item>
-    
-    <item>
-      <title>vscode</title>
-      <link>https://hnc-hskim.github.io/workshop/ide/vscode/</link>
-      <pubDate>Wed, 13 Jul 2022 11:12:30 +0900</pubDate>
-      
-      <guid>https://hnc-hskim.github.io/workshop/ide/vscode/</guid>
-      <description>code server를 활용한 실습 환경 구성이 가능한지 검증해보자.
-References  [참고1] https://www.sobyte.net/post/2021-12/deploy-vscode-on-k8s/ [참고2] https://github.com/coder/coder [참고3] https://blog.59s.io/install-code-server [참고4] https://coder.com/docs/code-server/latest/helm [참고5] https://github.com/coder/code-server  Local VS-Code 환경을 Kubernetes에 배포하기  Dockerfile  FROM codercom/code-server COPY .vscode /home/coder/.local/share/code-server RUN curl -Lo shellcheck-v0.7.1.linux.aarch64.tar.xz https://github.com/koalaman/shellcheck/releases/download/v0.7.1/shellcheck-v0.7.1.linux.aarch64.tar.xz \ &amp;amp;&amp;amp; tar -xvf shellcheck-v0.7.1.linux.aarch64.tar.xz \ &amp;amp;&amp;amp; chmod +x shellcheck-v0.7.1/shellcheck &amp;amp;&amp;amp; sudo mv shellcheck-v0.7.1/shellcheck /usr/local/bin/ \ &amp;amp;&amp;amp; rm -rf shellcheck* &amp;amp;&amp;amp; sudo chown -R coder:coder /home/coder/.local/share/code-server \ &amp;amp;&amp;amp; curl -LO https://storage.</description>
     </item>
     
     <item>
@@ -139,7 +135,7 @@ AWS 클라우드 포메이션AWS CloudFormation의 경우 AWS만 지원하는 �
       <pubDate>Wed, 13 Jul 2022 08:51:28 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/kubernetes/cli/</guid>
-      <description>컨텍스트 조회 # 조회 kubectl config get-contexts # 사용 kubectl config use-context &amp;#34;context name&amp;#34; 클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.clusters[].name}&amp;#39; 노드에 레이블 추가 # 레이블 추가 kubectl label nodes &amp;lt;your-node-name&amp;gt; disktype=ssd # 레이블 확인 kubectl get nodes --show-labels Evicted pod 제거 kubectl delete pods --field-selector=status.phase=Failed -A node describe kubectl describe nodes &amp;#34;nodes-name&amp;#34; </description>
+      <description>컨텍스트 조회 # 조회kubectl config get-contexts# 사용kubectl config use-context &amp;#34;context name&amp;#34; 클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.clusters[].name}&amp;#39; 노드에 레이블 추가 # 레이블 추가kubectl label nodes &amp;lt;your-node-name&amp;gt; disktype=ssd# 레이블 확인kubectl get nodes --show-labels Evicted pod 제거 kubectl delete pods --field-selector=status.phase=Failed -A node describe kubectl describe nodes &amp;#34;nodes-name&amp;#34; </description>
     </item>
     
   </channel>
