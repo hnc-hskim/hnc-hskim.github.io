@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Terraforms :: My New Hugo Site</title>
+    <title>Helm Repository :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1658836229" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/terraform/">
+  <body class="" data-url="/cloud/helm/helm-repository/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -85,7 +85,7 @@
     
     <li data-nav-id="/blazor/" title="Blazors" class="dd-item
         
-        active
+        
         
         ">
       <a href="/blazor/">
@@ -141,8 +141,8 @@
   
     
     <li data-nav-id="/cloud/" title="Clouds" class="dd-item
+        parent
         
-        active
         
         ">
       <a href="/cloud/">
@@ -169,7 +169,7 @@
  
   
     
-      <li data-nav-id="/cloud/helm/helm-repository/" title="Helm Repository" class="dd-item ">
+      <li data-nav-id="/cloud/helm/helm-repository/" title="Helm Repository" class="dd-item active">
         <a href="/cloud/helm/helm-repository/">
         Helm Repository
         <i class="fas fa-check read-icon"></i>
@@ -241,7 +241,7 @@
     
     <li data-nav-id="/workshop/" title="Workshops" class="dd-item
         
-        active
+        
         
         ">
       <a href="/workshop/">
@@ -400,8 +400,8 @@
   
     
     <li data-nav-id="/terraform/" title="Terraforms" class="dd-item
-        parent
-        active
+        
+        
         
         ">
       <a href="/terraform/">
@@ -458,7 +458,7 @@
     
     <li data-nav-id="/references/" title="References" class="dd-item
         
-        active
+        
         
         ">
       <a href="/references/">
@@ -536,7 +536,7 @@
     
     <li data-nav-id="/hugo/" title="Hugoes" class="dd-item
         
-        active
+        
         
         ">
       <a href="/hugo/">
@@ -720,6 +720,13 @@
                   
                   
                   
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/cloud/helm/helm-repository.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
                 
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -741,7 +748,13 @@
             
           
           
-            <a href='/'></a> > Terraforms
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/cloud/'>Clouds</a> > Helm Repository
+          
+        
           
         
           
@@ -752,7 +765,25 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#github에-helm-repository-만들기">Github에 helm repository 만들기</a>
+      <ul>
+        <li><a href="#1-github으로-이동">1. Github으로 이동</a></li>
+        <li><a href="#2-new-버튼을-클릭한다">2. New 버튼을 클릭한다.</a></li>
+        <li><a href="#3-생성된-repository-화면">3. 생성된 Repository 화면</a></li>
+        <li><a href="#4-접근-url-셋팅">4. 접근 URL 셋팅</a></li>
+        <li><a href="#5-local-repository-만들기">5. Local Repository 만들기</a></li>
+        <li><a href="#6-아래-samples-repository를-로컬에-clone한다">6. 아래 samples Repository를 로컬에 clone한다.</a></li>
+        <li><a href="#7-작업-내용을-commit-한다">7. 작업 내용을 commit 한다.</a></li>
+        <li><a href="#7-helm-repository-추가">7. Helm Repository 추가</a></li>
+        <li><a href="#8-배포">8. 배포</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-삭제">9. 삭제</a></li>
+    <li><a href="#10-local-helm-repository-구성">10. Local Helm Repository 구성</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -768,20 +799,191 @@
           
             <h1>
               
-              Terraforms
+              Helm Repository
             </h1>
           
 
         
 
 
+<h2 id="github에-helm-repository-만들기">Github에 helm repository 만들기</h2>
+<h3 id="1-github으로-이동">1. Github으로 이동</h3>
+<p><p class="md__image">
+    
+    <img src="./github-repository-home.png" alt="github repository home"  />
+    
+  </p></p>
+<h3 id="2-new-버튼을-클릭한다">2. New 버튼을 클릭한다.</h3>
+<ul>
+<li>Repository name(helm-charts)</li>
+<li>Public 체크</li>
+<li>Add a README file 체크
+<p class="md__image">
+    
+    <img src="./create-repository.png" alt="create-repository"  />
+    
+  </p></li>
+</ul>
+<h3 id="3-생성된-repository-화면">3. 생성된 Repository 화면</h3>
+<p><p class="md__image">
+    
+    <img src="./repository-home.png" alt="repository home"  />
+    
+  </p></p>
+<h3 id="4-접근-url-셋팅">4. 접근 URL 셋팅</h3>
+<ul>
+<li>
+<p>리파지터리 홈 탭 메뉴의 Settings를 선택한다.</p>
+</li>
+<li>
+<p>좌측 메뉴에 Pages를 선택한다.
+<p class="md__image">
+    
+    <img src="./settings.png" alt="repository home"  />
+    
+  </p></p>
+</li>
+<li>
+<p>main 브랜치를 선택후 save 버튼을 클릭한다.
+<p class="md__image">
+    
+    <img src="./settings2.png" alt="repository home"  />
+    
+  </p></p>
+</li>
+<li>
+<p>publicshed 주소가 나오는데 이 주소가 helm repository 주소가 된다. 
+<p class="md__image">
+    
+    <img src="./settings3.png" alt="repository home"  />
+    
+  </p></p>
+</li>
+</ul>
+<h3 id="5-local-repository-만들기">5. Local Repository 만들기</h3>
+<ul>
+<li>생성한 Repository를 로컬에 clone한다.</li>
+</ul>
+<pre tabindex="0"><code>$ git clone https://github.com/&#34;Your github id&#34;/helm-charts.git
+$ cd helm-charts
 
-	
+# stable 디렉토리를 생성한다. 
+$ mkdir stable
+</code></pre><h3 id="6-아래-samples-repository를-로컬에-clone한다">6. 아래 samples Repository를 로컬에 clone한다.</h3>
+<p><a href="https://github.com/hnc-hskim/samples">helm sample Github</a></p>
+<ul>
+<li>차트 검증</li>
+</ul>
+<pre tabindex="0"><code>$ cd samples\sftp-server\
+$ helm lint
+==&gt; Linting .
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed
+</code></pre><ul>
+<li>helm차트를 패키징한다.</li>
+</ul>
+<pre tabindex="0"><code>$ cd samples
+$ helm package .\sftp-server\
+Successfully packaged chart and saved it to: C:\work2022\git\hnc-hskim\samples\sftp-server-0.3.2.tgz
+</code></pre><ul>
+<li>만들어진 sftp-server-0.3.2.tgz 파일을 Helm Local Repository에 복사한다.</li>
+</ul>
+<pre tabindex="0"><code>cp sftp-server-0.3.2.tgz &#34;your helm chart local repo&#34;/statble/sftp-server-0.3.2.tgz
+</code></pre><ul>
+<li>helm chart local repository에서 아래 명령으로 index.yaml파일을 새로 만든다.</li>
+</ul>
+<pre tabindex="0"><code>#helm repo index stable/ --url https://&#34;Your github id&#34;.github.io/helm-charts/stable
+
+# helm-chart 리파지터리 root에서 실행
+#helm repo index ./stable
+
+#helm repo index ./code-server
+</code></pre><p><p class="md__image">
+    
+    <img src="./settings4.png" alt="repository home"  />
+    
+  </p></p>
+<h3 id="7-작업-내용을-commit-한다">7. 작업 내용을 commit 한다.</h3>
+<pre tabindex="0"><code>$ git add . &amp;&amp; git commit -m &#34;init helm charts&#34; &amp;&amp; git push origin main
+</code></pre><h3 id="7-helm-repository-추가">7. Helm Repository 추가</h3>
+<ul>
+<li>작업 내용을 commit하면 git actions에 의해 Github Pages가 빌드후 배포된다.</li>
+</ul>
+<pre tabindex="0"><code>$ helm repo add github-stable https://&#34;Your github id&#34;.github.io/helm-charts/stable
+&#34;github-stable&#34; has been added to your repositories
+</code></pre><ul>
+<li>helm repository 확인</li>
+</ul>
+<pre tabindex="0"><code>$ helm repo list
+NAME            URL 
+github-stable   https://hnc-hskim.github.io/helm-charts/stable
+
+$ helm search repo sftp-server
+NAME                            CHART VERSION   APP VERSION     DESCRIPTION
+github-stable/sftp-server       0.3.2           1.0             A helm chart for a SFTP server
+</code></pre><h3 id="8-배포">8. 배포</h3>
+<pre tabindex="0"><code>$ helm repo update
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the &#34;github-stable&#34; chart repository 
+Update Complete. ⎈Happy Helming!⎈
+
+$ kubectl create namespace sftp
+namespace/sftp created
+ 
+$ helm install --generate-name github-stable/sftp-server --namespace sftp
+NAME: sftp-server-1658462580
+LAST DEPLOYED: Fri Jul 22 13:03:01 2022
+NAMESPACE: sftp
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+1. Get the application URL by running these commands:
+
+  export POD_NAME=$(kubectl get pods --namespace sftp -l &#34;app.kubernetes.io/name=sftp-server,app.kubernetes.io/instance=sftp-server-1658462580&#34; -o jsonpath=&#34;{.items[0].metadata.name}&#34;)
+  echo &#34;Visit http://127.0.0.1:8080 to use your application&#34;
+  kubectl port-forward $POD_NAME 8080:80
+</code></pre><ul>
+<li>values.yaml 수정 및 사용</li>
+</ul>
+<pre tabindex="0"><code>$ helm inspect values github-stable/sftp-server &gt;&gt; values.yaml
+
+# values.yaml 파일을 열고 ingress 섹션을 수정한다.
+
+ingress:
+  enabled: true
+  className: &#34;&#34;
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: &#34;true&#34;
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+# 수정한 values.yaml 파일을 이용하여 helm 배포
+$ helm install -f values.yaml --generate-name github-stable/sftp-server --namespace sftp 
+</code></pre><h2 id="9-삭제">9. 삭제</h2>
+<pre tabindex="0"><code>$ helm ls -n sftp
+NAME                    NAMESPACE       REVISION        UPDATED                                 STATUS          CHART                   APP VERSION
+sftp-server-1658462580  sftp            1               2022-07-22 13:03:01.7682638 +0900 KST   deployed        sftp-server-0.3.2       1.0 
+
+$ helm delete sftp-server-1658462580 -n sftp
+release &#34;sftp-server-1658462580&#34; uninstalled
+</code></pre><h2 id="10-local-helm-repository-구성">10. Local Helm Repository 구성</h2>
+<pre tabindex="0"><code>
 
 
+git submodule add -b main https://github.com/hnc-hskim/helm-charts.git packages
+</code></pre>
 
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -851,6 +1053,90 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -907,85 +1193,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1013,7 +1220,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1026,9 +1232,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1197,10 +1400,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/workshop/msa/software-architecture/" title="Software Architecture"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cloud/" title="Clouds"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/terraform/introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cloud/rancher/monitoring/" title="Monitoring" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1233,3 +1436,4 @@
     </script>
   </body>
 </html>
+

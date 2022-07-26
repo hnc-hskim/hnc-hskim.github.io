@@ -6,7 +6,17 @@
     <description>Recent content in Clouds on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 19 Jul 2022 13:59:12 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Jul 2022 11:01:46 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Helm Repository</title>
+      <link>https://hnc-hskim.github.io/cloud/helm/helm-repository/</link>
+      <pubDate>Fri, 22 Jul 2022 11:01:46 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/cloud/helm/helm-repository/</guid>
+      <description>Github에 helm repository 만들기 1. Github으로 이동 2. New 버튼을 클릭한다.  Repository name(helm-charts) Public 체크 Add a README file 체크   3. 생성된 Repository 화면 4. 접근 URL 셋팅   리파지터리 홈 탭 메뉴의 Settings를 선택한다.
+  좌측 메뉴에 Pages를 선택한다.   main 브랜치를 선택후 save 버튼을 클릭한다.   publicshed 주소가 나오는데 이 주소가 helm repository 주소가 된다.   5. Local Repository 만들기  생성한 Repository를 로컬에 clone한다.</description>
+    </item>
+    
     <item>
       <title>Monitoring</title>
       <link>https://hnc-hskim.github.io/cloud/rancher/monitoring/</link>

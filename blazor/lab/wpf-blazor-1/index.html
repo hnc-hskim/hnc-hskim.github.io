@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Terraforms :: My New Hugo Site</title>
+    <title>Wpf Blazor 1 :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1658836229" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/terraform/">
+  <body class="" data-url="/blazor/lab/wpf-blazor-1/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -84,8 +84,8 @@
   
     
     <li data-nav-id="/blazor/" title="Blazors" class="dd-item
+        parent
         
-        active
         
         ">
       <a href="/blazor/">
@@ -112,7 +112,7 @@
  
   
     
-      <li data-nav-id="/blazor/lab/wpf-blazor-1/" title="Wpf Blazor 1" class="dd-item ">
+      <li data-nav-id="/blazor/lab/wpf-blazor-1/" title="Wpf Blazor 1" class="dd-item active">
         <a href="/blazor/lab/wpf-blazor-1/">
         Wpf Blazor 1
         <i class="fas fa-check read-icon"></i>
@@ -142,7 +142,7 @@
     
     <li data-nav-id="/cloud/" title="Clouds" class="dd-item
         
-        active
+        
         
         ">
       <a href="/cloud/">
@@ -241,7 +241,7 @@
     
     <li data-nav-id="/workshop/" title="Workshops" class="dd-item
         
-        active
+        
         
         ">
       <a href="/workshop/">
@@ -400,8 +400,8 @@
   
     
     <li data-nav-id="/terraform/" title="Terraforms" class="dd-item
-        parent
-        active
+        
+        
         
         ">
       <a href="/terraform/">
@@ -458,7 +458,7 @@
     
     <li data-nav-id="/references/" title="References" class="dd-item
         
-        active
+        
         
         ">
       <a href="/references/">
@@ -536,7 +536,7 @@
     
     <li data-nav-id="/hugo/" title="Hugoes" class="dd-item
         
-        active
+        
         
         ">
       <a href="/hugo/">
@@ -720,6 +720,13 @@
                   
                   
                   
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/blazor/lab/wpf-blazor-1.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
                 
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -741,7 +748,13 @@
             
           
           
-            <a href='/'></a> > Terraforms
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/blazor/'>Blazors</a> > Wpf Blazor 1
+          
+        
           
         
           
@@ -752,7 +765,24 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#references">References</a>
+      <ul>
+        <li><a href="#요구사항">요구사항</a></li>
+        <li><a href="#wpf-blazor-프로젝트-만들기">WPF Blazor 프로젝트 만들기</a></li>
+        <li><a href="#프로젝트-파일-편집wpfblazor-프로젝트-우클릭하여-프로젝트-파일-편집-선택">프로젝트 파일 편집(WpfBlazor 프로젝트 우클릭하여 프로젝트 파일 편집 선택)</a></li>
+        <li><a href="#_importsrazor-파일-추가위치-프로젝트-루트">_Imports.razor 파일 추가(위치 프로젝트 루트)</a></li>
+        <li><a href="#wwwroot-폴더-추가">wwwroot 폴더 추가</a></li>
+        <li><a href="#wwwrootcssappcss-파일-추가">wwwroot/css/app.css 파일 추가</a></li>
+        <li><a href="#counterrazor-파일-추가">Counter.razor 파일 추가</a></li>
+        <li><a href="#mainwindowxaml-파일-수정">MainWindow.xaml 파일 수정</a></li>
+        <li><a href="#mainwindowcs-파일-수정">MainWindow.cs 파일 수정</a></li>
+        <li><a href="#앱-실행">앱 실행</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -768,20 +798,253 @@
           
             <h1>
               
-              Terraforms
+              Wpf Blazor 1
             </h1>
           
 
         
 
 
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/ko-kr/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-6.0">WPF Blazor 앱 빌드</a></li>
+</ul>
+<ol>
+<li>WPF Blazor 앱 프로젝트 만들기</li>
+<li>프로젝트에 Razor 구성 요소 추가</li>
+<li>Windows에서 앱 실행</li>
+</ol>
 
-	
+<div class="notices info" ><p>Blazor Hybrid가 GA(일반 공급)에 도달했으며 프로덕션 워크로드에 대해 완전히 지원됩니다. Visual Studio 및 Mac용 Visual Studio는 Blazor Hybrid 앱 작업을 위해 시험판 버전으로 제공되며 최종 릴리스 전에 수정될 수 있습니다. 최상의 도구 환경을 위해 Visual Studio 2022 미리 보기를 업데이트된 상태로 유지하는 것이 좋습니다.</p>
+</div>
+
+<h3 id="요구사항">요구사항</h3>
+<ul>
+<li>visual studio 2022</li>
+<li>visual studio workload(.net desktop development)</li>
+</ul>
+<h3 id="wpf-blazor-프로젝트-만들기">WPF Blazor 프로젝트 만들기</h3>
+<ul>
+<li>
+<p>visual studio 2022 preview 시작
+<p class="md__image">
+    
+    <img src="./visualstudio-start.png" alt="start"  />
+    
+  </p></p>
+</li>
+<li>
+<p>새 프로젝트 만들기 선택
+<p class="md__image">
+    
+    <img src="./newproject.png" alt="start"  />
+    
+  </p></p>
+</li>
+<li>
+<p>wpf 애플리케이션 선택
+<p class="md__image">
+    
+    <img src="./wpfapp.png" alt="start"  />
+    
+  </p></p>
+</li>
+<li>
+<p>이름(WpfBlazor) 입력 및 저장 위치 선택
+<p class="md__image">
+    
+    <img src="./wpfblazor.png" alt="start"  />
+    
+  </p></p>
+</li>
+<li>
+<p>.NET 6.0(장기 지원) 선택
+<p class="md__image">
+    
+    <img src="./wpfblazor1.png" alt="start"  />
+    
+  </p></p>
+</li>
+<li>
+<p>NuGet 패키지 관리자 실행
+<p class="md__image">
+    
+    <img src="./wpfblazor2.jpg" alt="start"  />
+    
+  </p></p>
+</li>
+<li>
+<p>(Microsoft.AspNetCore.Components.WebView.Wpf 패키지 설치)
+<p class="md__image">
+    
+    <img src="./wpfblazor3.jpg" alt="start"  />
+    
+  </p></p>
+</li>
+</ul>
+<h3 id="프로젝트-파일-편집wpfblazor-프로젝트-우클릭하여-프로젝트-파일-편집-선택">프로젝트 파일 편집(WpfBlazor 프로젝트 우클릭하여 프로젝트 파일 편집 선택)</h3>
+<ul>
+<li>SDK를 Microsoft.NET.Sdk.Razor로 변경</li>
+<li><!-- raw HTML omitted -->WpfBlazor<!-- raw HTML omitted --> 루트 네임스페이스 추가</li>
+<li>변경내용 저장</li>
+</ul>
+<pre tabindex="0"><code>&lt;Project Sdk=&#34;Microsoft.NET.Sdk.Razor&#34;&gt;
+
+  &lt;PropertyGroup&gt;
+	&lt;RootNameSpace&gt;WpfBlazor&lt;/RootNameSpace&gt;
+    &lt;OutputType&gt;WinExe&lt;/OutputType&gt;
+    &lt;TargetFramework&gt;net6.0-windows&lt;/TargetFramework&gt;
+    &lt;Nullable&gt;enable&lt;/Nullable&gt;
+    &lt;UseWPF&gt;true&lt;/UseWPF&gt;
+  &lt;/PropertyGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;PackageReference Include=&#34;Microsoft.AspNetCore.Components.WebView.Wpf&#34; Version=&#34;6.0.419&#34; /&gt;
+  &lt;/ItemGroup&gt;
+
+&lt;/Project&gt;
+</code></pre><h3 id="_importsrazor-파일-추가위치-프로젝트-루트">_Imports.razor 파일 추가(위치 프로젝트 루트)</h3>
+<pre tabindex="0"><code>@using Microsoft.AspNetCore.Components.Web
+</code></pre><h3 id="wwwroot-폴더-추가">wwwroot 폴더 추가</h3>
+<ul>
+<li>index.html 추가</li>
+</ul>
+<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;en&#34;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&#34;utf-8&#34; /&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; /&gt;
+    &lt;title&gt;WpfBlazor&lt;/title&gt;
+    &lt;base href=&#34;/&#34; /&gt;
+    &lt;link href=&#34;css/bootstrap/bootstrap.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+    &lt;link href=&#34;css/app.css&#34; rel=&#34;stylesheet&#34; /&gt;
+    &lt;link href=&#34;WpfBlazor.styles.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&#34;app&#34;&gt;Loading...&lt;/div&gt;
+
+    &lt;div id=&#34;blazor-error-ui&#34;&gt;
+        An unhandled error has occurred.
+        &lt;a href=&#34;&#34; class=&#34;reload&#34;&gt;Reload&lt;/a&gt;
+        &lt;a class=&#34;dismiss&#34;&gt;🗙&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;script src=&#34;_framework/blazor.webview.js&#34;&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><h3 id="wwwrootcssappcss-파일-추가">wwwroot/css/app.css 파일 추가</h3>
+<pre tabindex="0"><code>html, body {
+    font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+</code></pre><h3 id="counterrazor-파일-추가">Counter.razor 파일 추가</h3>
+<pre tabindex="0"><code>&lt;h1&gt;Counter&lt;/h1&gt;
+
+&lt;p&gt;Current count: @currentCount&lt;/p&gt;
+
+&lt;button class=&#34;btn btn-primary&#34; @onclick=&#34;IncrementCount&#34;&gt;Click me&lt;/button&gt;
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
+</code></pre><h3 id="mainwindowxaml-파일-수정">MainWindow.xaml 파일 수정</h3>
+<pre tabindex="0"><code>&lt;Window x:Class=&#34;WpfBlazor.MainWindow&#34;
+        xmlns=&#34;http://schemas.microsoft.com/winfx/2006/xaml/presentation&#34;
+        xmlns:x=&#34;http://schemas.microsoft.com/winfx/2006/xaml&#34;
+        xmlns:d=&#34;http://schemas.microsoft.com/expression/blend/2008&#34;
+        xmlns:mc=&#34;http://schemas.openxmlformats.org/markup-compatibility/2006&#34;
+        xmlns:blazor=&#34;clr-namespace:Microsoft.AspNetCore.Components.WebView.Wpf;assembly=Microsoft.AspNetCore.Components.WebView.Wpf&#34;
+        xmlns:local=&#34;clr-namespace:WpfBlazor&#34;
+        mc:Ignorable=&#34;d&#34;
+        Title=&#34;MainWindow&#34; Height=&#34;450&#34; Width=&#34;800&#34;&gt;
+    &lt;Grid&gt;
+        &lt;blazor:BlazorWebView HostPage=&#34;wwwroot\index.html&#34; Services=&#34;{DynamicResource services}&#34;&gt;
+            &lt;blazor:BlazorWebView.RootComponents&gt;
+                &lt;blazor:RootComponent Selector=&#34;#app&#34; ComponentType=&#34;{x:Type local:Counter}&#34; /&gt;
+            &lt;/blazor:BlazorWebView.RootComponents&gt;
+        &lt;/blazor:BlazorWebView&gt;
+    &lt;/Grid&gt;
+&lt;/Window&gt;
+</code></pre><h3 id="mainwindowcs-파일-수정">MainWindow.cs 파일 수정</h3>
+<pre tabindex="0"><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace WpfBlazor
+{
+    /// &lt;summary&gt;
+    /// Interaction logic for MainWindow.xaml
+    /// &lt;/summary&gt;
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            var serviceCollection = new ServiceCollection();
+            serviceCollection.AddWpfBlazorWebView();
+            Resources.Add(&#34;services&#34;, serviceCollection.BuildServiceProvider());
+        }
+    }
+}
+</code></pre><h3 id="앱-실행">앱 실행</h3>
+<p><p class="md__image">
+    
+    <img src="./run.png" alt="start"  />
+    
+  </p></p>
 
 
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -816,8 +1079,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -831,6 +1092,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -851,84 +1113,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -986,6 +1172,85 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -1013,7 +1278,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1026,9 +1290,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1197,10 +1458,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/workshop/msa/software-architecture/" title="Software Architecture"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/blazor/" title="Blazors"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/terraform/introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cloud/" title="Clouds" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1233,3 +1494,4 @@
     </script>
   </body>
 </html>
+

@@ -50,6 +50,26 @@
     </item>
     
     <item>
+      <title>Wpf Blazor 1</title>
+      <link>https://hnc-hskim.github.io/blazor/lab/wpf-blazor-1/</link>
+      <pubDate>Sat, 23 Jul 2022 14:01:09 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/blazor/lab/wpf-blazor-1/</guid>
+      <description>References  WPF Blazor 앱 빌드   WPF Blazor 앱 프로젝트 만들기 프로젝트에 Razor 구성 요소 추가 Windows에서 앱 실행  Blazor Hybrid가 GA(일반 공급)에 도달했으며 프로덕션 워크로드에 대해 완전히 지원됩니다. Visual Studio 및 Mac용 Visual Studio는 Blazor Hybrid 앱 작업을 위해 시험판 버전으로 제공되며 최종 릴리스 전에 수정될 수 있습니다. 최상의 도구 환경을 위해 Visual Studio 2022 미리 보기를 업데이트된 상태로 유지하는 것이 좋습니다.
+요구사항  visual studio 2022 visual studio workload(.</description>
+    </item>
+    
+    <item>
+      <title>Helm Repository</title>
+      <link>https://hnc-hskim.github.io/cloud/helm/helm-repository/</link>
+      <pubDate>Fri, 22 Jul 2022 11:01:46 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/cloud/helm/helm-repository/</guid>
+      <description>Github에 helm repository 만들기 1. Github으로 이동 2. New 버튼을 클릭한다.  Repository name(helm-charts) Public 체크 Add a README file 체크   3. 생성된 Repository 화면 4. 접근 URL 셋팅   리파지터리 홈 탭 메뉴의 Settings를 선택한다.
+  좌측 메뉴에 Pages를 선택한다.   main 브랜치를 선택후 save 버튼을 클릭한다.   publicshed 주소가 나오는데 이 주소가 helm repository 주소가 된다.   5. Local Repository 만들기  생성한 Repository를 로컬에 clone한다.</description>
+    </item>
+    
+    <item>
       <title>Monitoring</title>
       <link>https://hnc-hskim.github.io/cloud/rancher/monitoring/</link>
       <pubDate>Tue, 19 Jul 2022 13:59:12 +0900</pubDate>
@@ -135,7 +155,7 @@ AWS 클라우드 포메이션AWS CloudFormation의 경우 AWS만 지원하는 �
       <pubDate>Wed, 13 Jul 2022 08:51:28 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/kubernetes/cli/</guid>
-      <description>컨텍스트 조회 # 조회kubectl config get-contexts# 사용kubectl config use-context &amp;#34;context name&amp;#34; 클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.clusters[].name}&amp;#39; 노드에 레이블 추가 # 레이블 추가kubectl label nodes &amp;lt;your-node-name&amp;gt; disktype=ssd# 레이블 확인kubectl get nodes --show-labels Evicted pod 제거 kubectl delete pods --field-selector=status.phase=Failed -A node describe kubectl describe nodes &amp;#34;nodes-name&amp;#34; </description>
+      <description>컨텍스트 조회 # 조회kubectl config get-contexts# 사용kubectl config use-context &amp;#34;context name&amp;#34; 클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.clusters[].name}&amp;#39; 노드에 레이블 추가 # 레이블 추가kubectl label nodes &amp;lt;your-node-name&amp;gt; disktype=ssd# 레이블 확인kubectl get nodes --show-labels Evicted pod 제거 kubectl delete pods --field-selector=status.phase=Failed -A Node 재시작 kubectl describe node/hcidc-sv-paz-orca-worker-08kubectl uncordon hcidc-sv-paz-orca-worker-08 node describe kubectl describe nodes &amp;#34;nodes-name&amp;#34; Disk-Pressure 해결  테인트 수동 제거 시도(제거 안됨)  kubectl taint nodes hcidc-sv-paz-orca-worker-08 node.</description>
     </item>
     
   </channel>
