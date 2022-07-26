@@ -12,22 +12,22 @@
     <title>Cli :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1658836229" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1658836229" rel="stylesheet">
-    <link href="/css/hybrid.css?1658836229" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1658836229" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1658836229" rel="stylesheet">
-    <link href="/css/auto-complete.css?1658836229" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1658836229" rel="stylesheet">
-    <link href="/css/theme.css?1658836229" rel="stylesheet">
-    <link href="/css/tabs.css?1658836229" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1658836229" rel="stylesheet">
+    <link href="/css/nucleus.css?1658837965" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1658837965" rel="stylesheet">
+    <link href="/css/hybrid.css?1658837965" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1658837965" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1658837965" rel="stylesheet">
+    <link href="/css/auto-complete.css?1658837965" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1658837965" rel="stylesheet">
+    <link href="/css/theme.css?1658837965" rel="stylesheet">
+    <link href="/css/tabs.css?1658837965" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1658837965" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1658836229" rel="stylesheet">
+    <link href="/css/theme-green.css?1658837965" rel="stylesheet">
     
-    <link href="/css/msa-style.css?1658836229" rel="stylesheet">
+    <link href="/css/msa-style.css?1658837965" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1658836229"></script>
+    <script src="/js/jquery-3.3.1.min.js?1658837965"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1658836229"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1658836229"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1658837965"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1658837965"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hnc-hskim.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1658836229"></script>
+<script type="text/javascript" src="/js/search.js?1658837965"></script>
 
     
   </div>
@@ -769,7 +769,9 @@
   <ul>
     <li>
       <ul>
-        <li></li>
+        <li><a href="#조회all">조회(All)</a></li>
+        <li><a href="#컨텍스트-조회">컨텍스트 조회</a></li>
+        <li><a href="#컨텍스트-사용">컨텍스트 사용</a></li>
         <li><a href="#evicted-pod-제거">Evicted pod 제거</a></li>
         <li><a href="#node-재시작">Node 재시작</a></li>
         <li><a href="#node-describe">node describe</a></li>
@@ -800,12 +802,25 @@
         
 
 
-<h4 id="컨텍스트-조회">컨텍스트 조회</h4>
-<pre tabindex="0"><code># 조회
-kubectl config get-contexts
+<h3 id="조회all">조회(All)</h3>
+<pre tabindex="0"><code>$ kubectl get all -n code-server
+NAME                               READY   STATUS                  RESTARTS   AGE
+pod/code-server-5fc775748c-nbmsr   0/1     Init:CrashLoopBackOff   5          4m31s
 
-# 사용
-kubectl config use-context &#34;context name&#34;
+NAME                  TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/code-server   ClusterIP   10.79.240.159   &lt;none&gt;        8080/TCP   13m
+
+NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/code-server   0/1     1            0           13m
+
+NAME                                     DESIRED   CURRENT   READY   AGE
+replicaset.apps/code-server-5879f94445   0         0         0       7m13s
+replicaset.apps/code-server-5fc775748c   1         1         0       4m31s
+replicaset.apps/code-server-67d7c4f6cd   0         0         0       13m
+</code></pre><h3 id="컨텍스트-조회">컨텍스트 조회</h3>
+<pre tabindex="0"><code>kubectl config get-contexts
+</code></pre><h3 id="컨텍스트-사용">컨텍스트 사용</h3>
+<pre tabindex="0"><code>kubectl config use-context &#34;context name&#34;
 </code></pre><h4 id="클러스터명-조회">클러스터명 조회</h4>
 <pre tabindex="0"><code>kubectl config view --minify -o jsonpath=&#39;{.clusters[].name}&#39; 
 </code></pre><h4 id="노드에-레이블-추가">노드에 레이블 추가</h4>
@@ -831,10 +846,7 @@ kubectl uncordon hcidc-sv-paz-orca-worker-08
 <li>테인트 수동 제거 시도(제거 안됨)</li>
 </ul>
 <pre tabindex="0"><code>kubectl taint nodes hcidc-sv-paz-orca-worker-08 node.kubernetes.io/disk-pressure-
-</code></pre><p>ssh -i ~/.ssh/hancom <a href="mailto:hancom@172.16.198.218">hancom@172.16.198.218</a></p>
-<p>ssh -i ~/.ssh/hancom <a href="mailto:hancom@172.16.198.220">hancom@172.16.198.220</a>
-ssh -i hancom <a href="mailto:hancom@172.16.198.201">hancom@172.16.198.201</a></p>
-<ul>
+</code></pre><ul>
 <li>워커 노드에 직접 접속해 해결</li>
 </ul>
 <pre tabindex="0"><code>ssh uname@IP_or_hostname (login to the worker node )
@@ -1272,16 +1284,16 @@ rm -rf folder_name (delete the unwanted folder,you are forcefully deleting the f
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1658836229"></script>
-    <script src="/js/perfect-scrollbar.min.js?1658836229"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1658836229"></script>
-    <script src="/js/jquery.sticky.js?1658836229"></script>
-    <script src="/js/featherlight.min.js?1658836229"></script>
-    <script src="/js/highlight.pack.js?1658836229"></script>
+    <script src="/js/clipboard.min.js?1658837965"></script>
+    <script src="/js/perfect-scrollbar.min.js?1658837965"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1658837965"></script>
+    <script src="/js/jquery.sticky.js?1658837965"></script>
+    <script src="/js/featherlight.min.js?1658837965"></script>
+    <script src="/js/highlight.pack.js?1658837965"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1658836229"></script>
-    <script src="/js/learn.js?1658836229"></script>
-    <script src="/js/hugo-learn.js?1658836229"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1658837965"></script>
+    <script src="/js/learn.js?1658837965"></script>
+    <script src="/js/hugo-learn.js?1658837965"></script>
     
         
             <script src="https://unpkg.com/mermaid@9.1.3/dist/mermaid.min.js"></script>
