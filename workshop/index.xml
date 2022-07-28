@@ -6,6 +6,17 @@
     <description>Recent content in Workshops on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 21 Jul 2022 15:01:06 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/workshop/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Jul 2022 10:41:30 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/workshop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Code Server</title>
+      <link>https://hnc-hskim.github.io/workshop/ide/code-server/</link>
+      <pubDate>Thu, 28 Jul 2022 10:41:30 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/ide/code-server/</guid>
+      <description>References [coder] https://coder.com/ [code server] https://github.com/coder/code-server Coder is an open source platform for creating and managing developer workspaces on your preferred clouds and servers. By building on top of common development interfaces (SSH) and infrastructure tools (Terraform), Coder aims to make the process of provisioning and accessing remote workspaces approachable for organizations of various sizes and stages of cloud-native maturity.
+WEB-IDE 사용법 Rancher 접속(Apps -&amp;gt; Charts 선택)
+Chart Repository(code-server 선택)</description>
+    </item>
+    
   </channel>
 </rss>
