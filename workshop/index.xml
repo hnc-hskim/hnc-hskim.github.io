@@ -14,8 +14,7 @@
       
       <guid>https://hnc-hskim.github.io/workshop/ide/code-server/</guid>
       <description>References [coder] https://coder.com/ [code server] https://github.com/coder/code-server Coder is an open source platform for creating and managing developer workspaces on your preferred clouds and servers. By building on top of common development interfaces (SSH) and infrastructure tools (Terraform), Coder aims to make the process of provisioning and accessing remote workspaces approachable for organizations of various sizes and stages of cloud-native maturity.
-WEB-IDE 사용법 Rancher 접속(Apps -&amp;gt; Charts 선택)
-Chart Repository(code-server 선택)</description>
+WEB-IDE 사용법 1. 차트 설치 Rancher 접속(Apps -&amp;gt; Charts 선택) Chart Repository(code-server 선택) code-server 차트 선택 2.</description>
     </item>
     
   </channel>

@@ -12,22 +12,22 @@
     <title>Code Server :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1658975660" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1658975660" rel="stylesheet">
-    <link href="/css/hybrid.css?1658975660" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1658975660" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1658975660" rel="stylesheet">
-    <link href="/css/auto-complete.css?1658975660" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1658975660" rel="stylesheet">
-    <link href="/css/theme.css?1658975660" rel="stylesheet">
-    <link href="/css/tabs.css?1658975660" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1658975660" rel="stylesheet">
+    <link href="/css/nucleus.css?1658975893" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1658975893" rel="stylesheet">
+    <link href="/css/hybrid.css?1658975893" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1658975893" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1658975893" rel="stylesheet">
+    <link href="/css/auto-complete.css?1658975893" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1658975893" rel="stylesheet">
+    <link href="/css/theme.css?1658975893" rel="stylesheet">
+    <link href="/css/tabs.css?1658975893" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1658975893" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1658975660" rel="stylesheet">
+    <link href="/css/theme-green.css?1658975893" rel="stylesheet">
     
-    <link href="/css/msa-style.css?1658975660" rel="stylesheet">
+    <link href="/css/msa-style.css?1658975893" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1658975660"></script>
+    <script src="/js/jquery-3.3.1.min.js?1658975893"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1658975660"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1658975660"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1658975893"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1658975893"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hnc-hskim.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1658975660"></script>
+<script type="text/javascript" src="/js/search.js?1658975893"></script>
 
     
   </div>
@@ -794,6 +794,13 @@
       </ul>
     </li>
     <li><a href="#web-ide-사용법">WEB-IDE 사용법</a></li>
+    <li><a href="#1-차트-설치">1. 차트 설치</a></li>
+    <li><a href="#2-차트-선택">2. 차트 선택</a></li>
+    <li><a href="#3-이름-입력">3. 이름 입력</a></li>
+    <li><a href="#4-차트-values-수정">4. 차트 values 수정</a></li>
+    <li><a href="#5-설치">5. 설치</a></li>
+    <li><a href="#6-웹-브라우저에서-확인">6. 웹 브라우저에서 확인</a></li>
+    <li><a href="#7-kubectl-동작-확인">7. kubectl 동작 확인</a></li>
   </ul>
 </nav>
     </div>
@@ -829,75 +836,72 @@ By building on top of common development interfaces (SSH) and infrastructure too
 </div>
 
 <h2 id="web-ide-사용법">WEB-IDE 사용법</h2>
+<h2 id="1-차트-설치">1. 차트 설치</h2>
 <ul>
-<li>
-<p>Rancher 접속(Apps -&gt; Charts 선택)</p>
-</li>
-<li>
-<p>Chart Repository(code-server 선택)</p>
-</li>
-<li>
-<p>code-server 차트 선택
+<li>Rancher 접속(Apps -&gt; Charts 선택)</li>
+<li>Chart Repository(code-server 선택)</li>
+<li>code-server 차트 선택
 <p class="md__image">
     
     <img src="./code1.png" alt="code-server"  />
     
-  </p></p>
-</li>
-<li>
-<p>우측 상단의 Install 버튼 클릭
+  </p></li>
+</ul>
+<h2 id="2-차트-선택">2. 차트 선택</h2>
+<ul>
+<li>우측 상단의 Install 버튼 클릭
 <p class="md__image">
     
     <img src="./code2.png" alt="code-server"  />
     
-  </p></p>
-</li>
-<li>
-<p>Namespace와 Name 입력후 Next 버튼 클릭
+  </p></li>
+</ul>
+<h2 id="3-이름-입력">3. 이름 입력</h2>
+<ul>
+<li>Namespace와 Name 입력후 Next 버튼 클릭
 <p class="md__image">
     
     <img src="./code3.png" alt="code-server"  />
     
-  </p></p>
-</li>
-<li>
-<p>접속 URL 수정 및 패스워드 변경(기본 password : code)</p>
-</li>
-<li>
-<p>&ldquo;이름&rdquo;.apps.orca.cloud.hancom.com 사용할것</p>
-</li>
-<li>
-<p>수정후 Install 버큰 클릭
+  </p></li>
+</ul>
+<h2 id="4-차트-values-수정">4. 차트 values 수정</h2>
+<ul>
+<li>접속 URL 수정 및 패스워드 변경(기본 password : code)</li>
+<li>&ldquo;이름&rdquo;.apps.orca.cloud.hancom.com 사용할것</li>
+<li>수정후 Install 버큰 클릭
 <p class="md__image">
     
     <img src="./code4.png" alt="code-server"  />
     
-  </p></p>
-</li>
-<li>
-<p>Output 창에 SUCCESS 나올때까지 대기(약 1분 소요)
+  </p></li>
+</ul>
+<h2 id="5-설치">5. 설치</h2>
+<ul>
+<li>Output 창에 SUCCESS 나올때까지 대기(약 1분 소요)
 <p class="md__image">
     
     <img src="./code5.png" alt="code-server"  />
     
-  </p></p>
-</li>
-<li>
-<p>접속 URL을 웹브라우져에서 입력
+  </p></li>
+</ul>
+<h2 id="6-웹-브라우저에서-확인">6. 웹 브라우저에서 확인</h2>
+<ul>
+<li>접속 URL을 웹브라우져에서 입력
 <p class="md__image">
     
     <img src="./code6.png" alt="code-server"  />
     
-  </p></p>
-</li>
-<li>
-<p>터미널 창에서 kubectl cli 동작 확인
+  </p></li>
+</ul>
+<h2 id="7-kubectl-동작-확인">7. kubectl 동작 확인</h2>
+<ul>
+<li>터미널 창에서 kubectl cli 동작 확인
 <p class="md__image">
     
     <img src="./code7.png" alt="code-server"  />
     
-  </p></p>
-</li>
+  </p></li>
 </ul>
 
 
@@ -1344,16 +1348,16 @@ By building on top of common development interfaces (SSH) and infrastructure too
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1658975660"></script>
-    <script src="/js/perfect-scrollbar.min.js?1658975660"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1658975660"></script>
-    <script src="/js/jquery.sticky.js?1658975660"></script>
-    <script src="/js/featherlight.min.js?1658975660"></script>
-    <script src="/js/highlight.pack.js?1658975660"></script>
+    <script src="/js/clipboard.min.js?1658975893"></script>
+    <script src="/js/perfect-scrollbar.min.js?1658975893"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1658975893"></script>
+    <script src="/js/jquery.sticky.js?1658975893"></script>
+    <script src="/js/featherlight.min.js?1658975893"></script>
+    <script src="/js/highlight.pack.js?1658975893"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1658975660"></script>
-    <script src="/js/learn.js?1658975660"></script>
-    <script src="/js/hugo-learn.js?1658975660"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1658975893"></script>
+    <script src="/js/learn.js?1658975893"></script>
+    <script src="/js/hugo-learn.js?1658975893"></script>
     
         
             <script src="https://unpkg.com/mermaid@9.1.3/dist/mermaid.min.js"></script>
