@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Aws Cli :: My New Hugo Site</title>
+    <title>Glossary :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1659499678" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/kubernetes/aws-cli/">
+  <body class="" data-url="/workshop/msa/glossary/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -84,7 +84,7 @@
   
     
     <li data-nav-id="/workshop/" title="Workshops" class="dd-item
-        
+        parent
         
         
         ">
@@ -136,7 +136,7 @@
   
     
     <li data-nav-id="/workshop/msa/" title="Msa" class="dd-item
-        
+        parent
         
         
         ">
@@ -248,7 +248,7 @@
  
   
     
-      <li data-nav-id="/workshop/msa/glossary/" title="Glossary" class="dd-item ">
+      <li data-nav-id="/workshop/msa/glossary/" title="Glossary" class="dd-item active">
         <a href="/workshop/msa/glossary/">
         Glossary
         <i class="fas fa-check read-icon"></i>
@@ -655,7 +655,7 @@
   
     
     <li data-nav-id="/kubernetes/" title="Kubernetes" class="dd-item
-        parent
+        
         
         
         ">
@@ -683,7 +683,7 @@
  
   
     
-      <li data-nav-id="/kubernetes/aws-cli/" title="Aws Cli" class="dd-item active">
+      <li data-nav-id="/kubernetes/aws-cli/" title="Aws Cli" class="dd-item ">
         <a href="/kubernetes/aws-cli/">
         Aws Cli
         <i class="fas fa-check read-icon"></i>
@@ -763,7 +763,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/kubernetes/aws-cli.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/workshop/msa/glossary.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -794,7 +794,13 @@
             
           
           
-            <a href='/'></a> > <a href='/kubernetes/'>Kubernetes</a> > Aws Cli
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/workshop/'>Workshops</a> > <a href='/workshop/msa/'>Msa</a> > Glossary
+          
+        
           
         
           
@@ -809,9 +815,9 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#용어-사전">용어 사전</a>
       <ul>
-        <li><a href="#aws-계정-정보-조회">aws 계정 정보 조회</a></li>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -831,18 +837,95 @@
           
             <h1>
               
-              Aws Cli
+              Glossary
             </h1>
           
 
         
 
 
-<h3 id="aws-계정-정보-조회">aws 계정 정보 조회</h3>
-<pre tabindex="0"><code>aws sts get-caller-identity --profile &#34;name&#34; 
-</code></pre><h1 id="kubeconfig-등록">kubeconfig 등록</h1>
-<pre tabindex="0"><code>aws eks --profile &#34;profile name&#34; update-kubeconfig --name &#34;cluster name&#34; --region ap-northeast-2 
-</code></pre>
+<h2 id="용어-사전">용어 사전</h2>
+
+<div class="notices tip" ><p>A</p>
+</div>
+
+<h4 id="aws">AWS</h4>
+<p>AWS(Amazon Web Services)는 아마존닷컴의 클라우드 컴퓨팅 사업부이며 현재 클라우드 컴퓨팅 분야에서 압도적인 세계 1위를 차지하고 있으며 2022년부로 16주년을 맞는 다국적 기업이자 역사상 가장 큰 IT 및 클라우드 기업 중 하나이다. 아마존 웹 서비스는 다른 웹 사이트나 클라이언트측 응용 프로그램에 대해 온라인 서비스를 제공하고 있다. 이러한 서비스의 상당수는 최종 사용자에 직접 공개되는 것이 아니고, 다른 개발자가 사용 가능한 기능을 제공하는 플랫폼을 제공하는 PaaS이다.</p>
+<h4 id="api-gateway">API Gateway</h4>
+<p>API 게이트웨이 는 실제 백엔드 서비스 또는 데이터와 접속하고 API 호출에 대한 정책, 인증 및 일반 액세스 제어를 적용하여 중요한 데이터를 보호하는 트래픽 관리자입니다. API 게이트웨이는 백엔드 시스템 및 서비스에 대한 액세스를 제어하는 방법이며 외부 클라이언트와 백엔드 서비스 간의 통신을 최적화하여 클라이언트에게 원활한 경험을 제공하도록 설계되었습니다. API 게이트웨이는 서비스의 확장성과 고가용성을 보장합니다. 요청을 적절한 서비스로 라우팅하고 요청자에게 응답을 다시 보내는 기능을 담당합니다.</p>
+
+<div class="notices tip" ><p>F</p>
+</div>
+
+<h4 id="faas">FaaS</h4>
+<p>FaaS(Function-as-a-Service)는 개발자가 자체 인프라를 유지관리할 필요 없이 애플리케이션 패키지를 기능으로 빌드, 실행, 관리할 수 있게 해주는 일종의 클라우드 컴퓨팅 서비스입니다.</p>
+
+<div class="notices tip" ><p>K</p>
+</div>
+
+<h4 id="kafka">kafka</h4>
+<p>Apache Kafka(아파치 카프카)는 LinkedIn에서 개발된 분산 메시징 시스템이다. 대용량 실시간 로그처리에 특화되어 기존 메시징 시스템보다 TPS(Transaction per Second)가 우수하다.
+서비스 제공자가 퍼블리시(Publish)한 이벤트를, 필요한 소비자가 구독(Subscribe)하여 활용하는 Pub/Sub 기반 아키텍처가 특징이다.</p>
+
+<div class="notices tip" ><p>L</p>
+</div>
+
+<h4 id="load-balancer">Load Balancer</h4>
+<p>로드밸런서는 서버에 가해지는 부하(=로드)를 분산(=밸런싱)해주는 장치 또는 기술을 통칭한다. 클라이언트와 서버풀(Server Pool, 분산 네트워크를 구성하는 서버들의 그룹) 사이에 위치하며, 한 대의 서버로 부하가 집중되지 않도록 트래픽을 관리해 각각의 서버가 최적의 퍼포먼스를 보일 수 있도록 해준다.</p>
+<ul>
+<li>L4 로드밸런서는 네트워크 계층(IP, IPX)이나 트랜스포트 계층(TCP, UDP)의 정보를 바탕으로 로드를 분산한다. IP주소나 포트번호, MAC주소, 전송 프로토콜에 따라 트래픽을 나누는 것이 가능하다.</li>
+<li>L7 로드밸런서의 경우 애플리케이션 계층(HTTP, FTP, SMTP)에서 로드를 분산하기 때문에 HTTP 헤더, 쿠키 등과 같은 사용자의 요청을 기준으로 특정 서버에 트래픽을 분산하는 것이 가능하다.</li>
+</ul>
+
+<div class="notices tip" ><p>M</p>
+</div>
+
+<h4 id="monolithic">Monolithic</h4>
+<p>MSA와 반대되는 개념으로 설명하기 위한 전통적인 아키텍처를 지칭, 소프트웨어의 모든 구성요소가 한 프로젝트에 통합 되어 있는 형태</p>
+<h4 id="msa">MSA</h4>
+<p>MicroService Architecture
+마이크로서비스 아키텍처에 대한 정확한 정의는 없다. 하지만 마이크로서비스란 작고, 독립적으로 배포 가능한 각각의 기능을 수행하는 서비스로 구성된 프레임워크라고 할 수 있다. 
+마이크로서비스는 완전히 독립적으로 배포가 가능하고, 다른 기술 스택(개발 언어, 데이터베이스 등)이 사용 가능한 단일 사업 영역에 초점을 둔다.</p>
+<h4 id="maven">Maven</h4>
+<p>Maven은 자바용 프로젝트 관리도구로 Apache Ant의 대안으로 만들어졌다. 프로젝트의 작성부터 컴파일, 페트스 등 프로젝트 라이프사이클에 포함되는 각 테스트를 지원해 준다.</p>
+
+<div class="notices tip" ><p>R</p>
+</div>
+
+<h4 id="region">Region</h4>
+<p>아마존 웹 서비스의 데이터 센터를 리전(region)이라고 부른다.</p>
+<ul>
+<li>아시아 태평양 (6개 리전)
+<ul>
+<li>아시아 태평양 (도쿄), 일본</li>
+<li>아시아 태평양 (서울), 대한민국</li>
+<li>아시아 태평양 (싱가포르)</li>
+<li>아시아 태평양 (뭄바이), 인도</li>
+<li>아시아 태평양 (시드니), 오스트레일리아</li>
+<li>중국 (베이징)</li>
+</ul>
+</li>
+</ul>
+
+<div class="notices tip" ><p>S</p>
+</div>
+
+<h4 id="software-architecture">Software Architecture</h4>
+<p>소프트웨어 구조 또는 소프트웨어 아키텍처(software architecture)는 소프트웨어의 구성요소들 사이에서 유기적 관계를 표현하고 소프트웨어의 설계와 업그레이드를 통제하는 지침과 원칙이다.</p>
+<h4 id="strangler-pattern">Strangler pattern</h4>
+<p>특정 기능을 새로운 애플리케이션 및 서비스로 점진적으로 교체하여 레거시 시스템을 단계적으로 마이그레이션한다. 레거시 시스템의 기능이 교체되면 결국 새 시스템이 기존 시스템의 모든 기능을 대체하여 기존 시스템을 중단하고 서비스 해제할 수 있다.
+백 엔드 애플리케이션을 새로운 아키텍처로 점진적으로 마이그레이션하는 경우 이 패턴을 사용한다.</p>
+<p>다음 경우에는 이 패턴이 적합하지 않을 수 있다.</p>
+<ul>
+<li>백 엔드 시스템에 대한 요청을 가로챌 수 없는 경우</li>
+<li>대량 교체의 복잡성이 낮은 소규모 시스템의 경우</li>
+</ul>
+<h4 id="scale-up">Scale-Up</h4>
+<p>서버 자체의 성능을 확장하는 것을 의미한다.<br>
+ex) CPU를 i3 -&gt; i7으로 업그레이드</p>
+<h4 id="scale-out">Scale-Out</h4>
+<p>기존 서버와 동일하거나 낮은 성능의 서버를 두 대 이상 증설하여 운영하는 것을 의미한다.</p>
+
 
 <footer class="footline">
 	
@@ -879,8 +962,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -896,6 +977,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -913,6 +997,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -926,21 +1011,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -1001,17 +1073,12 @@
             
         
                     
-            
-        
-                    
-            
-        
-                    
                         
             
             
                 
                     
+                    
                 
                 
 
@@ -1020,18 +1087,8 @@
                     
 
                     
-                        
             
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
+        
                     
             
         
@@ -1044,69 +1101,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1180,6 +1176,54 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1236,7 +1280,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1249,7 +1292,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -1267,8 +1309,53 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1293,10 +1380,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/kubernetes/" title="Kubernetes"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/workshop/msa/software-architecture/" title="Software Architecture"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/kubernetes/cli/" title="Cli" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/blazor/" title="Blazors" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
