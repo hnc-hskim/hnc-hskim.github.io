@@ -28,11 +28,11 @@
 	"content": "References [참고1] https://dev.to/zachgoll/introduction-to-software-architecture-monolithic-vs-layered-vs-microservices-452 [참고2] https://github.com/mermaid-js/mermaid Diagram Editor \u0026ldquo;Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius—and a lot of courage to move in the opposite direction\u0026rdquo;\n[From E.F. Schumacher\u0026rsquo;s book Small is Beautiful]\n1. 소프트웨어 아키텍처 소프트웨어 구조 또는 소프트웨어 아키텍처(software architecture)는 소프트웨어의 구성요소들 사이에서 유기적 관계를 표현하고 소프트웨어의 설계와 업그레이드를 통제하는 지침과 원칙이다.\n1.1 소프트웨어 아키텍처 설계시 고려사항 성능: 회전하는 \u0026ldquo;로드 중\u0026rdquo; 아이콘이 사라지기 전에 얼마나 기다려야 합니까? 가용성: 시스템이 실행되는 시간의 백분율은 무엇입니까? 사용성: 사용자가 시스템의 인터페이스를 쉽게 파악할 수 있습니까? 수정 가능성: 개발자가 시스템에 기능을 추가하려는 경우 수행하기 쉽습니까? 상호 운용성: 시스템이 다른 시스템과 원활하게 작동합니까? 보안: 시스템 주변에 보안 포트리스가 있습니까? 이식성: 시스템이 다양한 플랫폼(예: Windows, Mac, Linux)에서 실행될 수 있습니까? 확장성: 사용자 기반을 빠르게 성장시키면 시스템이 새로운 트래픽을 충족하도록 쉽게 확장할 수 있습니까? 배포 가능성: 프로덕션 환경에 새로운 기능을 추가하는 것이 쉽습니까? 안전: 소프트웨어가 물리적 사물을 제어하는 ​​경우 실제 사람에게 위험합니까? 2. 소프트웨어 아키텍처가 프로젝트의 성공에 중요한 13가지 이유 원문\r번역\r1. An architecture will inhibit or enable a system’s driving quality attributes. 2. The decisions made in an architecture allow you to reason about and manage change as the system evolves. 3. The analysis of an architecture enables early prediction of a system’s qualities. 4. A documented architecture enhances communication among stakeholders. 5. The architecture is a carrier of the earliest and hence most fundamental, hardest-to-change design decisions. 6. An architecture defines a set of constraints on subsequent implementation. 7. The architecture dictates the structure of an organization, or vice versa. 8. An architecture can provide the basis for evolutionary prototyping. 9. An architecture is the key artifact that allows the architect and project manager to reason about cost and schedule. 10. An architecture can be created as a transferable, reusable model that forms the heart of a product line. 11. Architecture-based development focuses attention on the assembly of components, rather than simply on their creation. 12. By restricting design alternatives, architecture channels the creativity of developers, reducing design and system complexity. 13. An architecture can be the foundation for training a new team member 1. 아키텍처는 시스템의 구동 품질 속성을 억제하거나 활성화합니다. 2. 아키텍처에서 내린 결정을 통해 시스템이 발전함에 따라 변경 사항을 추론하고 관리할 수 있습니다. 3. 아키텍처 분석을 통해 시스템 품질을 조기에 예측할 수 있습니다. 4. 문서화된 아키텍처는 이해 관계자 간의 의사 소통을 향상시킵니다. 5. 아키텍처는 가장 초기에 가장 기본적이고 가장 변경하기 어려운 설계 결정의 전달자입니다. 6. 아키텍처는 후속 구현에 대한 일련의 제약 조건을 정의합니다. 7. 아키텍처는 조직의 구조를 결정하거나 그 반대의 경우도 마찬가지입니다. 8. 아키텍처는 진화적 프로토타이핑의 기초를 제공할 수 있습니다. 9. 아키텍처는 건축가와 프로젝트 관리자가 비용과 일정에 대해 추론할 수 있도록 하는 핵심 아티팩트입니다. 10. 아키텍처는 제품 라인의 핵심을 형성하는 양도 가능하고 재사용 가능한 모델로 생성될 수 있습니다. 11. 아키텍처 기반 개발은 단순히 구성 요소를 만드는 것보다 구성 요소의 조립에 주의를 집중합니다. 12. 설계 대안을 제한함으로써 아키텍처는 개발자의 창의성을 전달하여 설계 및 시스템 복잡성을 줄입니다. 13. 아키텍처는 새로운 팀원을 교육하기 위한 기반이 될 수 있습니다. "
 },
 {
-	"uri": "https://hnc-hskim.github.io/workshop/eventstorming/miro/",
-	"title": "Event Storming",
+	"uri": "https://hnc-hskim.github.io/workshop/spring/",
+	"title": "Spring",
 	"tags": [],
 	"description": "",
-	"content": "References [miro] https://miro.com/app/dashboard/ [test board] https://miro.com/app/board/uXjVOh72El0=/?share_link_id=330360109631 Event Storming [hancomcloud test board] (https://miro.com/welcomeonboard/WUFkN3RjU2dQWEdrbWVRQ0EyOEJoZG5XTWhaMExMOThTUmdLb3o2eUJTc3A3Q3R4NUxxcXdhaDc1NFI5YVFKcHwzMDc0NDU3MzU4NTczODgwNDc5?share_link_id=729643470596)\n"
+	"content": "\r스프링 프레임워크(Spring Framework)는 오늘날 Java 기반 웹 애플리케이션 개발의 표준으로 인식되고 있습니다. 스프링 프레임워크를 기반으로 한 다수의 상용 프레임워크가 출시되었고, 스프링과 함께 많은 발전을 이뤄냈습니다. 이같은 상황에서 스프링 프로젝트는 더욱 향상된 개발 환경을 제공하기 위해 스프링 부트(Spring Boot), 보안 및 인증 모듈 등을 추가하였고, 새로운 기술을 지원하고자 다양한 서브 프로젝트를 개발해오고 있습니다.\n"
 },
 {
 	"uri": "https://hnc-hskim.github.io/workshop/",
@@ -40,6 +40,13 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://hnc-hskim.github.io/workshop/eventstorming/miro/",
+	"title": "Event Storming",
+	"tags": [],
+	"description": "",
+	"content": "References [miro] https://miro.com/app/dashboard/ [test board] https://miro.com/app/board/uXjVOh72El0=/?share_link_id=330360109631 Event Storming hancomcloud test board\n"
 },
 {
 	"uri": "https://hnc-hskim.github.io/workshop/msa/glossary/",
