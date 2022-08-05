@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Spring :: My New Hugo Site</title>
+    <title>Springboot :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1659688022" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/workshop/spring/">
+  <body class="" data-url="/workshop/spring/springboot/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -115,8 +115,8 @@
   
     
     <li data-nav-id="/workshop/spring/" title="Spring" class="dd-item
+        parent
         
-        active
         
         ">
       <a href="/workshop/spring/">
@@ -164,7 +164,7 @@
  
   
     
-      <li data-nav-id="/workshop/spring/springboot/" title="Springboot" class="dd-item ">
+      <li data-nav-id="/workshop/spring/springboot/" title="Springboot" class="dd-item active">
         <a href="/workshop/spring/springboot/">
         Springboot
         <i class="fas fa-check read-icon"></i>
@@ -864,7 +864,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/workshop/spring/_index.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/workshop/spring/springboot.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -895,7 +895,13 @@
             
           
           
-            <a href='/'></a> > <a href='/workshop/'>Workshops</a> > Spring
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/workshop/'>Workshops</a> > <a href='/workshop/spring/'>Spring</a> > Springboot
+          
+        
           
         
           
@@ -908,7 +914,23 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#vs-code에-스프링부트-설치하기">VS code에 스프링부트 설치하기</a>
+      <ul>
+        <li><a href="#1-사전-준비">1. 사전 준비</a></li>
+        <li><a href="#2-extension-pack-설치">2. Extension pack 설치</a></li>
+        <li><a href="#3-프로젝트-생성-및-실행">3. 프로젝트 생성 및 실행</a></li>
+        <li><a href="#4-완료-화면">4. 완료 화면</a></li>
+        <li><a href="#5-applicationproperties-파일-확장자-applicationyml로-변경">5. application.properties 파일 확장자 application.yml로 변경</a></li>
+        <li><a href="#6-helloworldcontrollerjava-추가">6. HelloWorldController.java 추가</a></li>
+        <li><a href="#7-helloworldservicejava-추가">7. HelloWorldService.java 추가</a></li>
+        <li><a href="#8-실행">8. 실행</a></li>
+        <li><a href="#9-완료-화면">9. 완료 화면</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -924,7 +946,7 @@
           
             <h1>
               
-              Spring
+              Springboot
             </h1>
           
 
@@ -932,16 +954,143 @@
 
 
 
-	
-<div class="notices info" ><p>스프링 프레임워크(Spring Framework)는 오늘날 Java 기반 웹 애플리케이션 개발의 표준으로 인식되고 있습니다. 스프링 프레임워크를 기반으로 한 다수의 상용 프레임워크가 출시되었고, 스프링과 함께 많은 발전을 이뤄냈습니다. 이같은 상황에서 스프링 프로젝트는 더욱 향상된 개발 환경을 제공하기 위해 스프링 부트(Spring Boot), 보안 및 인증 모듈 등을 추가하였고, 새로운 기술을 지원하고자 다양한 서브 프로젝트를 개발해오고 있습니다.</p>
+<div class="notices info" ><p>오픈 소스 마이크로 프레임워크입니다. 따라서 마이크로 서비스 기반 Spring 애플리케이션을 만드는 데 도움이 됩니다. Pivotal Software, Inc.에서 개발합니다.</p>
 </div>
 
+<p><a href="http://honeymon.io/tech/2021/01/06/use-vs-code-for-spring-boot.html">참고</a></p>
+<h2 id="vs-code에-스프링부트-설치하기">VS code에 스프링부트 설치하기</h2>
+<h3 id="1-사전-준비">1. 사전 준비</h3>
+<ul>
+<li>Java Development Kit(JDK): 8 이상(11이상 권장)</li>
+<li>VSCode Java Extension Pack: <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack">https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack</a></li>
+<li>VSCode : <a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></li>
+</ul>
+<h3 id="2-extension-pack-설치">2. Extension pack 설치</h3>
+<ul>
+<li>Java Extension Pack - Microsoft: <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack">https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack</a></li>
+<li>Spring Boot Extension Pack - Pivotal: <a href="https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack">https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack</a>
+<ul>
+<li>Spring Boot Tools - Pivotal: <a href="https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-spring-boot">https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-spring-boot</a>
+
+<div class="notices tip" ><p>‘Spring Boot Tools’ 확장팩은 다음 파일 패턴을 가지는 파일에 대해서 파일수정할 때 활성화된다.<br>
+.java: 스프링 부트 사양을 따르는 경우(@SpringBoot 애너테이션과 main() 메서드가 함께있음) 활성화<br>
+application*.properties<br>
+application*.yml</p>
+</div>
+</li>
+<li>Spring Initializr Java Support - Microsoft : <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-spring-initializr">https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-spring-initializr</a>
+
+<div class="notices tip" ><p>‘Spring Initializr Java Support’ 확장팩은 VSCode 내에서 Spring Initialzr(<a href="https://start.spring.io/">https://start.spring.io/</a>) API를 이용하여 스프링 부트 프로젝트를 구성할 수 있다.</p>
+</div>
+</li>
+<li>Spring Boot Dashboard - Microsoft: <a href="https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack">https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack</a>
+
+<div class="notices tip" ><p>‘Spring Initializr Java Support’ 확장팩은 VSCode 내에서 Spring Initialzr(<a href="https://start.spring.io/">https://start.spring.io/</a>) API를 이용하여 스프링 부트 프로젝트를 구성할 수 있다.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>Lombok Annotations Support for VS Code : <a href="https://marketplace.visualstudio.com/items?itemName=GabrielBB.vscode-lombok">https://marketplace.visualstudio.com/items?itemName=GabrielBB.vscode-lombok</a></li>
+</ul>
+<h3 id="3-프로젝트-생성-및-실행">3. 프로젝트 생성 및 실행</h3>
+<ul>
+<li>Ctrl + Shift + P를 눌러 Command palette 열기</li>
+</ul>
+<p><p class="md__image">
+    
+    <img src="./sp1.png" alt="Command palette"  />
+    
+  </p></p>
+<ul>
+<li>Spring Boot version 선택: 2.7.2</li>
+<li>Project language 선택: Java</li>
+<li>Group Id 등록: ex) test.springboot.vscode</li>
+<li>Artifact Id 등록: test-vs-code</li>
+<li>Packaging type 선택: JAR</li>
+<li>Java Version 선택: 18</li>
+<li>Dependnecies 선택
+<ol>
+<li>Spring Boot DevTools</li>
+<li>Lombok</li>
+<li>Spring Configuration Processor</li>
+<li>Spring Web</li>
+<li>Spring Data JPA</li>
+<li>H2 Database</li>
+<li>Flyway Migration</li>
+<li>MariaDB Driver</li>
+</ol>
+</li>
+<li>저장 위치 선택
+<p class="md__image">
+    
+    <img src="./sp2.png" alt="Command palette"  />
+    
+  </p></li>
+</ul>
+<h3 id="4-완료-화면">4. 완료 화면</h3>
+<p><p class="md__image">
+    
+    <img src="./sp3.png" alt="Command palette"  />
+    
+  </p></p>
+<h3 id="5-applicationproperties-파일-확장자-applicationyml로-변경">5. application.properties 파일 확장자 application.yml로 변경</h3>
+<ul>
+<li>yaml 파일 형식이 가독성이 좋고 작성이 쉽기 때문에 변경한다.</li>
+<li>파일 위치 : src/main/resources/application.yml</li>
+</ul>
+<pre tabindex="0"><code>logging:
+  level:
+    &#39;[org.springframework.web]&#39;: debug
+</code></pre><h3 id="6-helloworldcontrollerjava-추가">6. HelloWorldController.java 추가</h3>
+<pre tabindex="0"><code>package test.springboot.vscode.testvscode.web;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import lombok.RequiredArgsConstructor;
+import test.springboot.vscode.testvscode.service.HelloWorldService;
+
+@RestController
+@RequiredArgsConstructor
+public class HelloWorldController {
+    private final HelloWorldService helloService;
+
+    @GetMapping(&#34;/hello&#34;)
+    public String hello() {
+        return helloService.hello();
+    }
+    
+}
+</code></pre><h3 id="7-helloworldservicejava-추가">7. HelloWorldService.java 추가</h3>
+<pre tabindex="0"><code>package test.springboot.vscode.testvscode.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class HelloWorldService {
+    public String hello() {
+        return &#34;Hello, World!!!&#34;;
+    }
+    
+}
+</code></pre><h3 id="8-실행">8. 실행</h3>
+<ul>
+<li>Spring Boot Dashboard 선택후 Run 아이콘 클릭
+<p class="md__image">
+    
+    <img src="./sp5.png" alt="Command palette"  />
+    
+  </p></li>
+</ul>
+<h3 id="9-완료-화면">9. 완료 화면</h3>
+<p><p class="md__image">
+    
+    <img src="./sp4.png" alt="Command palette"  />
+    
+  </p></p>
 
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1025,6 +1174,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1043,6 +1193,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1451,10 +1604,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/workshop/" title="Workshops"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/workshop/spring/springboot-gradle/" title="Springboot Gradle"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/workshop/spring/springboot-gradle/" title="Springboot Gradle" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/workshop/eventstorming/miro/" title="Event Storming" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1487,3 +1640,4 @@
     </script>
   </body>
 </html>
+

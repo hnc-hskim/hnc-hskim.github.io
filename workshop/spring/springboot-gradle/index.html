@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Spring :: My New Hugo Site</title>
+    <title>Springboot Gradle :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1659688022" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/workshop/spring/">
+  <body class="" data-url="/workshop/spring/springboot-gradle/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -115,8 +115,8 @@
   
     
     <li data-nav-id="/workshop/spring/" title="Spring" class="dd-item
+        parent
         
-        active
         
         ">
       <a href="/workshop/spring/">
@@ -143,7 +143,7 @@
  
   
     
-      <li data-nav-id="/workshop/spring/springboot-gradle/" title="Springboot Gradle" class="dd-item ">
+      <li data-nav-id="/workshop/spring/springboot-gradle/" title="Springboot Gradle" class="dd-item active">
         <a href="/workshop/spring/springboot-gradle/">
         Springboot Gradle
         <i class="fas fa-check read-icon"></i>
@@ -864,7 +864,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/workshop/spring/_index.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/workshop/spring/springboot-gradle.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -895,7 +895,13 @@
             
           
           
-            <a href='/'></a> > <a href='/workshop/'>Workshops</a> > Spring
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/workshop/'>Workshops</a> > <a href='/workshop/spring/'>Spring</a> > Springboot Gradle
+          
+        
           
         
           
@@ -908,7 +914,20 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#referenes">Referenes</a></li>
+    <li><a href="#gradle-빌드-방법">gradle 빌드 방법</a>
+      <ul>
+        <li><a href="#jar-파일-위치">jar 파일 위치</a></li>
+        <li><a href="#jar-파일-실행">jar 파일 실행</a></li>
+        <li><a href="#extension-설치실행-안됨">Extension 설치(실행 안됨)</a></li>
+        <li><a href="#gradle-서버-실행">Gradle 서버 실행</a></li>
+        <li><a href="#docker-image-만들기">Docker Image 만들기</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -924,24 +943,152 @@
           
             <h1>
               
-              Spring
+              Springboot Gradle
             </h1>
           
 
         
 
 
+<h2 id="referenes">Referenes</h2>
+<ul>
+<li><a href="https://inma.tistory.com/148">https://inma.tistory.com/148</a></li>
+</ul>
 
-	
-<div class="notices info" ><p>스프링 프레임워크(Spring Framework)는 오늘날 Java 기반 웹 애플리케이션 개발의 표준으로 인식되고 있습니다. 스프링 프레임워크를 기반으로 한 다수의 상용 프레임워크가 출시되었고, 스프링과 함께 많은 발전을 이뤄냈습니다. 이같은 상황에서 스프링 프로젝트는 더욱 향상된 개발 환경을 제공하기 위해 스프링 부트(Spring Boot), 보안 및 인증 모듈 등을 추가하였고, 새로운 기술을 지원하고자 다양한 서브 프로젝트를 개발해오고 있습니다.</p>
+<div class="notices info" ><p>$ java -version<br>
+java version &ldquo;18.0.2&rdquo; 2022-07-19<br>
+Java(TM) SE Runtime Environment (build 18.0.2+9-61)<br>
+Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)</p>
 </div>
 
+<h2 id="gradle-빌드-방법">gradle 빌드 방법</h2>
+<ul>
+<li>프로젝트 루트로 이동후 gradlew jar 명령어 입력</li>
+</ul>
+<pre tabindex="0"><code>$ ./gradlew jar
+Starting a Gradle Daemon, 2 incompatible and 2 stopped Daemons could not be reused, use --status for details
 
+BUILD SUCCESSFUL in 19s
+3 actionable tasks: 3 executed
+</code></pre><ul>
+<li>실행 가능한 jar 파일 만들기</li>
+</ul>
+<pre tabindex="0"><code>$ ./gradlew bootJar
 
+BUILD SUCCESSFUL in 4s
+4 actionable tasks: 4 up-to-date
+</code></pre><h3 id="jar-파일-위치">jar 파일 위치</h3>
+<pre tabindex="0"><code>build/libs/*.jar
+</code></pre><h3 id="jar-파일-실행">jar 파일 실행</h3>
+<pre tabindex="0"><code>$ java -jar .\test-vs-code-0.0.1-SNAPSHOT.jar
 
+  .   ____          _            __ _ _
+ /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  &#39;  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2)
 
+2022-08-05 17:25:32.578  INFO 11512 --- [           main] t.s.v.testvscode.TestVsCodeApplication   : Starting TestVsCodeApplication using Java 18.0.2 on DESKTOP-SC8B9ID with PID 11512 (C:\work2022\git\hnc-hskim\samples\springboot\test-vs-code\build\libs\test-vs-code-0.0.1-SNAPSHOT.jar started by hskim in C:\work2022\git\hnc-hskim\samples\springboot\test-vs-code\build\libs)
+2022-08-05 17:25:32.585  INFO 11512 --- [           main] t.s.v.testvscode.TestVsCodeApplication   : No active profile set, falling back to 1 default profile: &#34;default&#34;
+2022-08-05 17:25:33.647  INFO 11512 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-05 17:25:33.674  INFO 11512 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2022-08-05 17:25:34.711  INFO 11512 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-05 17:25:34.733  INFO 11512 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-05 17:25:34.734  INFO 11512 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-05 17:25:34.874  INFO 11512 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-05 17:25:34.875  INFO 11512 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2140 ms
+2022-08-05 17:25:35.172  INFO 11512 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 8.5.13 by Redgate
+2022-08-05 17:25:35.173  INFO 11512 --- [           main] o.f.c.internal.license.VersionPrinter    : See what&#39;s new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2022-08-05 17:25:35.173  INFO 11512 --- [           main] o.f.c.internal.license.VersionPrinter    :
+2022-08-05 17:25:35.188  INFO 11512 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-05 17:25:35.514  INFO 11512 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-05 17:25:35.531  INFO 11512 --- [           main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:6c0933b2-c77b-474d-9973-17e89d02a625 (H2 2.1)
+2022-08-05 17:25:35.587  WARN 11512 --- [           main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022-08-05 17:25:35.615  INFO 11512 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.007s)
+2022-08-05 17:25:35.615  WARN 11512 --- [           main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2022-08-05 17:25:35.627  INFO 11512 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table &#34;PUBLIC&#34;.&#34;flyway_schema_history&#34; ...
+2022-08-05 17:25:35.664  INFO 11512 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema &#34;PUBLIC&#34;: &lt;&lt; Empty Schema &gt;&gt;
+2022-08-05 17:25:35.667  INFO 11512 --- [           main] o.f.core.internal.command.DbMigrate      : Schema &#34;PUBLIC&#34; is up to date. No migration necessary.
+2022-08-05 17:25:35.946  INFO 11512 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-05 17:25:36.075  INFO 11512 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-05 17:25:36.367  INFO 11512 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-05 17:25:36.649  INFO 11512 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-05 17:25:37.074  INFO 11512 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-05 17:25:37.092  INFO 11512 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit &#39;default&#39;
+2022-08-05 17:25:37.205  WARN 11512 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view 
+rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-05 17:25:37.486 DEBUG 11512 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-08-05 17:25:37.721 DEBUG 11512 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in &#39;requestMappingHandlerMapping&#39;
+2022-08-05 17:25:37.775 DEBUG 11512 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in &#39;resourceHandlerMapping&#39;
+2022-08-05 17:25:37.809 DEBUG 11512 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-08-05 17:25:38.042  INFO 11512 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path &#39;&#39;
+2022-08-05 17:25:38.066  INFO 11512 --- [           main] t.s.v.testvscode.TestVsCodeApplication   : Started TestVsCodeApplication in 6.269 seconds (JVM running for 7.013)
+</code></pre><h3 id="extension-설치실행-안됨">Extension 설치(실행 안됨)</h3>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-gradle">https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-gradle</a></li>
+</ul>
+<p><p class="md__image">
+    
+    <img src="./img1.png" alt="gradle"  />
+    
+  </p></p>
+<h3 id="gradle-서버-실행">Gradle 서버 실행</h3>
+<pre tabindex="0"><code>./gradlew bootRun
 
-<footer class=" footline" >
+&gt; Task :bootRun
+16:07:25.068 [Thread-0] DEBUG org.springframework.boot.devtools.restart.classloader.RestartClassLoader - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@24829070
+
+  .   ____          _            __ _ _
+ /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  &#39;  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.2) 
+</code></pre><h3 id="docker-image-만들기">Docker Image 만들기</h3>
+<ul>
+<li>Dockerfile</li>
+</ul>
+<pre tabindex="0"><code># jdk 18 alpine 버전 사용
+FROM openjdk:18-alpine AS builder 
+
+# gradlew 복사
+COPY gradlew . 
+
+# gradle 복사
+COPY gradle gradle 
+
+# build.gradle 복사
+COPY build.gradle . 
+
+# settings.gradle 복사
+COPY settings.gradle . 
+
+# 웹 어플리케이션 소스 복사
+COPY src src 
+
+# gradlew 실행권한 부여
+RUN chmod +x ./gradlew 
+
+# gradlew를 사용하여 실행 가능한 jar 파일 생성
+RUN ./gradlew bootJar 
+
+# 베이스 이미지
+FROM openjdk:18-alpine
+
+# builder 이미지에서 build/libs/*.jar 파일을 app.jar로 복사
+COPY --from=builder build/libs/*.jar app.jar 
+
+# 컨테이너 Port 노출
+EXPOSE 8080 
+
+# jar 파일 실행
+ENTRYPOINT [&#34;java&#34;,&#34;-jar&#34;,&#34;/app.jar&#34;]  
+</code></pre>
+
+<footer class="footline">
 	
 </footer>
 
@@ -1006,8 +1153,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1024,6 +1169,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1451,10 +1599,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/workshop/" title="Workshops"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/workshop/spring/" title="Spring"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/workshop/spring/springboot-gradle/" title="Springboot Gradle" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/workshop/spring/springboot/" title="Springboot" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1487,3 +1635,4 @@
     </script>
   </body>
 </html>
+
