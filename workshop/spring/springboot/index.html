@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="ko" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.94.0" />
+    <meta name="description" content="My blog">
+<meta name="author" content="hnc-hskim">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Springboot :: My New Hugo Site</title>
+
+    
+    <link href="/css/nucleus.css?1659753975" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1659753975" rel="stylesheet">
+    <link href="/css/hybrid.css?1659753975" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1659753975" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1659753975" rel="stylesheet">
+    <link href="/css/auto-complete.css?1659753975" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1659753975" rel="stylesheet">
+    <link href="/css/theme.css?1659753975" rel="stylesheet">
+    <link href="/css/tabs.css?1659753975" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1659753975" rel="stylesheet">
+    
+    <link href="/css/theme-green.css?1659753975" rel="stylesheet">
+    
+    <link href="/css/msa-style.css?1659753975" rel="stylesheet">
+
+    <script src="/js/jquery-3.3.1.min.js?1659753975"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/workshop/spring/springboot/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo"
+    href='/'>
+    <img src="/images/title.jpg" />
+
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1659753975"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1659753975"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/hnc-hskim.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1659753975"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop/" title="Workshops" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/workshop/">
+          Workshops
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop/spring/" title="Spring" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/workshop/spring/">
+          Spring
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/workshop/spring/springboot/" title="Springboot" class="dd-item active">
+        <a href="/workshop/spring/springboot/">
+        Springboot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/workshop/spring/springboot-gradle/" title="Springboot Gradle" class="dd-item ">
+        <a href="/workshop/spring/springboot-gradle/">
+        Springboot Gradle
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/workshop/eventstorming/miro/" title="Event Storming" class="dd-item ">
+        <a href="/workshop/eventstorming/miro/">
+        Event Storming
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/workshop/ide/code-server/" title="Code Server" class="dd-item ">
+        <a href="/workshop/ide/code-server/">
+        Code Server
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop/msa/" title="Msa" class="dd-item
+        
+        
+        
+        ">
+      <a href="/workshop/msa/">
+          Msa
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/workshop/msa/definition/" title="Definition" class="dd-item ">
+        <a href="/workshop/msa/definition/">
+        Definition
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/workshop/msa/concept/" title="Concept" class="dd-item ">
+        <a href="/workshop/msa/concept/">
+        Concept
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/workshop/msa/software-architecture-pattern/" title="Software Architecture Pattern" class="dd-item ">
+        <a href="/workshop/msa/software-architecture-pattern/">
+        Software Architecture Pattern
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/workshop/msa/software-architecture/" title="Software Architecture" class="dd-item ">
+        <a href="/workshop/msa/software-architecture/">
+        Software Architecture
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/workshop/msa/glossary/" title="Glossary" class="dd-item ">
+        <a href="/workshop/msa/glossary/">
+        Glossary
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/blazor/" title="Blazors" class="dd-item
+        
+        
+        
+        ">
+      <a href="/blazor/">
+          Blazors
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/blazor/lab/wpf-blazor-1/" title="Wpf Blazor 1" class="dd-item ">
+        <a href="/blazor/lab/wpf-blazor-1/">
+        Wpf Blazor 1
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cloud/" title="Clouds" class="dd-item
+        
+        
+        
+        ">
+      <a href="/cloud/">
+          Clouds
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cloud/helm/helm-repository/" title="Helm Repository" class="dd-item ">
+        <a href="/cloud/helm/helm-repository/">
+        Helm Repository
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cloud/rancher/monitoring/" title="Monitoring" class="dd-item ">
+        <a href="/cloud/rancher/monitoring/">
+        Monitoring
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cloud/operation/scheduling/" title="Scheduling" class="dd-item ">
+        <a href="/cloud/operation/scheduling/">
+        Scheduling
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/terraform/" title="Terraforms" class="dd-item
+        
+        
+        
+        ">
+      <a href="/terraform/">
+          Terraforms
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/terraform/introduction/" title="Introduction" class="dd-item ">
+        <a href="/terraform/introduction/">
+        Introduction
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/references/" title="References" class="dd-item
+        
+        
+        
+        ">
+      <a href="/references/">
+          References
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/references/kubernetes/" title="Kubernetes" class="dd-item ">
+        <a href="/references/kubernetes/">
+        Kubernetes
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/references/terraform/" title="Terraform" class="dd-item ">
+        <a href="/references/terraform/">
+        Terraform
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/hugo/" title="Hugoes" class="dd-item
+        
+        
+        
+        ">
+      <a href="/hugo/">
+          Hugoes
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hugo/comments/" title="Comments" class="dd-item ">
+        <a href="/hugo/comments/">
+        Comments
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/hugo/style/" title="Style" class="dd-item ">
+        <a href="/hugo/style/">
+        Style
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/" title="Kubernetes" class="dd-item
+        
+        
+        
+        ">
+      <a href="/kubernetes/">
+          Kubernetes
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/aws-cli/" title="Aws Cli" class="dd-item ">
+        <a href="/kubernetes/aws-cli/">
+        Aws Cli
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/cli/" title="Cli" class="dd-item ">
+        <a href="/kubernetes/cli/">
+        Cli
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> </a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/hnc-hskim/mario/edit/master/content/workshop/spring/springboot.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/workshop/'>Workshops</a> > <a href='/workshop/spring/'>Spring</a> > Springboot
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#vs-code에-스프링부트-설치하기">VS code에 스프링부트 설치하기</a>
+      <ul>
+        <li><a href="#1-사전-준비">1. 사전 준비</a></li>
+        <li><a href="#jdk-환경변수-설정window">jdk 환경변수 설정(Window)</a></li>
+        <li><a href="#2-extension-pack-설치">2. Extension pack 설치</a></li>
+        <li><a href="#3-프로젝트-생성-및-실행">3. 프로젝트 생성 및 실행</a></li>
+        <li><a href="#4-완료-화면">4. 완료 화면</a></li>
+        <li><a href="#5-applicationproperties-파일-확장자-applicationyml로-변경">5. application.properties 파일 확장자 application.yml로 변경</a></li>
+        <li><a href="#6-helloworldcontrollerjava-추가">6. HelloWorldController.java 추가</a></li>
+        <li><a href="#7-helloworldservicejava-추가">7. HelloWorldService.java 추가</a></li>
+        <li><a href="#8-실행">8. 실행</a></li>
+        <li><a href="#9-완료-화면">9. 완료 화면</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Springboot
+            </h1>
+          
+
+        
+
+
+
+<div class="notices info" ><p>오픈 소스 마이크로 프레임워크입니다. 따라서 마이크로 서비스 기반 Spring 애플리케이션을 만드는 데 도움이 됩니다. Pivotal Software, Inc.에서 개발합니다.</p>
+</div>
+
+<p><a href="http://honeymon.io/tech/2021/01/06/use-vs-code-for-spring-boot.html">참고</a></p>
+<h2 id="vs-code에-스프링부트-설치하기">VS code에 스프링부트 설치하기</h2>
+<h3 id="1-사전-준비">1. 사전 준비</h3>
+<ul>
+<li>Java Development Kit(JDK): <a href="https://www.oracle.com/java/technologies/downloads/#jdk18-windows">8 이상(11이상 권장)</a></li>
+<li>VSCode Java Extension Pack: <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack">https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack</a></li>
+<li>VSCode : <a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></li>
+</ul>
+<h3 id="jdk-환경변수-설정window">jdk 환경변수 설정(Window)</h3>
+<pre tabindex="0"><code># 커맨드에서 아래명령을 입력했을때 버전이 표시되지 않으면 환경 변수 설정을 해준다. 
+$ javac -version 
+javac 18.0.2
+
+# window key + R을 누른뒤, sysdm.cpl을 입력한다.(시작 버튼을 누른뒤 검색에서 고급 시스템 설정을 검색해도 됨)
+# 고급탭에 환경변수를 누른다. 
+# 시스템 변수에 새로 만들기를 선택한다. 
+
+변수 이름(N) : JAVA_HOME
+변수 값(V) : C:\Program Files\Java\jdk1.8.0_281 (JDK가 설치된 경로)
+
+# 시스템 변수의 Path를 눌러 편집을 클릭한다. 
+# 새로 만들기를 클릭한후 다음을 입력한다. 
+ %JAVA_HOME%bin
+</code></pre><h3 id="2-extension-pack-설치">2. Extension pack 설치</h3>
+<ul>
+<li>Java Extension Pack - Microsoft: <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack">https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack</a></li>
+<li>Spring Boot Extension Pack - Pivotal: <a href="https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack">https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack</a>
+<ul>
+<li>Spring Boot Tools - Pivotal: <a href="https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-spring-boot">https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-spring-boot</a>
+
+<div class="notices tip" ><p>‘Spring Boot Tools’ 확장팩은 다음 파일 패턴을 가지는 파일에 대해서 파일수정할 때 활성화된다.<br>
+.java: 스프링 부트 사양을 따르는 경우(@SpringBoot 애너테이션과 main() 메서드가 함께있음) 활성화<br>
+application*.properties<br>
+application*.yml</p>
+</div>
+</li>
+<li>Spring Initializr Java Support - Microsoft : <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-spring-initializr">https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-spring-initializr</a>
+
+<div class="notices tip" ><p>‘Spring Initializr Java Support’ 확장팩은 VSCode 내에서 Spring Initialzr(<a href="https://start.spring.io/">https://start.spring.io/</a>) API를 이용하여 스프링 부트 프로젝트를 구성할 수 있다.</p>
+</div>
+</li>
+<li>Spring Boot Dashboard - Microsoft: <a href="https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack">https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack</a>
+
+<div class="notices tip" ><p>‘Spring Initializr Java Support’ 확장팩은 VSCode 내에서 Spring Initialzr(<a href="https://start.spring.io/">https://start.spring.io/</a>) API를 이용하여 스프링 부트 프로젝트를 구성할 수 있다.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>Lombok Annotations Support for VS Code : <a href="https://marketplace.visualstudio.com/items?itemName=GabrielBB.vscode-lombok">https://marketplace.visualstudio.com/items?itemName=GabrielBB.vscode-lombok</a></li>
+</ul>
+<h3 id="3-프로젝트-생성-및-실행">3. 프로젝트 생성 및 실행</h3>
+<ul>
+<li>Ctrl + Shift + P를 눌러 Command palette 열기</li>
+</ul>
+<p><p class="md__image">
+    
+    <img src="./sp1.png" alt="Command palette"  />
+    
+  </p></p>
+<ul>
+<li>Spring Boot version 선택: 2.7.2</li>
+<li>Project language 선택: Java</li>
+<li>Group Id 등록: ex) test.springboot.vscode</li>
+<li>Artifact Id 등록: test-vs-code</li>
+<li>Packaging type 선택: JAR</li>
+<li>Java Version 선택: 18</li>
+<li>Dependnecies 선택
+<ol>
+<li>Spring Boot DevTools</li>
+<li>Lombok</li>
+<li>Spring Configuration Processor</li>
+<li>Spring Web</li>
+<li>Spring Data JPA</li>
+<li>H2 Database</li>
+<li>Flyway Migration</li>
+<li>MariaDB Driver</li>
+</ol>
+</li>
+<li>저장 위치 선택
+<p class="md__image">
+    
+    <img src="./sp2.png" alt="Command palette"  />
+    
+  </p></li>
+</ul>
+<h3 id="4-완료-화면">4. 완료 화면</h3>
+<p><p class="md__image">
+    
+    <img src="./sp3.png" alt="Command palette"  />
+    
+  </p></p>
+<h3 id="5-applicationproperties-파일-확장자-applicationyml로-변경">5. application.properties 파일 확장자 application.yml로 변경</h3>
+<ul>
+<li>yaml 파일 형식이 가독성이 좋고 작성이 쉽기 때문에 변경한다.</li>
+<li>파일 위치 : src/main/resources/application.yml</li>
+</ul>
+<pre tabindex="0"><code>logging:
+  level:
+    &#39;[org.springframework.web]&#39;: debug
+</code></pre><h3 id="6-helloworldcontrollerjava-추가">6. HelloWorldController.java 추가</h3>
+<pre tabindex="0"><code>package test.springboot.vscode.testvscode.web;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import lombok.RequiredArgsConstructor;
+import test.springboot.vscode.testvscode.service.HelloWorldService;
+
+@RestController
+@RequiredArgsConstructor
+public class HelloWorldController {
+    private final HelloWorldService helloService;
+
+    @GetMapping(&#34;/hello&#34;)
+    public String hello() {
+        return helloService.hello();
+    }
+    
+}
+</code></pre><h3 id="7-helloworldservicejava-추가">7. HelloWorldService.java 추가</h3>
+<pre tabindex="0"><code>package test.springboot.vscode.testvscode.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class HelloWorldService {
+    public String hello() {
+        return &#34;Hello, World!!!&#34;;
+    }
+    
+}
+</code></pre><h3 id="8-실행">8. 실행</h3>
+<ul>
+<li>Spring Boot Dashboard 선택후 Run 아이콘 클릭
+<p class="md__image">
+    
+    <img src="./sp5.png" alt="Command palette"  />
+    
+  </p></li>
+</ul>
+<h3 id="9-완료-화면">9. 완료 화면</h3>
+<p><p class="md__image">
+    
+    <img src="./sp4.png" alt="Command palette"  />
+    
+  </p></p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/workshop/spring/" title="Spring"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/workshop/spring/springboot-gradle/" title="Springboot Gradle" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1659753975"></script>
+    <script src="/js/perfect-scrollbar.min.js?1659753975"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1659753975"></script>
+    <script src="/js/jquery.sticky.js?1659753975"></script>
+    <script src="/js/featherlight.min.js?1659753975"></script>
+    <script src="/js/highlight.pack.js?1659753975"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1659753975"></script>
+    <script src="/js/learn.js?1659753975"></script>
+    <script src="/js/hugo-learn.js?1659753975"></script>
+    
+        
+            <script src="https://unpkg.com/mermaid@9.1.3/dist/mermaid.min.js"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    <script src="https://utteranc.es/client.js" repo="hnc-hskim/mario-comments" issue-term="title" theme="github-light"
+    crossorigin="anonymous" async>
+    </script>
+  </body>
+</html>
+

@@ -13,8 +13,19 @@
       <pubDate>Thu, 21 Jul 2022 15:01:06 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/workshop/msa/definition/</guid>
-      <description>[출처] https://ko.wikipedia.org/wiki/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4
+      <description>출처 : 위키디피아
 정의 마이크로서비스(microservice)는 애플리케이션을 느슨하게 결합된 서비스의 모임으로 구조화하는 서비스 지향 아키텍처(SOA) 스타일의 일종인 소프트웨어 개발 기법이다. 마이크로서비스 아키텍처에서 서비스들은 섬세(fine-grained)하고 프로토콜은 가벼운 편이다. 애플리케이션을 더 조그마한 여러 서비스로 분해할 때의 장점은 모듈성을 개선하고 애플리케이션의 이해, 개발, 테스트를 더 쉽게 해주고 애플리케이션 침식에 더 탄력적으로 만들어 준다. 규모가 작은 자율적인 팀들이 팀별 서비스를 독립적으로 개발, 전개, 규모 확장을 할 수 있게 함으로써 병렬로 개발할 수 있게 한다. 또, 지속적인 리팩터링을 통해 개개의 서비스 아키텍처가 하나로 병합될 수 있게 허용한다.</description>
+    </item>
+    
+    <item>
+      <title>Springboot</title>
+      <link>https://hnc-hskim.github.io/workshop/spring/springboot/</link>
+      <pubDate>Thu, 04 Aug 2022 14:50:04 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/spring/springboot/</guid>
+      <description>오픈 소스 마이크로 프레임워크입니다. 따라서 마이크로 서비스 기반 Spring 애플리케이션을 만드는 데 도움이 됩니다. Pivotal Software, Inc.에서 개발합니다.
+참고
+VS code에 스프링부트 설치하기 1. 사전 준비  Java Development Kit(JDK): 8 이상(11이상 권장) VSCode Java Extension Pack: https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack VSCode : https://code.visualstudio.com/download  jdk 환경변수 설정(Window) # 커맨드에서 아래명령을 입력했을때 버전이 표시되지 않으면 환경 변수 설정을 해준다. $ javac -version javac 18.0.2# window key + R을 누른뒤, sysdm.cpl을 입력한다.</description>
     </item>
     
     <item>
@@ -24,8 +35,20 @@
       
       <guid>https://hnc-hskim.github.io/workshop/msa/concept/</guid>
       <description>아래에 사용된 예제는 NodeJS, ExpressJS, MongoDB를 이용하여 구성되었습니다.
-Referenes  https://www.atlassian.com/ko/microservices/microservices-architecture/microservices-vs-monolith Diagram Editor mermaid flowchart syntax  모놀리식 아키텍처는 소프트웨어 프로그램의 전통적인 모델로, 자체 포함 방식이며 다른 애플리케이션과 독립적인 통합된 유닛으로 만들어집니다. “모놀리스&amp;quot;라는 단어는 거대하고 빙하 같은 것을 의미하는 경우가 많은데, 소프트웨어 설계의 모놀리식 아키텍처도 크게 다르지 않습니다. 모놀리식 아키텍처는 모든 비즈니스 관련 사항을 함께 결합하는 하나의 코드 베이스를 갖춘 대규모의 단일 컴퓨팅 네트워크입니다.
-1. 모놀리식 아키텍처 VS 마이크로서비스 아키텍처 Monolithic Architecture 전통적인 모놀로식 아키텍처가 비효율적으로 보일 수 있지만 간단한 아키텍처의 경우 모놀리식 아키텍처도 충분히 활용 가능한 솔루션이라고 할 수 있습니다.</description>
+Referenes  https://dev.to/zachgoll/introduction-to-software-architecture-monolithic-vs-layered-vs-microservices-452 https://www.atlassian.com/ko/microservices/microservices-architecture/microservices-vs-monolith https://github.com/zachgoll/layered-architecture-example-app    Diagram Editor mermaid flowchart syntax  모놀리식 아키텍처는 소프트웨어 프로그램의 전통적인 모델로, 자체 포함 방식이며 다른 애플리케이션과 독립적인 통합된 유닛으로 만들어집니다. “모놀리스&amp;quot;라는 단어는 거대하고 빙하 같은 것을 의미하는 경우가 많은데, 소프트웨어 설계의 모놀리식 아키텍처도 크게 다르지 않습니다. 모놀리식 아키텍처는 모든 비즈니스 관련 사항을 함께 결합하는 하나의 코드 베이스를 갖춘 대규모의 단일 컴퓨팅 네트워크입니다.</description>
+    </item>
+    
+    <item>
+      <title>Springboot Gradle</title>
+      <link>https://hnc-hskim.github.io/workshop/spring/springboot-gradle/</link>
+      <pubDate>Fri, 05 Aug 2022 15:31:06 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/spring/springboot-gradle/</guid>
+      <description>Referenes  https://inma.tistory.com/148  $ java -version
+java version &amp;ldquo;18.0.2&amp;rdquo; 2022-07-19
+Java(TM) SE Runtime Environment (build 18.0.2+9-61)
+Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
+gradle 빌드 방법  프로젝트 루트로 이동후 gradlew jar 명령어 입력  $ ./gradlew jarStarting a Gradle Daemon, 2 incompatible and 2 stopped Daemons could not be reused, use --status for detailsBUILD SUCCESSFUL in 19s3 actionable tasks: 3 executed  실행 가능한 jar 파일 만들기  $ .</description>
     </item>
     
     <item>
@@ -34,7 +57,7 @@
       <pubDate>Mon, 18 Jul 2022 16:48:39 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/workshop/msa/software-architecture-pattern/</guid>
-      <description>Referenes  10 Common Software Architectural Patterns in a nutshell Architectural patterns  10가지 소프트웨어 아키텍처 패턴  계층화 패턴 (Layered pattern) 클라이언트-서버 패턴 (Client-server pattern) 마스터-슬레이브 패턴 (Master-slave pattern) 파이프-필터 패턴 (Pipe-filter pattern) 브로커 패턴 (Broker pattern) 피어 투 피어 패턴 (Peer-to-peer pattern) 이벤트-버스 패턴 (Event-bus pattern) 모델-뷰-컨트롤러 패턴 (Model-view-controller pattern) 블랙보드 패턴 (Blackboard pattern) 인터프리터 패턴 (Interpreter pattern)  1. 계층화 패턴 (Layered pattern) 계층화 패턴에서 흔히 볼 수 있는 4개의 계층은 다음과 같다.</description>
+      <description>Referenes  10 Common Software Architectural Patterns in a nutshell Architectural patterns  소프트웨어 아키텍처가 프로젝트의 성공에 중요한 13가지 이유  아키텍처는 시스템의 구동 품질 속성을 억제하거나 활성화합니다. 아키텍처에서 내린 결정을 통해 시스템이 발전함에 따라 변경 사항을 추론하고 관리할 수 있습니다. 아키텍처 분석을 통해 시스템 품질을 조기에 예측할 수 있습니다. 문서화된 아키텍처는 이해 관계자 간의 의사 소통을 향상시킵니다. 아키텍처는 가장 초기에 가장 기본적이고 가장 변경하기 어려운 설계 결정의 전달자입니다. 아키텍처는 후속 구현에 대한 일련의 제약 조건을 정의합니다.</description>
     </item>
     
     <item>
@@ -47,6 +70,36 @@
 [From E.F. Schumacher&amp;rsquo;s book Small is Beautiful]
 1. 소프트웨어 아키텍처 소프트웨어 구조 또는 소프트웨어 아키텍처(software architecture)는 소프트웨어의 구성요소들 사이에서 유기적 관계를 표현하고 소프트웨어의 설계와 업그레이드를 통제하는 지침과 원칙이다.
 1.1 소프트웨어 아키텍처 설계시 고려사항  성능: 회전하는 &amp;ldquo;로드 중&amp;rdquo; 아이콘이 사라지기 전에 얼마나 기다려야 합니까?</description>
+    </item>
+    
+    <item>
+      <title>Event Storming</title>
+      <link>https://hnc-hskim.github.io/workshop/eventstorming/miro/</link>
+      <pubDate>Wed, 03 Aug 2022 17:24:14 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/eventstorming/miro/</guid>
+      <description>References  [miro] https://miro.com/app/dashboard/ [test board] https://miro.com/app/board/uXjVOh72El0=/?share_link_id=330360109631  Event Storming hancomcloud test board</description>
+    </item>
+    
+    <item>
+      <title>Glossary</title>
+      <link>https://hnc-hskim.github.io/workshop/msa/glossary/</link>
+      <pubDate>Wed, 03 Aug 2022 08:49:31 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/msa/glossary/</guid>
+      <description>용어 사전 A
+AWS AWS(Amazon Web Services)는 아마존닷컴의 클라우드 컴퓨팅 사업부이며 현재 클라우드 컴퓨팅 분야에서 압도적인 세계 1위를 차지하고 있으며 2022년부로 16주년을 맞는 다국적 기업이자 역사상 가장 큰 IT 및 클라우드 기업 중 하나이다. 아마존 웹 서비스는 다른 웹 사이트나 클라이언트측 응용 프로그램에 대해 온라인 서비스를 제공하고 있다. 이러한 서비스의 상당수는 최종 사용자에 직접 공개되는 것이 아니고, 다른 개발자가 사용 가능한 기능을 제공하는 플랫폼을 제공하는 PaaS이다.
+API Gateway API 게이트웨이 는 실제 백엔드 서비스 또는 데이터와 접속하고 API 호출에 대한 정책, 인증 및 일반 액세스 제어를 적용하여 중요한 데이터를 보호하는 트래픽 관리자입니다.</description>
+    </item>
+    
+    <item>
+      <title>Code Server</title>
+      <link>https://hnc-hskim.github.io/workshop/ide/code-server/</link>
+      <pubDate>Thu, 28 Jul 2022 10:41:30 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/ide/code-server/</guid>
+      <description>References  [coder] https://coder.com/ [code server] https://github.com/coder/code-server  Coder is an open source platform for creating and managing developer workspaces on your preferred clouds and servers. By building on top of common development interfaces (SSH) and infrastructure tools (Terraform), Coder aims to make the process of provisioning and accessing remote workspaces approachable for organizations of various sizes and stages of cloud-native maturity.
+WEB-IDE 사용법 1. 차트 설치  Rancher 접속(Apps -&amp;gt; Charts 선택) Chart Repository(code-server 선택) code-server 차트 선택   2.</description>
     </item>
     
     <item>
@@ -155,7 +208,7 @@ AWS 클라우드 포메이션AWS CloudFormation의 경우 AWS만 지원하는 �
       <pubDate>Wed, 13 Jul 2022 08:51:28 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/kubernetes/cli/</guid>
-      <description>조회(All) $ kubectl get all -n code-serverNAME READY STATUS RESTARTS AGEpod/code-server-5fc775748c-nbmsr 0/1 Init:CrashLoopBackOff 5 4m31sNAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGEservice/code-server ClusterIP 10.79.240.159 &amp;lt;none&amp;gt; 8080/TCP 13mNAME READY UP-TO-DATE AVAILABLE AGEdeployment.apps/code-server 0/1 1 0 13mNAME DESIRED CURRENT READY AGEreplicaset.apps/code-server-5879f94445 0 0 0 7m13sreplicaset.apps/code-server-5fc775748c 1 1 0 4m31sreplicaset.apps/code-server-67d7c4f6cd 0 0 0 13m 컨텍스트 조회 kubectl config get-contexts 컨텍스트 사용 kubectl config use-context &amp;#34;context name&amp;#34; 클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.</description>
+      <description>조회(All) $ kubectl get all -n code-serverNAME READY STATUS RESTARTS AGEpod/code-server-5fc775748c-nbmsr 0/1 Init:CrashLoopBackOff 5 4m31sNAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGEservice/code-server ClusterIP 10.79.240.159 &amp;lt;none&amp;gt; 8080/TCP 13mNAME READY UP-TO-DATE AVAILABLE AGEdeployment.apps/code-server 0/1 1 0 13mNAME DESIRED CURRENT READY AGEreplicaset.apps/code-server-5879f94445 0 0 0 7m13sreplicaset.apps/code-server-5fc775748c 1 1 0 4m31sreplicaset.apps/code-server-67d7c4f6cd 0 0 0 13m 리소스 쿼터 조회 kubectl get resourcequota -n &amp;#34;namespace&amp;#34; 컨텍스트 조회 kubectl config get-contexts 컨텍스트 사용 kubectl config use-context &amp;#34;context name&amp;#34; 클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.</description>
     </item>
     
   </channel>
