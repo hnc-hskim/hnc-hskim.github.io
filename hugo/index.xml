@@ -14,8 +14,8 @@
       
       <guid>https://hnc-hskim.github.io/hugo/comments/</guid>
       <description>[참고] https://velog.io/@mellonggo/Github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-with-Hugo
-댓글 기능 추가 리파지터리 생성 blog-comments로 리파지터리 생성 layouts/partials/custom-footer.html 파일 생성 및 스크립트 추가 테마별로 지정해야할 위치가 다를수 있다. learn 테마의 경우 post 레이아웃을 찾을수 없어 custom-footer.html에 추가한다.
-아래 코드를 복하하여 custom-footer.html에 붙여넣는다. &amp;lt;script src=&amp;#34;https://utteranc.es/client.js&amp;#34;repo=&amp;#34;user id/blog-comments&amp;#34;issue-term=&amp;#34;title&amp;#34;theme=&amp;#34;github-light&amp;#34;crossorigin=&amp;#34;anonymous&amp;#34;async&amp;gt;&amp;lt;/script&amp;gt; 첫 로딩시 댓글 기능은 비활성화되어 있고 github 로그인 인증을 통해 해당 리파지터리에서 utterances app 사용을 승인하면 이후 댓글 기능을 사용할 수 있다. 댓글의 경우 생성한 리파지터리의 Issues 생성 기능을 통해 동작한다.</description>
+댓글 기능 추가  리파지터리 생성  blog-comments로 리파지터리 생성  layouts/partials/custom-footer.html 파일 생성 및 스크립트 추가  테마별로 지정해야할 위치가 다를수 있다. learn 테마의 경우 post 레이아웃을 찾을수 없어 custom-footer.html에 추가한다.
+ 아래 코드를 복하하여 custom-footer.html에 붙여넣는다.  &amp;lt;script src=&amp;#34;https://utteranc.es/client.js&amp;#34;repo=&amp;#34;user id/blog-comments&amp;#34;issue-term=&amp;#34;title&amp;#34;theme=&amp;#34;github-light&amp;#34;crossorigin=&amp;#34;anonymous&amp;#34;async&amp;gt;&amp;lt;/script&amp;gt; 첫 로딩시 댓글 기능은 비활성화되어 있고 github 로그인 인증을 통해 해당 리파지터리에서 utterances app 사용을 승인하면 이후 댓글 기능을 사용할 수 있다.</description>
     </item>
     
     <item>
