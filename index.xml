@@ -18,14 +18,38 @@
     </item>
     
     <item>
+      <title>Springboot</title>
+      <link>https://hnc-hskim.github.io/workshop/spring/springboot/</link>
+      <pubDate>Thu, 04 Aug 2022 14:50:04 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/spring/springboot/</guid>
+      <description>오픈 소스 마이크로 프레임워크입니다. 따라서 마이크로 서비스 기반 Spring 애플리케이션을 만드는 데 도움이 됩니다. Pivotal Software, Inc.에서 개발합니다.
+참고
+VS code에 스프링부트 설치하기 1. 사전 준비 Java Development Kit(JDK): 8 이상(11이상 권장) VSCode Java Extension Pack: https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack VSCode : https://code.visualstudio.com/download jdk 환경변수 설정(Window) # 커맨드에서 아래명령을 입력했을때 버전이 표시되지 않으면 환경 변수 설정을 해준다. $ javac -version javac 18.0.2# window key + R을 누른뒤, sysdm.cpl을 입력한다.(시작 버튼을 누른뒤 검색에서 고급 시스템 설정을 검색해도 됨)# 고급탭에 환경변수를 누른다.</description>
+    </item>
+    
+    <item>
       <title>Concept</title>
       <link>https://hnc-hskim.github.io/workshop/msa/concept/</link>
       <pubDate>Tue, 12 Jul 2022 13:38:23 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/workshop/msa/concept/</guid>
       <description>아래에 사용된 예제는 NodeJS, ExpressJS, MongoDB를 이용하여 구성되었습니다.
-Referenes https://dev.to/zachgoll/introduction-to-software-architecture-monolithic-vs-layered-vs-microservices-452 https://www.atlassian.com/ko/microservices/microservices-architecture/microservices-vs-monolith https://github.com/zachgoll/layered-architecture-example-app Diagram Editor mermaid flowchart syntax 모놀리식 아키텍처는 소프트웨어 프로그램의 전통적인 모델로, 자체 포함 방식이며 다른 애플리케이션과 독립적인 통합된 유닛으로 만들어집니다. “모놀리스&amp;quot;라는 단어는 거대하고 빙하 같은 것을 의미하는 경우가 많은데, 소프트웨어 설계의 모놀리식 아키텍처도 크게 다르지 않습니다. 모놀리식 아키텍처는 모든 비즈니스 관련 사항을 함께 결합하는 하나의 코드 베이스를 갖춘 대규모의 단일 컴퓨팅 네트워크입니다.
+References https://dev.to/zachgoll/introduction-to-software-architecture-monolithic-vs-layered-vs-microservices-452 https://www.atlassian.com/ko/microservices/microservices-architecture/microservices-vs-monolith https://github.com/zachgoll/layered-architecture-example-app Diagram Editor mermaid flowchart syntax 모놀리식 아키텍처는 소프트웨어 프로그램의 전통적인 모델로, 자체 포함 방식이며 다른 애플리케이션과 독립적인 통합된 유닛으로 만들어집니다. “모놀리스&amp;quot;라는 단어는 거대하고 빙하 같은 것을 의미하는 경우가 많은데, 소프트웨어 설계의 모놀리식 아키텍처도 크게 다르지 않습니다. 모놀리식 아키텍처는 모든 비즈니스 관련 사항을 함께 결합하는 하나의 코드 베이스를 갖춘 대규모의 단일 컴퓨팅 네트워크입니다.
 1. 모놀리식 아키텍처 VS 마이크로서비스 아키텍처 Monolithic Architecture 전통적인 모놀로식 아키텍처가 비효율적으로 보일 수 있지만 간단한 아키텍처의 경우 모놀리식 아키텍처도 충분히 활용 가능한 솔루션이라고 할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Springboot Gradle</title>
+      <link>https://hnc-hskim.github.io/workshop/spring/springboot-gradle/</link>
+      <pubDate>Fri, 05 Aug 2022 15:31:06 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/spring/springboot-gradle/</guid>
+      <description>References https://inma.tistory.com/148 $ java -version
+java version &amp;ldquo;18.0.2&amp;rdquo; 2022-07-19
+Java(TM) SE Runtime Environment (build 18.0.2+9-61)
+Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
+gradle 빌드 방법 프로젝트 루트로 이동후 gradlew jar 명령어 입력 $ ./gradlew jarStarting a Gradle Daemon, 2 incompatible and 2 stopped Daemons could not be reused, use --status for detailsBUILD SUCCESSFUL in 19s3 actionable tasks: 3 executed 실행 가능한 jar 파일 만들기 $ .</description>
     </item>
     
     <item>
@@ -34,7 +58,7 @@ Referenes https://dev.to/zachgoll/introduction-to-software-architecture-monolith
       <pubDate>Mon, 18 Jul 2022 16:48:39 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/workshop/msa/software-architecture-pattern/</guid>
-      <description>Referenes 10 Common Software Architectural Patterns in a nutshell Architectural patterns 소프트웨어 아키텍처가 프로젝트의 성공에 중요한 13가지 이유 아키텍처는 시스템의 구동 품질 속성을 억제하거나 활성화합니다. 아키텍처에서 내린 결정을 통해 시스템이 발전함에 따라 변경 사항을 추론하고 관리할 수 있습니다. 아키텍처 분석을 통해 시스템 품질을 조기에 예측할 수 있습니다. 문서화된 아키텍처는 이해 관계자 간의 의사 소통을 향상시킵니다. 아키텍처는 가장 초기에 가장 기본적이고 가장 변경하기 어려운 설계 결정의 전달자입니다. 아키텍처는 후속 구현에 대한 일련의 제약 조건을 정의합니다.</description>
+      <description>References 10 Common Software Architectural Patterns in a nutshell Architectural patterns 소프트웨어 아키텍처가 프로젝트의 성공에 중요한 13가지 이유 아키텍처는 시스템의 구동 품질 속성을 억제하거나 활성화합니다. 아키텍처에서 내린 결정을 통해 시스템이 발전함에 따라 변경 사항을 추론하고 관리할 수 있습니다. 아키텍처 분석을 통해 시스템 품질을 조기에 예측할 수 있습니다. 문서화된 아키텍처는 이해 관계자 간의 의사 소통을 향상시킵니다. 아키텍처는 가장 초기에 가장 기본적이고 가장 변경하기 어려운 설계 결정의 전달자입니다. 아키텍처는 후속 구현에 대한 일련의 제약 조건을 정의합니다.</description>
     </item>
     
     <item>
@@ -47,30 +71,6 @@ Referenes https://dev.to/zachgoll/introduction-to-software-architecture-monolith
 [From E.F. Schumacher&amp;rsquo;s book Small is Beautiful]
 1. 소프트웨어 아키텍처 소프트웨어 구조 또는 소프트웨어 아키텍처(software architecture)는 소프트웨어의 구성요소들 사이에서 유기적 관계를 표현하고 소프트웨어의 설계와 업그레이드를 통제하는 지침과 원칙이다.
 1.1 소프트웨어 아키텍처 설계시 고려사항 성능: 회전하는 &amp;ldquo;로드 중&amp;rdquo; 아이콘이 사라지기 전에 얼마나 기다려야 합니까?</description>
-    </item>
-    
-    <item>
-      <title>Springboot Gradle</title>
-      <link>https://hnc-hskim.github.io/workshop/spring/springboot-gradle/</link>
-      <pubDate>Fri, 05 Aug 2022 15:31:06 +0900</pubDate>
-      
-      <guid>https://hnc-hskim.github.io/workshop/spring/springboot-gradle/</guid>
-      <description>Referenes https://inma.tistory.com/148 $ java -version
-java version &amp;ldquo;18.0.2&amp;rdquo; 2022-07-19
-Java(TM) SE Runtime Environment (build 18.0.2+9-61)
-Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
-gradle 빌드 방법 프로젝트 루트로 이동후 gradlew jar 명령어 입력 $ ./gradlew jarStarting a Gradle Daemon, 2 incompatible and 2 stopped Daemons could not be reused, use --status for detailsBUILD SUCCESSFUL in 19s3 actionable tasks: 3 executed 실행 가능한 jar 파일 만들기 $ .</description>
-    </item>
-    
-    <item>
-      <title>Springboot</title>
-      <link>https://hnc-hskim.github.io/workshop/spring/springboot/</link>
-      <pubDate>Thu, 04 Aug 2022 14:50:04 +0900</pubDate>
-      
-      <guid>https://hnc-hskim.github.io/workshop/spring/springboot/</guid>
-      <description>오픈 소스 마이크로 프레임워크입니다. 따라서 마이크로 서비스 기반 Spring 애플리케이션을 만드는 데 도움이 됩니다. Pivotal Software, Inc.에서 개발합니다.
-참고
-VS code에 스프링부트 설치하기 1. 사전 준비 Java Development Kit(JDK): 8 이상(11이상 권장) VSCode Java Extension Pack: https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack VSCode : https://code.visualstudio.com/download 2. Extension pack 설치 Java Extension Pack - Microsoft: https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack Spring Boot Extension Pack - Pivotal: https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack Spring Boot Tools - Pivotal: https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-spring-boot ‘Spring Boot Tools’ 확장팩은 다음 파일 패턴을 가지는 파일에 대해서 파일수정할 때 활성화된다.</description>
     </item>
     
     <item>

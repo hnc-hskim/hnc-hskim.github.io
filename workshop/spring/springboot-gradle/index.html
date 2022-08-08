@@ -12,22 +12,22 @@
     <title>Springboot Gradle :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1659688497" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1659688497" rel="stylesheet">
-    <link href="/css/hybrid.css?1659688497" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1659688497" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1659688497" rel="stylesheet">
-    <link href="/css/auto-complete.css?1659688497" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1659688497" rel="stylesheet">
-    <link href="/css/theme.css?1659688497" rel="stylesheet">
-    <link href="/css/tabs.css?1659688497" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1659688497" rel="stylesheet">
+    <link href="/css/nucleus.css?1659947585" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1659947585" rel="stylesheet">
+    <link href="/css/hybrid.css?1659947585" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1659947585" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1659947585" rel="stylesheet">
+    <link href="/css/auto-complete.css?1659947585" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1659947585" rel="stylesheet">
+    <link href="/css/theme.css?1659947585" rel="stylesheet">
+    <link href="/css/tabs.css?1659947585" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1659947585" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1659688497" rel="stylesheet">
+    <link href="/css/theme-green.css?1659947585" rel="stylesheet">
     
-    <link href="/css/msa-style.css?1659688497" rel="stylesheet">
+    <link href="/css/msa-style.css?1659947585" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1659688497"></script>
+    <script src="/js/jquery-3.3.1.min.js?1659947585"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1659688497"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1659688497"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1659947585"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1659947585"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hnc-hskim.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1659688497"></script>
+<script type="text/javascript" src="/js/search.js?1659947585"></script>
 
     
   </div>
@@ -143,9 +143,9 @@
  
   
     
-      <li data-nav-id="/workshop/spring/springboot-gradle/" title="Springboot Gradle" class="dd-item active">
-        <a href="/workshop/spring/springboot-gradle/">
-        Springboot Gradle
+      <li data-nav-id="/workshop/spring/springboot/" title="Springboot" class="dd-item ">
+        <a href="/workshop/spring/springboot/">
+        Springboot
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -164,9 +164,9 @@
  
   
     
-      <li data-nav-id="/workshop/spring/springboot/" title="Springboot" class="dd-item ">
-        <a href="/workshop/spring/springboot/">
-        Springboot
+      <li data-nav-id="/workshop/spring/springboot-gradle/" title="Springboot Gradle" class="dd-item active">
+        <a href="/workshop/spring/springboot-gradle/">
+        Springboot Gradle
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -916,12 +916,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#referenes">Referenes</a></li>
+    <li><a href="#references">References</a></li>
     <li><a href="#gradle-빌드-방법">gradle 빌드 방법</a>
       <ul>
         <li><a href="#jar-파일-위치">jar 파일 위치</a></li>
         <li><a href="#jar-파일-실행">jar 파일 실행</a></li>
-        <li><a href="#extension-설치실행-안됨">Extension 설치(실행 안됨)</a></li>
+        <li><a href="#gradle-extension-설치">Gradle Extension 설치</a></li>
         <li><a href="#gradle-서버-실행">Gradle 서버 실행</a></li>
         <li><a href="#docker-image-만들기">Docker Image 만들기</a></li>
       </ul>
@@ -950,7 +950,7 @@
         
 
 
-<h2 id="referenes">Referenes</h2>
+<h2 id="references">References</h2>
 <ul>
 <li><a href="https://inma.tistory.com/148">https://inma.tistory.com/148</a></li>
 </ul>
@@ -979,7 +979,15 @@ BUILD SUCCESSFUL in 4s
 4 actionable tasks: 4 up-to-date
 </code></pre><h3 id="jar-파일-위치">jar 파일 위치</h3>
 <pre tabindex="0"><code>build/libs/*.jar
-</code></pre><h3 id="jar-파일-실행">jar 파일 실행</h3>
+</code></pre>
+<div class="notices tip" ><p>JAR(Java Archive, 자바 아카이브)는 여러개의 자바 클래스 파일과, 클래스들이 이용하는 관련 리소스(텍스트, 그림 등) 및 메타데이터를 하나의 파일로 모아서 자바 플랫폼에 응용 소프트웨어나 라이브러리를 배포하기 위한 소프트웨어 패키지 파일 포맷이다.
+JAR 파일은 실제로 ZIP 파일 포맷으로 이루어진 압축 파일로서, 파일 확장자는 .jar이다.<br>
+컴퓨터 사용자들은 JDK에 포함된 jar 명령어를 이용하여 JAR 파일을 만들거나 압축을 풀 수 있다.<br>
+또, zip 도구를 사용할 수도 있으나 압축 시에는 매니페스트 파일이 처음이어야 하는 경우가 있어서 zip 파일 헤더의 엔트리 순서가 중요하다.<br>
+JAR 안에서 파일 이름들은 유니코드 텍스트로 되어 있다.</p>
+</div>
+
+<h3 id="jar-파일-실행">jar 파일 실행</h3>
 <pre tabindex="0"><code>$ java -jar .\test-vs-code-0.0.1-SNAPSHOT.jar
 
   .   ____          _            __ _ _
@@ -1025,7 +1033,7 @@ rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2022-08-05 17:25:37.809 DEBUG 11512 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
 2022-08-05 17:25:38.042  INFO 11512 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path &#39;&#39;
 2022-08-05 17:25:38.066  INFO 11512 --- [           main] t.s.v.testvscode.TestVsCodeApplication   : Started TestVsCodeApplication in 6.269 seconds (JVM running for 7.013)
-</code></pre><h3 id="extension-설치실행-안됨">Extension 설치(실행 안됨)</h3>
+</code></pre><h3 id="gradle-extension-설치">Gradle Extension 설치</h3>
 <ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-gradle">https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-gradle</a></li>
 </ul>
@@ -1034,7 +1042,21 @@ rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
     <img src="./img1.png" alt="gradle"  />
     
   </p></p>
-<h3 id="gradle-서버-실행">Gradle 서버 실행</h3>
+<pre tabindex="0"><code># 중첩 Gradle 프로젝트 검색은 기본적으로 활성화되어 있지 않으며 활성화하도록 설정하려면 다음을 셋티한다. 
+# .vscode의 settings.json파일에 환경변수를 등록한다. 
+{
+    &#34;java.configuration.updateBuildConfiguration&#34;: &#34;interactive&#34;,
+    &#34;gradle.nestedProjects&#34;: true
+}
+
+jdk설치후 시스템 재시작을 해야 vscode에서 환경변수가 제대로 반영된다. 
+</code></pre><pre tabindex="0"><code># JAVA_HOME 환경변수 패스확인
+PS&gt; $Env:JAVA_HOME
+C:\Program Files\Android\Jdk\microsoft_dist_openjdk_1.8.0.25
+
+# 변경
+PS&gt; $Env:JAVA_HOME = &#34;C:\Program Files\Java\jdk-18.0.2&#34;
+</code></pre><h3 id="gradle-서버-실행">Gradle 서버 실행</h3>
 <pre tabindex="0"><code>./gradlew bootRun
 
 &gt; Task :bootRun
@@ -1153,23 +1175,6 @@ ENTRYPOINT [&#34;java&#34;,&#34;-jar&#34;,&#34;/app.jar&#34;]
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1184,6 +1189,23 @@ ENTRYPOINT [&#34;java&#34;,&#34;-jar&#34;,&#34;/app.jar&#34;]
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1191,6 +1213,9 @@ ENTRYPOINT [&#34;java&#34;,&#34;-jar&#34;,&#34;/app.jar&#34;]
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1599,10 +1624,10 @@ ENTRYPOINT [&#34;java&#34;,&#34;-jar&#34;,&#34;/app.jar&#34;]
 	 
 	 
 		
-			<a class="nav nav-prev" href="/workshop/spring/" title="Spring"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/workshop/spring/springboot/" title="Springboot"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/workshop/spring/springboot/" title="Springboot" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/workshop/eventstorming/miro/" title="Event Storming" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1612,16 +1637,16 @@ ENTRYPOINT [&#34;java&#34;,&#34;-jar&#34;,&#34;/app.jar&#34;]
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1659688497"></script>
-    <script src="/js/perfect-scrollbar.min.js?1659688497"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1659688497"></script>
-    <script src="/js/jquery.sticky.js?1659688497"></script>
-    <script src="/js/featherlight.min.js?1659688497"></script>
-    <script src="/js/highlight.pack.js?1659688497"></script>
+    <script src="/js/clipboard.min.js?1659947585"></script>
+    <script src="/js/perfect-scrollbar.min.js?1659947585"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1659947585"></script>
+    <script src="/js/jquery.sticky.js?1659947585"></script>
+    <script src="/js/featherlight.min.js?1659947585"></script>
+    <script src="/js/highlight.pack.js?1659947585"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1659688497"></script>
-    <script src="/js/learn.js?1659688497"></script>
-    <script src="/js/hugo-learn.js?1659688497"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1659947585"></script>
+    <script src="/js/learn.js?1659947585"></script>
+    <script src="/js/hugo-learn.js?1659947585"></script>
     
         
             <script src="https://unpkg.com/mermaid@9.1.3/dist/mermaid.min.js"></script>

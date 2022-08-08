@@ -8,19 +8,6 @@
     <language>ko-kr</language>
     <lastBuildDate>Thu, 04 Aug 2022 14:55:17 +0900</lastBuildDate><atom:link href="https://hnc-hskim.github.io/workshop/spring/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Springboot Gradle</title>
-      <link>https://hnc-hskim.github.io/workshop/spring/springboot-gradle/</link>
-      <pubDate>Fri, 05 Aug 2022 15:31:06 +0900</pubDate>
-      
-      <guid>https://hnc-hskim.github.io/workshop/spring/springboot-gradle/</guid>
-      <description>Referenes https://inma.tistory.com/148 $ java -version
-java version &amp;ldquo;18.0.2&amp;rdquo; 2022-07-19
-Java(TM) SE Runtime Environment (build 18.0.2+9-61)
-Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
-gradle 빌드 방법 프로젝트 루트로 이동후 gradlew jar 명령어 입력 $ ./gradlew jarStarting a Gradle Daemon, 2 incompatible and 2 stopped Daemons could not be reused, use --status for detailsBUILD SUCCESSFUL in 19s3 actionable tasks: 3 executed 실행 가능한 jar 파일 만들기 $ .</description>
-    </item>
-    
-    <item>
       <title>Springboot</title>
       <link>https://hnc-hskim.github.io/workshop/spring/springboot/</link>
       <pubDate>Thu, 04 Aug 2022 14:50:04 +0900</pubDate>
@@ -28,7 +15,20 @@ gradle 빌드 방법 프로젝트 루트로 이동후 gradlew jar 명령어 입�
       <guid>https://hnc-hskim.github.io/workshop/spring/springboot/</guid>
       <description>오픈 소스 마이크로 프레임워크입니다. 따라서 마이크로 서비스 기반 Spring 애플리케이션을 만드는 데 도움이 됩니다. Pivotal Software, Inc.에서 개발합니다.
 참고
-VS code에 스프링부트 설치하기 1. 사전 준비 Java Development Kit(JDK): 8 이상(11이상 권장) VSCode Java Extension Pack: https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack VSCode : https://code.visualstudio.com/download 2. Extension pack 설치 Java Extension Pack - Microsoft: https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack Spring Boot Extension Pack - Pivotal: https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-boot-dev-pack Spring Boot Tools - Pivotal: https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-spring-boot ‘Spring Boot Tools’ 확장팩은 다음 파일 패턴을 가지는 파일에 대해서 파일수정할 때 활성화된다.</description>
+VS code에 스프링부트 설치하기 1. 사전 준비 Java Development Kit(JDK): 8 이상(11이상 권장) VSCode Java Extension Pack: https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack VSCode : https://code.visualstudio.com/download jdk 환경변수 설정(Window) # 커맨드에서 아래명령을 입력했을때 버전이 표시되지 않으면 환경 변수 설정을 해준다. $ javac -version javac 18.0.2# window key + R을 누른뒤, sysdm.cpl을 입력한다.(시작 버튼을 누른뒤 검색에서 고급 시스템 설정을 검색해도 됨)# 고급탭에 환경변수를 누른다.</description>
+    </item>
+    
+    <item>
+      <title>Springboot Gradle</title>
+      <link>https://hnc-hskim.github.io/workshop/spring/springboot-gradle/</link>
+      <pubDate>Fri, 05 Aug 2022 15:31:06 +0900</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/workshop/spring/springboot-gradle/</guid>
+      <description>References https://inma.tistory.com/148 $ java -version
+java version &amp;ldquo;18.0.2&amp;rdquo; 2022-07-19
+Java(TM) SE Runtime Environment (build 18.0.2+9-61)
+Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
+gradle 빌드 방법 프로젝트 루트로 이동후 gradlew jar 명령어 입력 $ ./gradlew jarStarting a Gradle Daemon, 2 incompatible and 2 stopped Daemons could not be reused, use --status for detailsBUILD SUCCESSFUL in 19s3 actionable tasks: 3 executed 실행 가능한 jar 파일 만들기 $ .</description>
     </item>
     
   </channel>
