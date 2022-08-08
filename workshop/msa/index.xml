@@ -43,11 +43,10 @@ References https://dev.to/zachgoll/introduction-to-software-architecture-monolit
       <pubDate>Tue, 12 Jul 2022 15:43:56 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/workshop/msa/software-architecture/</guid>
-      <description>References  [참고1] https://dev.to/zachgoll/introduction-to-software-architecture-monolithic-vs-layered-vs-microservices-452 [참고2] https://github.com/mermaid-js/mermaid Diagram Editor  &amp;ldquo;Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius—and a lot of courage to move in the opposite direction&amp;rdquo;
+      <description>References [참고1] https://dev.to/zachgoll/introduction-to-software-architecture-monolithic-vs-layered-vs-microservices-452 [참고2] https://github.com/mermaid-js/mermaid Diagram Editor &amp;ldquo;Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius—and a lot of courage to move in the opposite direction&amp;rdquo;
 [From E.F. Schumacher&amp;rsquo;s book Small is Beautiful]
-
 1. 소프트웨어 아키텍처 소프트웨어 구조 또는 소프트웨어 아키텍처(software architecture)는 소프트웨어의 구성요소들 사이에서 유기적 관계를 표현하고 소프트웨어의 설계와 업그레이드를 통제하는 지침과 원칙이다.
-1.1 소프트웨어 아키텍처 설계시 고려사항  성능: 회전하는 &amp;ldquo;로드 중&amp;rdquo; 아이콘이 사라지기 전에 얼마나 기다려야 합니까?</description>
+1.1 소프트웨어 아키텍처 설계시 고려사항 성능: 회전하는 &amp;ldquo;로드 중&amp;rdquo; 아이콘이 사라지기 전에 얼마나 기다려야 합니까?</description>
     </item>
     
     <item>
@@ -57,7 +56,6 @@ References https://dev.to/zachgoll/introduction-to-software-architecture-monolit
       
       <guid>https://hnc-hskim.github.io/workshop/msa/glossary/</guid>
       <description>용어 사전 A
-
 AWS AWS(Amazon Web Services)는 아마존닷컴의 클라우드 컴퓨팅 사업부이며 현재 클라우드 컴퓨팅 분야에서 압도적인 세계 1위를 차지하고 있으며 2022년부로 16주년을 맞는 다국적 기업이자 역사상 가장 큰 IT 및 클라우드 기업 중 하나이다. 아마존 웹 서비스는 다른 웹 사이트나 클라이언트측 응용 프로그램에 대해 온라인 서비스를 제공하고 있다. 이러한 서비스의 상당수는 최종 사용자에 직접 공개되는 것이 아니고, 다른 개발자가 사용 가능한 기능을 제공하는 플랫폼을 제공하는 PaaS이다.
 API Gateway API 게이트웨이 는 실제 백엔드 서비스 또는 데이터와 접속하고 API 호출에 대한 정책, 인증 및 일반 액세스 제어를 적용하여 중요한 데이터를 보호하는 트래픽 관리자입니다.</description>
     </item>
