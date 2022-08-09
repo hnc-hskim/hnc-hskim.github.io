@@ -13,8 +13,8 @@
       <pubDate>Sat, 23 Jul 2022 14:01:09 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/blazor/lab/wpf-blazor-1/</guid>
-      <description>References  WPF Blazor 앱 빌드   WPF Blazor 앱 프로젝트 만들기 프로젝트에 Razor 구성 요소 추가 Windows에서 앱 실행  Blazor Hybrid가 GA(일반 공급)에 도달했으며 프로덕션 워크로드에 대해 완전히 지원됩니다. Visual Studio 및 Mac용 Visual Studio는 Blazor Hybrid 앱 작업을 위해 시험판 버전으로 제공되며 최종 릴리스 전에 수정될 수 있습니다. 최상의 도구 환경을 위해 Visual Studio 2022 미리 보기를 업데이트된 상태로 유지하는 것이 좋습니다.
-요구사항  visual studio 2022 visual studio workload(.</description>
+      <description>References WPF Blazor 앱 빌드 WPF Blazor 앱 프로젝트 만들기 프로젝트에 Razor 구성 요소 추가 Windows에서 앱 실행 Blazor Hybrid가 GA(일반 공급)에 도달했으며 프로덕션 워크로드에 대해 완전히 지원됩니다. Visual Studio 및 Mac용 Visual Studio는 Blazor Hybrid 앱 작업을 위해 시험판 버전으로 제공되며 최종 릴리스 전에 수정될 수 있습니다. 최상의 도구 환경을 위해 Visual Studio 2022 미리 보기를 업데이트된 상태로 유지하는 것이 좋습니다.
+요구사항 visual studio 2022 visual studio workload(.net desktop development) WPF Blazor 프로젝트 만들기 visual studio 2022 preview 시작 새 프로젝트 만들기 선택 wpf 애플리케이션 선택 이름(WpfBlazor) 입력 및 저장 위치 선택 .</description>
     </item>
     
   </channel>
