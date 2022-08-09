@@ -35,7 +35,7 @@ VS code에 스프링부트 설치하기 1. 사전 준비  Java Development Kit(J
       
       <guid>https://hnc-hskim.github.io/workshop/msa/concept/</guid>
       <description>아래에 사용된 예제는 NodeJS, ExpressJS, MongoDB를 이용하여 구성되었습니다.
-Referenes  https://dev.to/zachgoll/introduction-to-software-architecture-monolithic-vs-layered-vs-microservices-452 https://www.atlassian.com/ko/microservices/microservices-architecture/microservices-vs-monolith https://github.com/zachgoll/layered-architecture-example-app    Diagram Editor mermaid flowchart syntax  모놀리식 아키텍처는 소프트웨어 프로그램의 전통적인 모델로, 자체 포함 방식이며 다른 애플리케이션과 독립적인 통합된 유닛으로 만들어집니다. “모놀리스&amp;quot;라는 단어는 거대하고 빙하 같은 것을 의미하는 경우가 많은데, 소프트웨어 설계의 모놀리식 아키텍처도 크게 다르지 않습니다. 모놀리식 아키텍처는 모든 비즈니스 관련 사항을 함께 결합하는 하나의 코드 베이스를 갖춘 대규모의 단일 컴퓨팅 네트워크입니다.</description>
+References  https://dev.to/zachgoll/introduction-to-software-architecture-monolithic-vs-layered-vs-microservices-452 https://www.atlassian.com/ko/microservices/microservices-architecture/microservices-vs-monolith https://github.com/zachgoll/layered-architecture-example-app    Diagram Editor mermaid flowchart syntax  모놀리식 아키텍처는 소프트웨어 프로그램의 전통적인 모델로, 자체 포함 방식이며 다른 애플리케이션과 독립적인 통합된 유닛으로 만들어집니다. “모놀리스&amp;quot;라는 단어는 거대하고 빙하 같은 것을 의미하는 경우가 많은데, 소프트웨어 설계의 모놀리식 아키텍처도 크게 다르지 않습니다. 모놀리식 아키텍처는 모든 비즈니스 관련 사항을 함께 결합하는 하나의 코드 베이스를 갖춘 대규모의 단일 컴퓨팅 네트워크입니다.</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@ VS code에 스프링부트 설치하기 1. 사전 준비  Java Development Kit(J
       <pubDate>Fri, 05 Aug 2022 15:31:06 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/workshop/spring/springboot-gradle/</guid>
-      <description>Referenes  https://inma.tistory.com/148  $ java -version
+      <description>References  https://inma.tistory.com/148  $ java -version
 java version &amp;ldquo;18.0.2&amp;rdquo; 2022-07-19
 Java(TM) SE Runtime Environment (build 18.0.2+9-61)
 Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
@@ -57,7 +57,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
       <pubDate>Mon, 18 Jul 2022 16:48:39 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/workshop/msa/software-architecture-pattern/</guid>
-      <description>Referenes  10 Common Software Architectural Patterns in a nutshell Architectural patterns  소프트웨어 아키텍처가 프로젝트의 성공에 중요한 13가지 이유  아키텍처는 시스템의 구동 품질 속성을 억제하거나 활성화합니다. 아키텍처에서 내린 결정을 통해 시스템이 발전함에 따라 변경 사항을 추론하고 관리할 수 있습니다. 아키텍처 분석을 통해 시스템 품질을 조기에 예측할 수 있습니다. 문서화된 아키텍처는 이해 관계자 간의 의사 소통을 향상시킵니다. 아키텍처는 가장 초기에 가장 기본적이고 가장 변경하기 어려운 설계 결정의 전달자입니다. 아키텍처는 후속 구현에 대한 일련의 제약 조건을 정의합니다.</description>
+      <description>References  10 Common Software Architectural Patterns in a nutshell Architectural patterns  소프트웨어 아키텍처가 프로젝트의 성공에 중요한 13가지 이유  아키텍처는 시스템의 구동 품질 속성을 억제하거나 활성화합니다. 아키텍처에서 내린 결정을 통해 시스템이 발전함에 따라 변경 사항을 추론하고 관리할 수 있습니다. 아키텍처 분석을 통해 시스템 품질을 조기에 예측할 수 있습니다. 문서화된 아키텍처는 이해 관계자 간의 의사 소통을 향상시킵니다. 아키텍처는 가장 초기에 가장 기본적이고 가장 변경하기 어려운 설계 결정의 전달자입니다. 아키텍처는 후속 구현에 대한 일련의 제약 조건을 정의합니다.</description>
     </item>
     
     <item>
@@ -87,7 +87,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
       <pubDate>Wed, 03 Aug 2022 08:49:31 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/workshop/msa/glossary/</guid>
-      <description>용어 사전 A
+      <description>용어 정리 A
 AWS AWS(Amazon Web Services)는 아마존닷컴의 클라우드 컴퓨팅 사업부이며 현재 클라우드 컴퓨팅 분야에서 압도적인 세계 1위를 차지하고 있으며 2022년부로 16주년을 맞는 다국적 기업이자 역사상 가장 큰 IT 및 클라우드 기업 중 하나이다. 아마존 웹 서비스는 다른 웹 사이트나 클라이언트측 응용 프로그램에 대해 온라인 서비스를 제공하고 있다. 이러한 서비스의 상당수는 최종 사용자에 직접 공개되는 것이 아니고, 다른 개발자가 사용 가능한 기능을 제공하는 플랫폼을 제공하는 PaaS이다.
 API Gateway API 게이트웨이 는 실제 백엔드 서비스 또는 데이터와 접속하고 API 호출에 대한 정책, 인증 및 일반 액세스 제어를 적용하여 중요한 데이터를 보호하는 트래픽 관리자입니다.</description>
     </item>

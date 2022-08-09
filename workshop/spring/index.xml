@@ -24,7 +24,7 @@ VS code에 스프링부트 설치하기 1. 사전 준비  Java Development Kit(J
       <pubDate>Fri, 05 Aug 2022 15:31:06 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/workshop/spring/springboot-gradle/</guid>
-      <description>Referenes  https://inma.tistory.com/148  $ java -version
+      <description>References  https://inma.tistory.com/148  $ java -version
 java version &amp;ldquo;18.0.2&amp;rdquo; 2022-07-19
 Java(TM) SE Runtime Environment (build 18.0.2+9-61)
 Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
