@@ -13,8 +13,8 @@
       <pubDate>Fri, 22 Jul 2022 11:01:46 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/cloud/helm/helm-repository/</guid>
-      <description>Github에 helm repository 만들기 1. Github으로 이동 2. New 버튼을 클릭한다. Repository name(helm-charts) Public 체크 Add a README file 체크 3. 생성된 Repository 화면 4. 접근 URL 셋팅 리파지터리 홈 탭 메뉴의 Settings를 선택한다.
-좌측 메뉴에 Pages를 선택한다. main 브랜치를 선택후 save 버튼을 클릭한다. publicshed 주소가 나오는데 이 주소가 helm repository 주소가 된다. 5. Local Repository 만들기 생성한 Repository를 로컬에 clone한다. $ git clone https://github.com/&amp;#34;Your github id&amp;#34;/helm-charts.git$ cd helm-charts# stable 디렉토리를 생성한다.</description>
+      <description>Github에 helm repository 만들기 1. Github으로 이동 2. New 버튼을 클릭한다.  Repository name(helm-charts) Public 체크 Add a README file 체크   3. 생성된 Repository 화면 4. 접근 URL 셋팅   리파지터리 홈 탭 메뉴의 Settings를 선택한다.
+  좌측 메뉴에 Pages를 선택한다.   main 브랜치를 선택후 save 버튼을 클릭한다.   publicshed 주소가 나오는데 이 주소가 helm repository 주소가 된다.   5. Local Repository 만들기  생성한 Repository를 로컬에 clone한다.</description>
     </item>
     
     <item>
@@ -23,9 +23,9 @@
       <pubDate>Tue, 19 Jul 2022 13:59:12 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/cloud/rancher/monitoring/</guid>
-      <description>Rancher에 모니터링 도구 설치 및 GPU 모니터링 References [참고1] https://nvidia.github.io/gpu-monitoring-tools/ [참고2] https://passwd.tistory.com/entry/NVIDIAgpu-monitoring-tools-dcgm-exporter-CrashLoopBackOff rancher에서 monitoring 도구 설치 Apps -&amp;gt; Charts 이동후 monitoring 검색 Monitoring 설치 설치를 진행하면 모니터링 앱은 Rancher 의 cattle-monitoring-system namespace 에 배포됨
+      <description>Rancher에 모니터링 도구 설치 및 GPU 모니터링 References  [참고1] https://nvidia.github.io/gpu-monitoring-tools/ [참고2] https://passwd.tistory.com/entry/NVIDIAgpu-monitoring-tools-dcgm-exporter-CrashLoopBackOff  rancher에서 monitoring 도구 설치   Apps -&amp;gt; Charts 이동후 monitoring 검색   Monitoring 설치 설치를 진행하면 모니터링 앱은 Rancher 의 cattle-monitoring-system namespace 에 배포됨
 (설치후 랜처 로그아웃후 다시 로그인)
-네비게이션 영역을 보면 Monitoring 메뉴가 추가되어 있음 대쉬보드 확인 grafana 확인 그라파나에 로그인합니다. Grafana 인스턴스의 기본 관리자 사용자 이름과 비밀번호는 입니다 admin/prom-operator. (비밀번호가 있는 사람에 관계없이 Rancher의 클러스터 관리자 권한은 여전히 ​​Grafana 인스턴스에 액세스해야 합니다.</description>
+  네비게이션 영역을 보면 Monitoring 메뉴가 추가되어 있음   대쉬보드 확인   grafana 확인   그라파나에 로그인합니다. Grafana 인스턴스의 기본 관리자 사용자 이름과 비밀번호는 입니다 admin/prom-operator.</description>
     </item>
     
     <item>
