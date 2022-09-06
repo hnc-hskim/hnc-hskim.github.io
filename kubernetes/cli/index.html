@@ -12,22 +12,22 @@
     <title>Cli :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1660119163" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1660119163" rel="stylesheet">
-    <link href="/css/hybrid.css?1660119163" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1660119163" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1660119163" rel="stylesheet">
-    <link href="/css/auto-complete.css?1660119163" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1660119163" rel="stylesheet">
-    <link href="/css/theme.css?1660119163" rel="stylesheet">
-    <link href="/css/tabs.css?1660119163" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1660119163" rel="stylesheet">
+    <link href="/css/nucleus.css?1662457578" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1662457578" rel="stylesheet">
+    <link href="/css/hybrid.css?1662457578" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1662457578" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1662457578" rel="stylesheet">
+    <link href="/css/auto-complete.css?1662457578" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1662457578" rel="stylesheet">
+    <link href="/css/theme.css?1662457578" rel="stylesheet">
+    <link href="/css/tabs.css?1662457578" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1662457578" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1660119163" rel="stylesheet">
+    <link href="/css/theme-green.css?1662457578" rel="stylesheet">
     
-    <link href="/css/msa-style.css?1660119163" rel="stylesheet">
+    <link href="/css/msa-style.css?1662457578" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1660119163"></script>
+    <script src="/js/jquery-3.3.1.min.js?1662457578"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1660119163"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1660119163"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1662457578"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1662457578"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hnc-hskim.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1660119163"></script>
+<script type="text/javascript" src="/js/search.js?1662457578"></script>
 
     
   </div>
@@ -913,6 +913,7 @@
     <li>
       <ul>
         <li><a href="#조회all">조회(All)</a></li>
+        <li><a href="#kubectl-버전-조회">kubectl 버전 조회</a></li>
         <li><a href="#리소스-쿼터-조회">리소스 쿼터 조회</a></li>
         <li><a href="#컨텍스트-조회">컨텍스트 조회</a></li>
         <li><a href="#컨텍스트-사용">컨텍스트 사용</a></li>
@@ -920,6 +921,7 @@
         <li><a href="#node-재시작">Node 재시작</a></li>
         <li><a href="#node-describe">node describe</a></li>
         <li><a href="#disk-pressure-해결">Disk-Pressure 해결</a></li>
+        <li><a href="#yaml-edit">yaml edit</a></li>
       </ul>
     </li>
   </ul>
@@ -961,6 +963,18 @@ NAME                                     DESIRED   CURRENT   READY   AGE
 replicaset.apps/code-server-5879f94445   0         0         0       7m13s
 replicaset.apps/code-server-5fc775748c   1         1         0       4m31s
 replicaset.apps/code-server-67d7c4f6cd   0         0         0       13m
+</code></pre><h3 id="kubectl-버전-조회">kubectl 버전 조회</h3>
+<pre tabindex="0"><code># orca
+$ kubectl version  --short | grep -i server
+Flag --short has been deprecated, and will be removed in the future. The --short output will become the default.
+WARNING: version difference between client (1.24) and server (1.21) exceeds the supported minor version skew of +/-1
+Server Version: v1.21.12 
+
+# black
+$ kubectl version  --short | grep -i server
+Flag --short has been deprecated, and will be removed in the future. The --short output will become the default.
+WARNING: version difference between client (1.24) and server (1.21) exceeds the supported minor version skew of +/-1
+Server Version: v1.21.13-eks-84b4fe6
 </code></pre><h3 id="리소스-쿼터-조회">리소스 쿼터 조회</h3>
 <pre tabindex="0"><code>kubectl get resourcequota -n &#34;namespace&#34;
 </code></pre><h3 id="컨텍스트-조회">컨텍스트 조회</h3>
@@ -998,7 +1012,15 @@ kubectl uncordon hcidc-sv-paz-orca-worker-08
 <pre tabindex="0"><code>ssh uname@IP_or_hostname (login to the worker node )
 df -h (to check the disk usage)
 rm -rf folder_name (delete the unwanted folder,you are forcefully deleting the file, so make sure you really want to delete it).
-</code></pre>
+</code></pre><h3 id="yaml-edit">yaml edit</h3>
+<pre tabindex="0"><code>kubectl edit service/ocr-service -n mlops
+kubectl edit Ingress/mlops-ingress -n mlops
+
+kubectl edit endpoints/ocr-service -n mlops
+
+kubectl edit service/ingress-nginx-controller -n ingress-nginx
+</code></pre><p><a href="https://kubernetes.io/ko/docs/concepts/services-networking/service-traffic-policy/">https://kubernetes.io/ko/docs/concepts/services-networking/service-traffic-policy/</a></p>
+
 
 <footer class="footline">
 	
@@ -1526,16 +1548,16 @@ rm -rf folder_name (delete the unwanted folder,you are forcefully deleting the f
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1660119163"></script>
-    <script src="/js/perfect-scrollbar.min.js?1660119163"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1660119163"></script>
-    <script src="/js/jquery.sticky.js?1660119163"></script>
-    <script src="/js/featherlight.min.js?1660119163"></script>
-    <script src="/js/highlight.pack.js?1660119163"></script>
+    <script src="/js/clipboard.min.js?1662457578"></script>
+    <script src="/js/perfect-scrollbar.min.js?1662457578"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1662457578"></script>
+    <script src="/js/jquery.sticky.js?1662457578"></script>
+    <script src="/js/featherlight.min.js?1662457578"></script>
+    <script src="/js/highlight.pack.js?1662457578"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1660119163"></script>
-    <script src="/js/learn.js?1660119163"></script>
-    <script src="/js/hugo-learn.js?1660119163"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1662457578"></script>
+    <script src="/js/learn.js?1662457578"></script>
+    <script src="/js/hugo-learn.js?1662457578"></script>
     
         
             <script src="https://unpkg.com/mermaid@9.1.3/dist/mermaid.min.js"></script>

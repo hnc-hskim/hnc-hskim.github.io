@@ -143,7 +143,7 @@ API Gateway API 게이트웨이 는 실제 백엔드 서비스 또는 데이터�
 AWS 클라우드 포메이션AWS CloudFormation의 경우 AWS만 지원하는 것과 달리 테라폼의 경우 아마존 웹 서비스, 구글 클라우드 플랫폼(Google Cloud Platform), 마이크로소프트 애저(Microsoft Azure)와 같은 주요 클라우드 서비스를 비롯한 다양한 클라우드 서비스들을 프로바이더 방식으로 제공하고 있습니다. 이를 통해 테라폼만으로 멀티 클라우드의 리소스들을 선언하고 코드로 관리하는 것도 가능합니다.
 테라폼은 고(Go) 프로그래밍 언어로 개발하고 있습니다.
 테라폼 공식 홈
-  IaC는 코드로 인프라스트럭처를 관리한다는 개념으로 테라폼에서는 하시코프 설정 언어(HCL, Hashicorp Configuration Language)을 사용해 클라우드 리소스를 선언합니다.</description>
+terraform unlock $ terraform force-unlock ec8fb402-fb9f-06c1-2bda-c300a7411d26Do you really want to force-unlock?</description>
     </item>
     
     <item>
@@ -208,7 +208,7 @@ AWS 클라우드 포메이션AWS CloudFormation의 경우 AWS만 지원하는 �
       <pubDate>Wed, 13 Jul 2022 08:51:28 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/kubernetes/cli/</guid>
-      <description>조회(All) $ kubectl get all -n code-serverNAME READY STATUS RESTARTS AGEpod/code-server-5fc775748c-nbmsr 0/1 Init:CrashLoopBackOff 5 4m31sNAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGEservice/code-server ClusterIP 10.79.240.159 &amp;lt;none&amp;gt; 8080/TCP 13mNAME READY UP-TO-DATE AVAILABLE AGEdeployment.apps/code-server 0/1 1 0 13mNAME DESIRED CURRENT READY AGEreplicaset.apps/code-server-5879f94445 0 0 0 7m13sreplicaset.apps/code-server-5fc775748c 1 1 0 4m31sreplicaset.apps/code-server-67d7c4f6cd 0 0 0 13m 리소스 쿼터 조회 kubectl get resourcequota -n &amp;#34;namespace&amp;#34; 컨텍스트 조회 kubectl config get-contexts 컨텍스트 사용 kubectl config use-context &amp;#34;context name&amp;#34; 클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.</description>
+      <description>조회(All) $ kubectl get all -n code-serverNAME READY STATUS RESTARTS AGEpod/code-server-5fc775748c-nbmsr 0/1 Init:CrashLoopBackOff 5 4m31sNAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGEservice/code-server ClusterIP 10.79.240.159 &amp;lt;none&amp;gt; 8080/TCP 13mNAME READY UP-TO-DATE AVAILABLE AGEdeployment.apps/code-server 0/1 1 0 13mNAME DESIRED CURRENT READY AGEreplicaset.apps/code-server-5879f94445 0 0 0 7m13sreplicaset.apps/code-server-5fc775748c 1 1 0 4m31sreplicaset.apps/code-server-67d7c4f6cd 0 0 0 13m kubectl 버전 조회 # orca$ kubectl version --short | grep -i serverFlag --short has been deprecated, and will be removed in the future.</description>
     </item>
     
   </channel>

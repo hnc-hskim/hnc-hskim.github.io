@@ -12,22 +12,22 @@
     <title>Introduction :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1660119163" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1660119163" rel="stylesheet">
-    <link href="/css/hybrid.css?1660119163" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1660119163" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1660119163" rel="stylesheet">
-    <link href="/css/auto-complete.css?1660119163" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1660119163" rel="stylesheet">
-    <link href="/css/theme.css?1660119163" rel="stylesheet">
-    <link href="/css/tabs.css?1660119163" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1660119163" rel="stylesheet">
+    <link href="/css/nucleus.css?1662457578" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1662457578" rel="stylesheet">
+    <link href="/css/hybrid.css?1662457578" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1662457578" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1662457578" rel="stylesheet">
+    <link href="/css/auto-complete.css?1662457578" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1662457578" rel="stylesheet">
+    <link href="/css/theme.css?1662457578" rel="stylesheet">
+    <link href="/css/tabs.css?1662457578" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1662457578" rel="stylesheet">
     
-    <link href="/css/theme-green.css?1660119163" rel="stylesheet">
+    <link href="/css/theme-green.css?1662457578" rel="stylesheet">
     
-    <link href="/css/msa-style.css?1660119163" rel="stylesheet">
+    <link href="/css/msa-style.css?1662457578" rel="stylesheet">
 
-    <script src="/js/jquery-3.3.1.min.js?1660119163"></script>
+    <script src="/js/jquery-3.3.1.min.js?1662457578"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1660119163"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1660119163"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1662457578"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1662457578"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/hnc-hskim.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1660119163"></script>
+<script type="text/javascript" src="/js/search.js?1662457578"></script>
 
     
   </div>
@@ -908,7 +908,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#terraform-unlock">terraform unlock</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -936,7 +940,20 @@
 이를 통해 테라폼만으로 멀티 클라우드의 리소스들을 선언하고 코드로 관리하는 것도 가능합니다.</p>
 <p>테라폼은 고(Go) 프로그래밍 언어로 개발하고 있습니다.</p>
 <p><a href="https://www.terraform.io/">테라폼 공식 홈</a></p>
-<section class="footnotes" role="doc-endnotes">
+<h2 id="terraform-unlock">terraform unlock</h2>
+<pre tabindex="0"><code>$ terraform force-unlock ec8fb402-fb9f-06c1-2bda-c300a7411d26
+Do you really want to force-unlock?
+  Terraform will remove the lock on the remote state.
+  This will allow local Terraform commands to modify this state, even though it
+  may be still be in use. Only &#39;yes&#39; will be accepted to confirm.
+
+  Enter a value: yes
+
+Terraform state has been successfully unlocked!
+
+The state has been unlocked, and Terraform commands should now be able to
+obtain a new lock on the remote state.
+</code></pre><section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
@@ -1472,16 +1489,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1660119163"></script>
-    <script src="/js/perfect-scrollbar.min.js?1660119163"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1660119163"></script>
-    <script src="/js/jquery.sticky.js?1660119163"></script>
-    <script src="/js/featherlight.min.js?1660119163"></script>
-    <script src="/js/highlight.pack.js?1660119163"></script>
+    <script src="/js/clipboard.min.js?1662457578"></script>
+    <script src="/js/perfect-scrollbar.min.js?1662457578"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1662457578"></script>
+    <script src="/js/jquery.sticky.js?1662457578"></script>
+    <script src="/js/featherlight.min.js?1662457578"></script>
+    <script src="/js/highlight.pack.js?1662457578"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1660119163"></script>
-    <script src="/js/learn.js?1660119163"></script>
-    <script src="/js/hugo-learn.js?1660119163"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1662457578"></script>
+    <script src="/js/learn.js?1662457578"></script>
+    <script src="/js/hugo-learn.js?1662457578"></script>
     
         
             <script src="https://unpkg.com/mermaid@9.1.3/dist/mermaid.min.js"></script>

@@ -22,7 +22,7 @@
       <pubDate>Wed, 13 Jul 2022 08:51:28 +0900</pubDate>
       
       <guid>https://hnc-hskim.github.io/kubernetes/cli/</guid>
-      <description>조회(All) $ kubectl get all -n code-serverNAME READY STATUS RESTARTS AGEpod/code-server-5fc775748c-nbmsr 0/1 Init:CrashLoopBackOff 5 4m31sNAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGEservice/code-server ClusterIP 10.79.240.159 &amp;lt;none&amp;gt; 8080/TCP 13mNAME READY UP-TO-DATE AVAILABLE AGEdeployment.apps/code-server 0/1 1 0 13mNAME DESIRED CURRENT READY AGEreplicaset.apps/code-server-5879f94445 0 0 0 7m13sreplicaset.apps/code-server-5fc775748c 1 1 0 4m31sreplicaset.apps/code-server-67d7c4f6cd 0 0 0 13m 리소스 쿼터 조회 kubectl get resourcequota -n &amp;#34;namespace&amp;#34; 컨텍스트 조회 kubectl config get-contexts 컨텍스트 사용 kubectl config use-context &amp;#34;context name&amp;#34; 클러스터명 조회 kubectl config view --minify -o jsonpath=&amp;#39;{.</description>
+      <description>조회(All) $ kubectl get all -n code-serverNAME READY STATUS RESTARTS AGEpod/code-server-5fc775748c-nbmsr 0/1 Init:CrashLoopBackOff 5 4m31sNAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGEservice/code-server ClusterIP 10.79.240.159 &amp;lt;none&amp;gt; 8080/TCP 13mNAME READY UP-TO-DATE AVAILABLE AGEdeployment.apps/code-server 0/1 1 0 13mNAME DESIRED CURRENT READY AGEreplicaset.apps/code-server-5879f94445 0 0 0 7m13sreplicaset.apps/code-server-5fc775748c 1 1 0 4m31sreplicaset.apps/code-server-67d7c4f6cd 0 0 0 13m kubectl 버전 조회 # orca$ kubectl version --short | grep -i serverFlag --short has been deprecated, and will be removed in the future.</description>
     </item>
     
   </channel>
