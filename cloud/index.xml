@@ -50,5 +50,33 @@
 ☞ /etc/pam.d/system-auth 파일 설정(auth, account) User changes will be destroyed the next time authconfig is run.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://hnc-hskim.github.io/cloud/isms-p/rds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/cloud/isms-p/rds/</guid>
+      <description>rds ssh slackapp-stg-mysql-one.c1x2zusz8eyr.ap-northeast-2.rds.amazonaws.commysql -u 계정이름 -p -h 엔드포인트 RDS DB 리스트업 aws rds describe-db-instances $ aws rds describe-db-instances \&amp;gt; --query &amp;#34;*[].[DBInstanceIdentifier,Endpoint.Address,Endpoint.Port,MasterUsername]&amp;#34;[[&amp;#34;slackapp-stg-mysql-one&amp;#34;,&amp;#34;slackapp-stg-mysql-one.c1x2zusz8eyr.ap-northeast-2.rds.amazonaws.com&amp;#34;,3306,&amp;#34;slackapp&amp;#34;],[&amp;#34;slackapp-stg-mysql-three&amp;#34;,&amp;#34;slackapp-stg-mysql-three.c1x2zusz8eyr.ap-northeast-2.rds.amazonaws.com&amp;#34;,3306,&amp;#34;slackapp&amp;#34;],[&amp;#34;slackapp-stg-mysql-two&amp;#34;,&amp;#34;slackapp-stg-mysql-two.c1x2zusz8eyr.ap-northeast-2.rds.amazonaws.com&amp;#34;,3306,&amp;#34;slackapp&amp;#34;],[&amp;#34;stg-sign-bo-postgres-instance-1&amp;#34;,&amp;#34;stg-sign-bo-postgres-instance-1.c1x2zusz8eyr.ap-northeast-2.rds.amazonaws.com&amp;#34;,5432,&amp;#34;postgres&amp;#34;],[&amp;#34;stg-sign-bo-postgres-instance-1-ap-northeast-2a&amp;#34;,&amp;#34;stg-sign-bo-postgres-instance-1-ap-northeast-2a.c1x2zusz8eyr.ap-northeast-2.rds.amazonaws.com&amp;#34;,5432,&amp;#34;postgres&amp;#34;],[&amp;#34;stg-sign-postgres-instance-1&amp;#34;,&amp;#34;stg-sign-postgres-instance-1.c1x2zusz8eyr.ap-northeast-2.rds.amazonaws.com&amp;#34;,5432,&amp;#34;postgres&amp;#34;],[&amp;#34;stg-sign-postgres-instance-1-ap-northeast-2a&amp;#34;,&amp;#34;stg-sign-postgres-instance-1-ap-northeast-2a.c1x2zusz8eyr.ap-northeast-2.rds.amazonaws.com&amp;#34;,5432,&amp;#34;postgres&amp;#34;],[&amp;#34;stg-sign-rabbit-postgres-instance-1&amp;#34;,&amp;#34;stg-sign-rabbit-postgres-instance-1.c1x2zusz8eyr.ap-northeast-2.rds.amazonaws.com&amp;#34;,5432,&amp;#34;postgres&amp;#34;],[&amp;#34;stg-sign-rabbit-postgres-instance-1-ap-northeast-2a&amp;#34;,&amp;#34;stg-sign-rabbit-postgres-instance-1-ap-northeast-2a.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hnc-hskim.github.io/cloud/work/2022-work/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/cloud/work/2022-work/</guid>
+      <description>업무 정리  EDP Layout Designer   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hnc-hskim.github.io/cloud/work/resource-tagging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/cloud/work/resource-tagging/</guid>
+      <description>참고
+[공유] k8s n/s나 워크로드 레벨로 비용 취합이 가능할지 확인 부탁합니다. </description>
+    </item>
+    
   </channel>
 </rss>

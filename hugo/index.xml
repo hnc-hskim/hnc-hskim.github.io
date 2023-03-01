@@ -27,5 +27,14 @@
       <description></description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://hnc-hskim.github.io/hugo/mermaid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/hugo/mermaid/</guid>
+      <description>스타일 커스터마이징 layouts/shortcodes/mermaid.html 파일 추가  mermaid.html  &amp;lt;script src=&amp;#34;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;let isDark = window.matchMedia(&amp;#39;(prefers-color-scheme: dark)&amp;#39;).matches;let mermaidTheme = (isDark) ? &amp;#39;dark&amp;#39; : &amp;#39;default&amp;#39;;let mermaidConfig = {theme: mermaidTheme,logLevel: &amp;#39;fatal&amp;#39;,securityLevel: &amp;#39;strict&amp;#39;,startOnLoad: true,arrowMarkerAbsolute: false,er: {diagramPadding: 20,layoutDirection: &amp;#39;TB&amp;#39;,minEntityWidth: 100,minEntityHeight: 75,entityPadding: 15,stroke: &amp;#39;gray&amp;#39;,fill: &amp;#39;honeydew&amp;#39;,fontSize: 12,useMaxWidth: true,},flowchart: {diagramPadding: 8,htmlLabels: true,curve: &amp;#39;basis&amp;#39;,},sequence: {diagramMarginX: 50,diagramMarginY: 10,actorMargin: 50,width: 150,height: 65,boxMargin: 10,boxTextMargin: 5,noteMargin: 10,messageMargin: 35,messageAlign: &amp;#39;center&amp;#39;,mirrorActors: true,bottomMarginAdj: 1,useMaxWidth: true,rightAngles: false,showSequenceNumbers: false,},gantt: {titleTopMargin: 25,barHeight: 20,barGap: 4,topPadding: 50,leftPadding: 175,gridLineStartPadding: 35,fontSize: 11,fontFamily: &amp;#39;&amp;#34;Open-Sans&amp;#34;, &amp;#34;sans-serif&amp;#34;&amp;#39;,numberSectionStyles: 4,axisFormat: &amp;#39;%Y-%m-%d&amp;#39;,topAxis: false,},};mermaid.</description>
+    </item>
+    
   </channel>
 </rss>

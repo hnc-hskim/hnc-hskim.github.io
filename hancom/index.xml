@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hancoms on My New Hugo Site</title>
+    <link>https://hnc-hskim.github.io/hancom/</link>
+    <description>Recent content in Hancoms on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language><atom:link href="https://hnc-hskim.github.io/hancom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://hnc-hskim.github.io/hancom/tip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/hancom/tip/</guid>
+      <description>노트북 무선랜 보안프로그램 우회 sc config &amp;#34;GnStart&amp;#34; start=disabled# 시스템 재시작후 확인 </description>
+    </item>
+    
+  </channel>
+</rss>

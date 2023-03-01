@@ -17,5 +17,44 @@
 요구사항  visual studio 2022 visual studio workload(.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://hnc-hskim.github.io/blazor/c#/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/blazor/c#/</guid>
+      <description>Data Annotation 사용 using System.ComponentModel.DataAnnotations;public class Starship{[Required][StringLength(16, ErrorMessage = &amp;#34;Identifier too long (16 character limit).&amp;#34;)]public string? Identifier { get; set; }public string? Description { get; set; }[Required]public string? Classification { get; set; }[Range(1, 100000, ErrorMessage = &amp;#34;Accommodation invalid (1-100000).&amp;#34;)]public int MaximumAccommodation { get; set; }[Required][Range(typeof(bool), &amp;#34;true&amp;#34;, &amp;#34;true&amp;#34;, ErrorMessage = &amp;#34;This form disallows unapproved ships.&amp;#34;)]public bool IsValidatedDesign { get; set; }[Required]public DateTime ProductionDate { get; set; }} Web API 호출 Blazor 서버앱은 기본적으로 HttpClient서비스를 포함하지 않는다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hnc-hskim.github.io/blazor/idea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/blazor/idea/</guid>
+      <description>참고
+템플릿 저작  Combination Search Quick Styling Easy Editing  뷰어 컨트롤 API  OOXML To Template Document Converter Injection Meta Data  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hnc-hskim.github.io/blazor/tutorials/tutorial-01-webapi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/blazor/tutorials/tutorial-01-webapi/</guid>
+      <description>Prometheus Web API
+1. folder 생성 및 프로젝트 템플릿 생성 $ md blazor-webapi$ cd blazor-webapi# 템플릿을 이용한 프로젝트 생성$ dotnet new blazorserver -f net6.0 2. HttpClient 추가  Program.cs  builder.Services.AddHttpClient();  Pages/CallWebAPI.razor  @page &amp;#34;/call-web-api&amp;#34;@using System.Text.Json@using System.Text.Json.Serialization@inject IHttpClientFactory ClientFactory&amp;lt;h1&amp;gt;Call web API from a Blazor Server Razor component&amp;lt;/h1&amp;gt;@if (getBranchesError){&amp;lt;p&amp;gt;Unable to get branches from GitHub. Please try again later.&amp;lt;/p&amp;gt;}else{&amp;lt;ul&amp;gt;@foreach (var branch in branches){&amp;lt;li&amp;gt;@branch.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hnc-hskim.github.io/blazor/whentouseblazor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hnc-hskim.github.io/blazor/whentouseblazor/</guid>
+      <description>참고
+Blazor를 사용해야 하는 이유  .NET 사용 경험 통합 요구 사항 기존 서버 구성 애플리케이션의 복잡성 네트워크 요구 사항 코드 보안 요구 사항  </description>
+    </item>
+    
   </channel>
 </rss>

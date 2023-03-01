@@ -35,3 +35,79 @@ img[src$='#floatright'] {
     width: 100%;
     position: absolute;
 }
+
+img[src$='#center']
+{
+    display: block;
+    margin: 0.7rem auto; /* you can replace the vertical '0.7rem' by
+                            whatever floats your boat, but keep the
+                            horizontal 'auto' for this to work */
+    /* whatever else styles you fancy here */
+}
+
+img[src$='#floatleft']
+{
+    display: block;
+    margin: 0.7rem;      /* this margin is totally up to you */
+    width: 100px;
+    height: 100px;
+    /* whatever else styles you fancy here */
+}
+
+img[src$='#floatright']
+{
+    float:right;
+    margin: 0.7rem;      /* this margin is totally up to you */
+    /* whatever else styles you fancy here */
+}
+
+
+table {
+    width: 800px;   
+    text-align: center;
+    border: 1px solid #fff;
+    border-spacing: 1px;
+    font-family: 'Cairo', sans-serif;
+  margin: auto;
+}
+
+caption {
+    font-weight: bold;
+}
+
+table td {
+    padding: 10px;
+    background-color: #eee;
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.view,
+.delete {
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.view {
+    background-color: #03A9F4;
+}
+
+.delete {
+    background-color: #E91E63;
+}
+
+.tablefoot {
+    padding: 0;
+    border-bottom: 3px solid #009688;
+}
